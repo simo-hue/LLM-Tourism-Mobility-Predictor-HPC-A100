@@ -32,9 +32,9 @@ class Config:
     MODEL_NAME = "mixtral:8x7b" #llama3.1:8b - qwen2.5:7b - qwen2.5:14b - mixtral:8x7b - mistral:7b
     TOP_K = 5  # Number of POI predictions
     
-    # HPC optimization parameters - OPTIMIZED FOR HIGH THROUGHPUT
-    MAX_CONCURRENT_REQUESTS = 12  # 4 GPUs × 3 requests per GPU (INCREASED)
-    REQUEST_TIMEOUT = 300  # Reduced for better throughput (was 600)
+    # HPC optimization parameters - OPTIMIZED FOR 4x A100
+    MAX_CONCURRENT_REQUESTS = 12  # 4 GPUs × 4 requests per GPU (OPTIMIZED)
+    REQUEST_TIMEOUT = 600  # Increased for stability (was 300)
     BATCH_SAVE_INTERVAL = 1000  # Save results every N cards
     HEALTH_CHECK_INTERVAL = 600  # Check host health every N seconds
     
@@ -50,17 +50,17 @@ class Config:
     MAX_503_RETRIES = 20    # ✅ NUOVO: retry dedicati per 503
     
     # Anchor rule for POI selection
-    DEFAULT_ANCHOR_RULE = "middle"
+    DEFAULT_ANCHOR_RULE = "penultimate"
     
     # Parallelism - OPTIMIZED FOR A100 64GB CAPACITY
     ENABLE_ROUND_ROBIN = True  # Abilita round-robin
     HOST_SELECTION_STRATEGY = "balanced"  # "round_robin", "performance", "balanced"
-    MAX_CONCURRENT_PER_GPU = 3  # INCREASED: 3 richieste simultanee per A100 64GB
+    MAX_CONCURRENT_PER_GPU = 3
     
     # File paths
     OLLAMA_PORT_FILE = "ollama_ports.txt"
     LOG_DIR = Path(__file__).resolve().parent / "logs"
-    RESULTS_DIR = Path(__file__).resolve().parent / "results/middle/mixtral_8x7b/with_geom_time/"
+    RESULTS_DIR = Path(__file__).resolve().parent / "results/penultimate/mixtral_8x7b/with_geom_time/"
     DATA_DIR = Path(__file__).resolve().parent / "data" / "verona"
     POI_FILE = DATA_DIR / "vc_site.csv"
 
@@ -1048,9 +1048,10 @@ class PromptBuilder:
         typical_hours = [h for h in all_hours if all_hours.count(h) > 1][:3]  # Top 3 frequent hours
 
         return {
-            "day": day_name,
+            "day": day_name[:3],  # Mon, Tue, Wed etc.
             "time_period": time_period,
             "hour": hour,
+            "minute": timestamp.minute,
             "is_weekend": is_weekend,
             "typical_hours": typical_hours
         }
@@ -1130,16 +1131,15 @@ class PromptBuilder:
             for poi in nearby_pois
         ])
 
-        # Build temporal context string
+        # Build temporal context string with specific time
         temporal_context = ""
         if temporal_info:
             time_parts = []
-            time_parts.append(f"{temporal_info['day']} {temporal_info['time_period']}")
-            if temporal_info['is_weekend']:
-                time_parts.append("(weekend)")
+            # Format: Mon 14:30 (usual 10h,14h,18h)
+            time_parts.append(f"{temporal_info['day']} {temporal_info['hour']:02d}:{temporal_info['minute']:02d}")
             if temporal_info['typical_hours']:
                 typical_str = ",".join([f"{h}h" for h in temporal_info['typical_hours']])
-                time_parts.append(f"usual: {typical_str}")
+                time_parts.append(f"(usual {typical_str})")
             temporal_context = f"Time: {' '.join(time_parts)}\n            "
 
         # Create enhanced prompt with temporal context

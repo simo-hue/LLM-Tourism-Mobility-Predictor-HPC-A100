@@ -18,11 +18,11 @@ PROVATI GEOM:
 
 PROVATI GEOM + TIME:
   - llama3.1:8b -> TO DO
-  - mixtral:8x7b -> TO DO
+  - mixtral:8x7b -> CODA
   - mistral:7b -> TO DO
   - qwen2.5:7b -> TO DO
   - qwen2.5:14b -> TO DO
-  - deepseek-coder:33b -> TO DO
+  - deepseek-coder:33b -> CODA
 
 
 ----------- ANCHOR RULE = MIDDLE -----------
@@ -33,7 +33,7 @@ PROVATI NORMALE:
   - mistral:7b
   - qwen2.5:7b
   - qwen2.5:14b
-  - deepseek-coder:33b -> ( esecuzione )
+  - deepseek-coder:33b
 
 PROVATI GEOM:
   - llama3.1:8b
@@ -41,15 +41,15 @@ PROVATI GEOM:
   - mistral:7b
   - qwen2.5:7b
   - qwen2.5:14b
-  - deepseek-coder:33b -> ( esecuzione )
+  - deepseek-coder:33b
 
 PROVATI GEOM + TIME:
-  - llama3.1:8b -> TO DO
-  - mixtral:8x7b -> TO DO
-  - mistral:7b -> TO DO
-  - qwen2.5:7b -> TO DO
-  - qwen2.5:14b -> TO DO
-  - deepseek-coder:33b -> TO DO
+  - llama3.1:8b
+  - mixtral:8x7b -> ( esecuzione )
+  - mistral:7b -> ( esecuzione )
+  - qwen2.5:7b
+  - qwen2.5:14b
+  - deepseek-coder:33b -> ( esecuzione )
 
 
 
