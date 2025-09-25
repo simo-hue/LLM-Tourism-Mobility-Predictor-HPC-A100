@@ -1,15 +1,15 @@
 #!/bin/bash
-#SBATCH --job-name=PENmix
+#SBATCH --job-name=PENqwen72b
 #SBATCH --account=IscrC_LLM-Mob
 #SBATCH --partition=boost_usr_prod
 #SBATCH --qos=boost_qos_lprod
-#SBATCH --time=80:00:00
+#SBATCH --time=70:00:00  # Increased for 72B model
 #SBATCH --nodes=1
 #SBATCH --gres=gpu:4
 #SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=32
-#SBATCH --mem=256G
-#SBATCH --output=PENgeom-time-mix-%j.out
+#SBATCH --cpus-per-task=32  # Full Sapphire Rapids for 72B
+#SBATCH --mem=250G  # Increased for 72B model
+#SBATCH --output=PENgeom-time-qwen72b-%j.out
 
 echo "🚀 VERONA CARD - GEOM + TEMPORAL VERSION"
 echo "================================================"
@@ -179,14 +179,14 @@ start_ollama_gpu() {
             if curl -s --connect-timeout 5 "http://127.0.0.1:$port/api/tags" >/dev/null 2>&1; then
                 echo "   🌐 API risponde, test modello..."
 
-                # Test caricamento modello - UPDATED per mixtral:8x7b
+                # Test caricamento modello - UPDATED per qwen2.5:72b-instruct
                 local test_response=$(curl -s -X POST \
                     --connect-timeout 10 \
                     --max-time 120 \
                     "http://127.0.0.1:$port/api/generate" \
                     -H "Content-Type: application/json" \
                     -d '{
-                        "model":"mixtral:8x7b",
+                        "model":"qwen2.5:72b-instruct",
                         "prompt":"Hi",
                         "stream":false,
                         "options":{"num_predict":1}
@@ -272,7 +272,7 @@ for i in 0 1 2 3; do
             "http://127.0.0.1:$port/api/chat" \
             -H "Content-Type: application/json" \
             -d '{
-                "model":"mixtral:8x7b",
+                "model":"qwen2.5:72b-instruct",
                 "messages":[{"role":"user","content":"Say OK"}],
                 "stream":false,
                 "options":{"num_predict":2}
@@ -374,9 +374,9 @@ advanced_gpu_monitor() {
             echo "🐍 Python Processing (Temporal + Geom):"
 
             # Linee processate dal log
-            if [ -f "mix_geom_time_python_execution.log" ]; then
-                processed=$(grep -c "Processing card" mix_geom_time_python_execution.log 2>/dev/null || echo "0")
-                errors=$(grep -c "ERROR\|Error" mix_geom_time_python_execution.log 2>/dev/null || echo "0")
+            if [ -f "qwen72b_geom_time_python_execution.log" ]; then
+                processed=$(grep -c "Processing card" qwen72b_geom_time_python_execution.log 2>/dev/null || echo "0")
+                errors=$(grep -c "ERROR\|Error" qwen72b_geom_time_python_execution.log 2>/dev/null || echo "0")
                 echo "  Cards processed: $processed"
                 echo "  Errors: $errors"
             fi
@@ -403,7 +403,7 @@ echo ""
 
 if [ -f "data/verona/vc_site.csv" ]; then
     python3 -u veronacard_mob_with_geom_time.py \
-        --append 2>&1 | tee mix_geom_time_python_execution.log
+        --append 2>&1 | tee qwen72b_geom_time_python_execution.log
     PYTHON_EXIT=$?
 else
     echo "❌ File non trovato!"

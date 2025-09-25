@@ -29,12 +29,12 @@ class Config:
     """Centralized configuration to avoid global variables"""
     
     # Model configuration
-    MODEL_NAME = "mixtral:8x7b" #llama3.1:8b - qwen2.5:7b - qwen2.5:14b - mixtral:8x7b - mistral:7b
+    MODEL_NAME = "qwen2.5:72b-instruct" #llama3.1:8b - qwen2.5:7b - qwen2.5:14b - mixtral:8x7b - mistral:7b - qwen2.5:72b-instruct
     TOP_K = 5  # Number of POI predictions
     
     # HPC optimization parameters - OPTIMIZED FOR 4x A100
-    MAX_CONCURRENT_REQUESTS = 12  # 4 GPUs × 4 requests per GPU (OPTIMIZED)
-    REQUEST_TIMEOUT = 600  # Increased for stability (was 300)
+    MAX_CONCURRENT_REQUESTS = 4  # 4 GPUs × 1 request per GPU (OPTIMIZED FOR 72B)
+    REQUEST_TIMEOUT = 1200  # Increased for 72B model (20 min)
     BATCH_SAVE_INTERVAL = 1000  # Save results every N cards
     HEALTH_CHECK_INTERVAL = 600  # Check host health every N seconds
     
@@ -50,17 +50,17 @@ class Config:
     MAX_503_RETRIES = 20    # ✅ NUOVO: retry dedicati per 503
     
     # Anchor rule for POI selection
-    DEFAULT_ANCHOR_RULE = "penultimate"
+    DEFAULT_ANCHOR_RULE = "middle"
     
     # Parallelism - OPTIMIZED FOR A100 64GB CAPACITY
     ENABLE_ROUND_ROBIN = True  # Abilita round-robin
     HOST_SELECTION_STRATEGY = "balanced"  # "round_robin", "performance", "balanced"
-    MAX_CONCURRENT_PER_GPU = 3
+    MAX_CONCURRENT_PER_GPU = 1  # CRITICAL: Only 1 request per A100 for 72B
     
     # File paths
     OLLAMA_PORT_FILE = "ollama_ports.txt"
     LOG_DIR = Path(__file__).resolve().parent / "logs"
-    RESULTS_DIR = Path(__file__).resolve().parent / "results/penultimate/mixtral_8x7b/with_geom_time/"
+    RESULTS_DIR = Path(__file__).resolve().parent / "results/middle/qwen2.5_72b/with_geom_time/"
     DATA_DIR = Path(__file__).resolve().parent / "data" / "verona"
     POI_FILE = DATA_DIR / "vc_site.csv"
 
@@ -632,12 +632,12 @@ class OllamaConnectionManager:
                     "stream": False,
                     "format": "json",
                     "options": {
-                        "num_ctx": 2048,      # REDUCED: DeepSeek R1 32B memory constraint
-                        "num_predict": 256,   # Reduced for faster completion
+                        "num_ctx": 4096,      # OPTIMIZED: Qwen2.5 72B context window
+                        "num_predict": 128,   # Reduced for faster completion on 72B
                         "temperature": 0.1,
                         "top_p": 0.9,
-                        "num_thread": 32,     # MAX: Use all available cores (32 limit)
-                        "num_batch": 1024,    # INCREASED: Better utilize A100 64GB VRAM
+                        "num_thread": 28,     # REDUCED: Half cores per GPU for 72B stability
+                        "num_batch": 256,    # REDUCED: Memory conservative for 72B model
                         "repeat_penalty": 1.1,
                         "stop": ["<|im_end|>", "<|endoftext|>"],  # Stop tokens for DeepSeek R1
                     }
