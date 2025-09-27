@@ -1,15 +1,15 @@
 #!/bin/bash
-#SBATCH --job-name=PENqwen72b
+#SBATCH --job-name=PENqwen72b-2N
 #SBATCH --account=IscrC_LLM-Mob
 #SBATCH --partition=boost_usr_prod
 #SBATCH --qos=boost_qos_lprod
 #SBATCH --time=70:00:00  # Increased for 72B model
-#SBATCH --nodes=1
+#SBATCH --nodes=2
 #SBATCH --gres=gpu:4
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=32  # Full Sapphire Rapids for 72B
 #SBATCH --mem=250G  # Increased for 72B model
-#SBATCH --output=PENgeom-time-qwen72b-%j.out
+#SBATCH --output=PENgeom-time-qwen72b-2N-%j.out
 
 echo "🚀 VERONA CARD - GEOM + TEMPORAL VERSION"
 echo "================================================"
@@ -29,13 +29,26 @@ source $WORK/venv/bin/activate
 echo "✅ Python: $(python3 --version)"
 echo "✅ CUDA: $(nvcc --version | grep release)"
 
+# ============= MULTI-NODE CONFIGURATION =============
+echo "🌐 MULTI-NODE SETUP:"
+echo "Node rank: $SLURM_NODEID"
+echo "Nodes: $SLURM_JOB_NODELIST"
+echo "Total nodes: $SLURM_JOB_NUM_NODES"
+
+# Get all node hostnames
+srun hostname | sort > nodes_$SLURM_JOB_ID.txt
+NODE_LIST=$(cat nodes_$SLURM_JOB_ID.txt | tr '\n' ',' | sed 's/,$//')
+echo "All nodes: $NODE_LIST"
+
+# Export multi-node configuration
+export SLURM_NODES="$NODE_LIST"
 export CUDA_VISIBLE_DEVICES=0,1,2,3
 export NVIDIA_VISIBLE_DEVICES=0,1,2,3
 
-# Debug GPU iniziale
+# Debug GPU detection on all nodes
 echo ""
-echo "🔍 GPU DETECTION:"
-nvidia-smi --query-gpu=index,name,memory.total,temperature.gpu --format=csv,noheader
+echo "🔍 GPU DETECTION (All Nodes):"
+srun nvidia-smi --query-gpu=index,name,memory.total,temperature.gpu --format=csv,noheader
 echo ""
 
 # ============= SETUP DIRECTORY TEMPORANEA =============
@@ -70,13 +83,14 @@ fi
 export OLLAMA_DEBUG=0
 export OLLAMA_MODELS="$WORK/.ollama/models"
 export OLLAMA_CACHE_DIR="$WORK/.ollama/cache"
-export OLLAMA_NUM_PARALLEL=4
+export OLLAMA_NUM_PARALLEL=8  # 8 GPUs total (2 nodes × 4 GPUs)
 export OLLAMA_MAX_LOADED_MODELS=1
 export OLLAMA_KEEP_ALIVE="8h"
 export OLLAMA_LLM_LIBRARY="cuda_v12"
 export OLLAMA_FLASH_ATTENTION=1
-export OLLAMA_MAX_QUEUE=16
-export OLLAMA_CONCURRENT_REQUESTS=3
+export OLLAMA_MAX_QUEUE=32  # Increased for 8 GPUs
+export OLLAMA_CONCURRENT_REQUESTS=8  # One per GPU
+export OLLAMA_GPU_MEMORY_FRACTION=0.95  # Use almost all VRAM
 
 # 🔴 RIMOZIONE DI TUTTI I TIMEOUT OLLAMA
 unset OLLAMA_LOAD_TIMEOUT
@@ -92,19 +106,23 @@ sleep 20
 # Cleanup vecchie directory temporanee
 find "$WORK" -maxdepth 1 -name "tmp_ollama_*" -type d -user $(whoami) -mmin +120 -exec rm -rf {} + 2>/dev/null || true
 
-# ============= DEFINIZIONE VARIABILI GLOBALI =============
+# ============= DEFINIZIONE VARIABILI GLOBALI (8 GPUs) =============
 SERVER_PID1=""
 SERVER_PID2=""
 SERVER_PID3=""
 SERVER_PID4=""
+SERVER_PID5=""
+SERVER_PID6=""
+SERVER_PID7=""
+SERVER_PID8=""
 
 # ============= FUNZIONE DI CLEANUP PER EXIT =============
 cleanup() {
     echo ""
     echo "🧹 Cleanup finale..."
 
-    # Kill processi Ollama
-    for pid in $SERVER_PID1 $SERVER_PID2 $SERVER_PID3 $SERVER_PID4; do
+    # Kill processi Ollama (8 GPUs)
+    for pid in $SERVER_PID1 $SERVER_PID2 $SERVER_PID3 $SERVER_PID4 $SERVER_PID5 $SERVER_PID6 $SERVER_PID7 $SERVER_PID8; do
         if [ -n "$pid" ] && kill -0 $pid 2>/dev/null; then
             echo "Stopping PID $pid..."
             kill -TERM $pid 2>/dev/null
@@ -124,26 +142,41 @@ cleanup() {
 }
 trap cleanup EXIT
 
-# ============= FUNZIONE DI AVVIO SENZA TIMEOUT =============
+# ============= FUNZIONE DI AVVIO MULTI-NODO =============
 start_ollama_gpu() {
     local gpu_id=$1
     local port=$2
     local is_master=$3
+    local node_id=$4  # New parameter for node ID
 
     echo ""
-    echo "🔧 Avvio GPU $gpu_id su porta $port..."
+    echo "🔧 Avvio GPU $gpu_id (Node $node_id) su porta $port..."
 
     # Crea cache directory dedicata
     local gpu_cache="$OLLAMA_CACHE_DIR/gpu${gpu_id}"
     mkdir -p "$gpu_cache"
 
-    # 🔴 CRITICO: Nessun comando timeout, processo libero di vivere
-    CUDA_VISIBLE_DEVICES=$gpu_id \
-    OLLAMA_HOST=127.0.0.1:$port \
-    OLLAMA_MAX_LOADED_MODELS=1 \
-    OLLAMA_TMPDIR="$CUSTOM_TMP" \
-    OLLAMA_CACHE_DIR="$gpu_cache" \
-    $OLLAMA_BIN serve > mixgeom_time_ollama_gpu${gpu_id}.log 2>&1 &
+    # 🔴 CRITICO: Multi-node Ollama startup
+    if [ "$node_id" = "0" ]; then
+        # Local node - run directly
+        CUDA_VISIBLE_DEVICES=$gpu_id \
+        OLLAMA_HOST=0.0.0.0:$port \
+        OLLAMA_MAX_LOADED_MODELS=1 \
+        OLLAMA_TMPDIR="$CUSTOM_TMP" \
+        OLLAMA_CACHE_DIR="$gpu_cache" \
+        $OLLAMA_BIN serve > mixgeom_time_ollama_node${node_id}_gpu${gpu_id}.log 2>&1 &
+    else
+        # Remote node - use srun
+        srun --nodes=1 --ntasks=1 --nodelist=$(echo $SLURM_NODES | cut -d',' -f$((node_id+1))) \
+        bash -c "
+            CUDA_VISIBLE_DEVICES=$gpu_id \
+            OLLAMA_HOST=0.0.0.0:$port \
+            OLLAMA_MAX_LOADED_MODELS=1 \
+            OLLAMA_TMPDIR=$CUSTOM_TMP \
+            OLLAMA_CACHE_DIR=$gpu_cache \
+            $OLLAMA_BIN serve > mixgeom_time_ollama_node${node_id}_gpu${gpu_id}.log 2>&1
+        " &
+    fi
 
     local pid=$!
     echo "✅ GPU $gpu_id PID: $pid (NO TIMEOUT)"
@@ -224,30 +257,41 @@ start_ollama_gpu() {
     return 0
 }
 
-# ============= AVVIO SEQUENZIALE CONTROLLATO =============
+# ============= AVVIO MULTI-NODO 8 GPU =============
 echo ""
-echo "🚀 AVVIO SISTEMA OLLAMA"
-echo "========================"
+echo "🚀 AVVIO SISTEMA OLLAMA (2 NODI - 8 GPU)"
+echo "========================================"
 
-# 1. AVVIA GPU 0 COME MASTER (carica il modello)
-if ! start_ollama_gpu 0 39001 true; then
-    echo "❌ ERRORE CRITICO: GPU 0 fallita"
+# 1. AVVIA GPU 0 NODO 0 COME MASTER (carica il modello)
+if ! start_ollama_gpu 0 39001 true 0; then
+    echo "❌ ERRORE CRITICO: GPU 0 Node 0 fallita"
     exit 1
 fi
 
 echo ""
-echo "✅ GPU 0 completamente operativa con modello caricato"
-echo "⏳ Pausa 60s per stabilizzazione..."
-sleep 60
+echo "✅ GPU 0 Node 0 completamente operativa con modello caricato"
+echo "⏳ Pausa 90s per stabilizzazione..."
+sleep 90
 
-# 2. AVVIA ALTRE GPU (che riuseranno il modello già in cache)
+# 2. AVVIA ALTRE 3 GPU NODO 0
 echo ""
-echo "🚀 Avvio GPU secondarie..."
-
+echo "🚀 Avvio GPU rimanenti Node 0..."
 for gpu_id in 1 2 3; do
     port=$((39001 + gpu_id))
-    start_ollama_gpu $gpu_id $port false
-    sleep 30
+    start_ollama_gpu $gpu_id $port false 0
+    sleep 45
+done
+
+echo "⏳ Node 0 completo, pausa 60s..."
+sleep 60
+
+# 3. AVVIA 4 GPU NODO 1
+echo ""
+echo "🚀 Avvio tutte le GPU Node 1..."
+for gpu_id in 0 1 2 3; do
+    port=$((39005 + gpu_id))  # Porte 39005-39008 per nodo 1
+    start_ollama_gpu $gpu_id $port false 1
+    sleep 45
 done
 
 echo "⏳ Attesa finale stabilizzazione sistema per Mixtral:8x7b (60s)..."
@@ -261,15 +305,18 @@ echo "==========================="
 WORKING_GPUS=0
 WORKING_PORTS=""
 
+# Test Node 0 (porte 39001-39004)
+echo "Testing Node 0..."
 for i in 0 1 2 3; do
     port=$((39001 + i))
+    node_host=$(echo $SLURM_NODES | cut -d',' -f1)
 
-    echo -n "GPU $i (porta $port): "
+    echo -n "Node 0 GPU $i (porta $port): "
 
     # Test completo
-    if curl -s "http://127.0.0.1:$port/api/tags" >/dev/null 2>&1; then
+    if curl -s "http://${node_host}:$port/api/tags" >/dev/null 2>&1; then
         test_resp=$(curl -s -X POST \
-            "http://127.0.0.1:$port/api/chat" \
+            "http://${node_host}:$port/api/chat" \
             -H "Content-Type: application/json" \
             -d '{
                 "model":"qwen2.5:72b-instruct",
@@ -281,7 +328,39 @@ for i in 0 1 2 3; do
         if echo "$test_resp" | grep -q '"done":true'; then
             echo "✅ OPERATIVA"
             ((WORKING_GPUS++))
-            [ -z "$WORKING_PORTS" ] && WORKING_PORTS="$port" || WORKING_PORTS="$WORKING_PORTS,$port"
+            [ -z "$WORKING_PORTS" ] && WORKING_PORTS="${node_host}:$port" || WORKING_PORTS="$WORKING_PORTS,${node_host}:$port"
+        else
+            echo "⚠️ API risponde ma modello non pronto"
+        fi
+    else
+        echo "❌ NON RISPONDE"
+    fi
+done
+
+# Test Node 1 (porte 39005-39008)
+echo "Testing Node 1..."
+for i in 0 1 2 3; do
+    port=$((39005 + i))
+    node_host=$(echo $SLURM_NODES | cut -d',' -f2)
+
+    echo -n "Node 1 GPU $i (porta $port): "
+
+    # Test completo
+    if curl -s "http://${node_host}:$port/api/tags" >/dev/null 2>&1; then
+        test_resp=$(curl -s -X POST \
+            "http://${node_host}:$port/api/chat" \
+            -H "Content-Type: application/json" \
+            -d '{
+                "model":"qwen2.5:72b-instruct",
+                "messages":[{"role":"user","content":"Say OK"}],
+                "stream":false,
+                "options":{"num_predict":2}
+            }' 2>&1)
+
+        if echo "$test_resp" | grep -q '"done":true'; then
+            echo "✅ OPERATIVA"
+            ((WORKING_GPUS++))
+            [ -z "$WORKING_PORTS" ] && WORKING_PORTS="${node_host}:$port" || WORKING_PORTS="$WORKING_PORTS,${node_host}:$port"
         else
             echo "⚠️ API risponde ma modello non pronto"
         fi
@@ -291,7 +370,7 @@ for i in 0 1 2 3; do
 done
 
 echo ""
-echo "📊 RISULTATO: $WORKING_GPUS/4 GPU operative"
+echo "📊 RISULTATO: $WORKING_GPUS/8 GPU operative"
 
 if [ $WORKING_GPUS -eq 0 ]; then
     echo "❌ ERRORE: Nessuna GPU operativa!"

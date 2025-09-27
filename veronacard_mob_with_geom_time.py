@@ -32,8 +32,8 @@ class Config:
     MODEL_NAME = "qwen2.5:72b-instruct" #llama3.1:8b - qwen2.5:7b - qwen2.5:14b - mixtral:8x7b - mistral:7b - qwen2.5:72b-instruct
     TOP_K = 5  # Number of POI predictions
     
-    # HPC optimization parameters - OPTIMIZED FOR 4x A100
-    MAX_CONCURRENT_REQUESTS = 4  # 4 GPUs × 1 request per GPU (OPTIMIZED FOR 72B)
+    # HPC optimization parameters - OPTIMIZED FOR 8x A100 (2 NODES)
+    MAX_CONCURRENT_REQUESTS = 8  # 8 GPUs × 1 request per GPU (OPTIMIZED FOR 72B MULTI-NODE)
     REQUEST_TIMEOUT = 1200  # Increased for 72B model (20 min)
     BATCH_SAVE_INTERVAL = 1000  # Save results every N cards
     HEALTH_CHECK_INTERVAL = 600  # Check host health every N seconds
@@ -421,16 +421,29 @@ class OllamaConnectionManager:
                 ports_str = f.read().strip()
             
             if "," in ports_str:
-                # Multi-GPU configuration
+                # Multi-GPU configuration (can include multi-node hosts)
                 ports = [p.strip() for p in ports_str.split(",")]
-                self.hosts = [f"http://127.0.0.1:{port}" for port in ports]
+                self.hosts = []
+
+                for port_spec in ports:
+                    if ":" in port_spec and not port_spec.startswith("http"):
+                        # Format: "hostname:port" (multi-node)
+                        self.hosts.append(f"http://{port_spec}")
+                    else:
+                        # Format: "port" (single node)
+                        self.hosts.append(f"http://127.0.0.1:{port_spec}")
+
                 logger.info(f"Multi-GPU configuration: {len(self.hosts)} instances")
-                
-                self.rate_limiter = Semaphore(len(self.hosts) * Config.MAX_CONCURRENT_PER_GPU)  # 2 richieste per GPU contemporaneamente
-                
+                logger.info(f"Hosts: {self.hosts}")
+
+                self.rate_limiter = Semaphore(len(self.hosts) * Config.MAX_CONCURRENT_PER_GPU)  # 1 richiesta per GPU contemporaneamente
+
             else:
                 # Single GPU fallback
-                self.hosts = [f"http://127.0.0.1:{ports_str}"]
+                if ":" in ports_str and not ports_str.startswith("http"):
+                    self.hosts = [f"http://{ports_str}"]
+                else:
+                    self.hosts = [f"http://127.0.0.1:{ports_str}"]
                 logger.info(f"Single GPU configuration: {self.hosts[0]}")
                 self.rate_limiter = Semaphore(1)
             

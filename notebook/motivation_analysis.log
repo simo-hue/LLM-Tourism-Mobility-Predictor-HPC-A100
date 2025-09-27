@@ -1,0 +1,1674 @@
+2025-09-27 07:47:02,787 - INFO - Configuration initialized: 16 workers, 50000 chunk size
+2025-09-27 07:47:02,839 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:47:02,856 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:47:02,885 - INFO - Performance monitoring started
+2025-09-27 07:47:02,985 - INFO - Found 148 files matching pattern: **/with_geom_time/*_pred_*.csv
+2025-09-27 07:47:03,055 - INFO - Found 144 files matching pattern: **/with_geom/*_pred_*.csv
+2025-09-27 07:47:03,125 - INFO - Found 146 files matching pattern: **/base_version/*_pred_*.csv
+2025-09-27 07:47:03,126 - INFO - Total discovered files: 438
+2025-09-27 07:47:03,127 - INFO - Starting parallel analysis of 438 files
+2025-09-27 07:47:03,195 - INFO - Created 1937 processing chunks
+2025-09-27 07:47:03,802 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:47:03,802 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:47:03,802 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:47:03,802 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:47:03,802 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:47:03,803 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:47:03,841 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:47:03,844 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:47:03,844 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:47:03,845 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:47:03,845 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:47:03,846 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:47:03,846 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:47:03,847 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:47:03,847 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:47:03,848 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:47:03,970 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:47:03,972 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:47:04,079 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:47:04,085 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:47:04,141 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:47:04,144 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:47:04,163 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:47:04,178 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:47:04,255 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:47:04,269 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:47:04,283 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:47:04,291 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:47:04,346 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:47:04,351 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:47:04,360 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:47:04,366 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:47:04,482 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:47:04,551 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:47:04,565 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:47:04,567 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:47:04,569 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:47:04,587 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:47:04,648 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:47:04,841 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:47:04,942 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:47:04,969 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:47:05,048 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:47:05,260 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:47:05,485 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:47:05,566 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:47:11,657 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:47:12,788 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:47:13,257 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:47:20,275 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:47:20,762 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:47:20,966 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:47:21,181 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:47:21,452 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:47:21,576 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:47:24,956 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:47:25,453 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:47:26,954 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:47:27,070 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:47:27,244 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:47:27,561 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:47:32,061 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:47:32,786 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:47:32,957 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:47:33,076 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:47:33,459 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:47:33,852 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:47:36,540 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:47:36,657 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:47:36,777 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:47:37,146 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:47:39,463 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:47:42,774 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:47:42,953 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:47:43,140 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:47:43,283 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:47:43,661 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:47:46,546 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:47:51,456 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:47:51,582 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:47:51,767 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:47:51,952 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:47:52,269 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:47:53,773 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:47:54,463 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:47:55,045 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:47:55,067 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:47:55,166 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:47:55,262 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:47:55,282 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:47:55,654 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:47:55,846 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:47:57,064 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:47:57,065 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:47:57,066 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:47:57,140 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:47:57,176 - ERROR - Chunk processing error: Error tokenizing data. C error: Expected 10 fields in line 38862, saw 19
+
+2025-09-27 07:47:57,365 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:48:00,945 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:48:01,070 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:48:01,349 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:48:01,363 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:48:01,566 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:48:01,646 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:48:07,464 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:48:08,086 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:48:08,087 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:48:08,140 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:48:08,440 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:48:10,764 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:48:10,879 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:48:11,055 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:48:11,282 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:48:11,367 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:48:12,351 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:48:12,469 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:48:12,642 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:48:12,958 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:48:13,246 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:48:13,986 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:48:14,166 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:48:14,356 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:48:14,474 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:48:14,659 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:48:14,686 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:48:16,366 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:48:17,289 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:48:17,356 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:48:17,370 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:48:17,371 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:48:17,460 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:48:17,542 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:48:17,664 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:48:17,840 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:48:17,967 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:48:18,055 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:48:20,353 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:48:24,451 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:48:24,672 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:48:24,845 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:48:24,972 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:48:25,055 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:48:27,141 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:48:30,580 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:48:30,878 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:48:31,664 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:48:36,155 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:48:36,265 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:48:36,384 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:48:36,558 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:48:36,661 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:48:37,560 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:48:39,770 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:48:41,459 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:48:41,650 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:48:41,840 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:48:42,170 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:48:43,144 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:48:44,255 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:48:44,443 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:48:44,582 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:48:44,961 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:48:47,169 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:48:47,350 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:48:47,487 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:48:47,681 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:48:48,065 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:48:49,461 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:48:52,582 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:48:52,761 - INFO - Processed 100,000 records at 910 records/sec, Memory: 58.6%
+2025-09-27 07:48:52,842 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:48:53,056 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:48:53,273 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:48:53,677 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:48:53,685 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:48:54,970 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:48:55,081 - INFO - Processed 100,000 records at 891 records/sec, Memory: 58.6%
+2025-09-27 07:48:55,171 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:48:55,373 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:48:55,579 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:48:55,976 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:48:56,744 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:48:58,960 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:48:59,370 - INFO - Processed 100,000 records at 858 records/sec, Memory: 58.6%
+2025-09-27 07:49:01,147 - INFO - Processed 100,000 records at 846 records/sec, Memory: 58.6%
+2025-09-27 07:49:01,464 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:49:01,586 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:49:01,586 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:49:01,871 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:49:02,647 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:49:03,287 - INFO - Processed 100,000 records at 831 records/sec, Memory: 58.6%
+2025-09-27 07:49:03,666 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:49:03,963 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:49:03,968 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:49:04,045 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:49:04,276 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:49:04,365 - INFO - Processed 100,000 records at 823 records/sec, Memory: 58.7%
+2025-09-27 07:49:04,549 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:49:04,874 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:49:06,886 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:49:09,677 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:49:09,763 - INFO - Processed 100,000 records at 788 records/sec, Memory: 58.7%
+2025-09-27 07:49:09,874 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:49:10,076 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:49:10,167 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:49:13,464 - INFO - Processed 100,000 records at 766 records/sec, Memory: 58.7%
+2025-09-27 07:49:14,350 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:49:14,477 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:49:16,672 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:49:16,784 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:49:16,950 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:49:17,247 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:49:17,381 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:49:18,449 - INFO - Processed 100,000 records at 738 records/sec, Memory: 58.7%
+2025-09-27 07:49:18,841 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:49:19,374 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:49:19,384 - INFO - Processed 100,000 records at 733 records/sec, Memory: 58.7%
+2025-09-27 07:49:19,541 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:49:21,046 - INFO - Processed 100,000 records at 724 records/sec, Memory: 58.7%
+2025-09-27 07:49:22,847 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:49:22,848 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:49:23,079 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:49:23,080 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:49:23,147 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:49:23,266 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:49:23,351 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:49:23,355 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:49:23,440 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:49:23,564 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:49:23,779 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:49:24,050 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:49:24,050 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:49:25,240 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:49:25,367 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:49:25,550 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:49:25,685 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:49:25,870 - INFO - Processed 100,000 records at 699 records/sec, Memory: 58.8%
+2025-09-27 07:49:26,054 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:49:27,087 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:49:28,153 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:49:28,269 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:49:28,440 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:49:28,553 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:49:31,958 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:49:32,487 - INFO - Processed 100,000 records at 668 records/sec, Memory: 58.8%
+2025-09-27 07:49:34,266 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:49:34,470 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:49:34,542 - INFO - Processed 100,000 records at 659 records/sec, Memory: 58.8%
+2025-09-27 07:49:34,584 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:49:34,762 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:49:34,867 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:49:36,887 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:49:36,959 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:49:37,251 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:49:41,063 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:49:42,446 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:49:42,565 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:49:42,740 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:49:42,848 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:49:44,168 - INFO - Processed 100,000 records at 620 records/sec, Memory: 58.9%
+2025-09-27 07:49:45,454 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:49:45,582 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:49:49,459 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:49:53,271 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:49:53,276 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:49:53,345 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:49:53,458 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:49:53,478 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:49:53,545 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:49:53,647 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:49:53,677 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:49:53,884 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:49:53,985 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:49:55,688 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:49:55,854 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:49:55,980 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:49:56,161 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:49:56,550 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:49:58,176 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:49:59,677 - INFO - Processed 100,000 records at 566 records/sec, Memory: 59.0%
+2025-09-27 07:50:00,473 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:50:00,657 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:50:00,847 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:50:01,043 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:50:01,346 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:50:01,567 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:50:01,583 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:50:02,369 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:50:02,465 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:50:02,470 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:50:02,658 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:50:02,782 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:50:02,864 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:50:06,172 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:50:06,358 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:50:06,485 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:50:06,668 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:50:06,785 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:50:07,846 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:50:09,545 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:50:11,851 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:50:11,969 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:50:12,155 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:50:12,342 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:50:12,450 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:50:14,862 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:50:15,183 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:50:15,482 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:50:16,154 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:50:19,441 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:50:19,566 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:50:19,742 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:50:19,871 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:50:19,967 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:50:21,162 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:50:25,885 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:50:32,058 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:50:32,665 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:50:32,760 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:50:37,568 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:50:37,569 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:50:37,570 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:50:37,584 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:50:37,640 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:50:37,968 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:50:37,968 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:50:37,988 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:50:38,068 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:50:38,158 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:50:38,240 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:50:38,442 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:50:38,650 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:50:39,059 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:50:39,146 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:50:41,180 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:50:41,374 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:50:41,388 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:50:41,653 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:50:41,670 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:50:42,047 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:50:42,056 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:50:43,960 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:50:44,173 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:50:44,443 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:50:44,666 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:50:44,883 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:50:45,351 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:50:48,076 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:50:49,350 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:50:49,555 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:50:49,758 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:50:49,962 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:50:50,062 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:50:50,577 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:50:54,255 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:50:57,377 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:50:57,377 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:50:57,455 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:50:57,547 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:50:57,567 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:50:57,762 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:50:58,563 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:50:58,956 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:51:00,463 - INFO - Processed 200,000 records at 842 records/sec, Memory: 59.4%
+2025-09-27 07:51:01,772 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:51:04,643 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:51:04,851 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:51:05,060 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:51:05,270 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:51:05,366 - INFO - Processed 200,000 records at 825 records/sec, Memory: 59.4%
+2025-09-27 07:51:05,454 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:51:06,183 - INFO - Processed 200,000 records at 822 records/sec, Memory: 59.4%
+2025-09-27 07:51:06,648 - INFO - Processed 200,000 records at 820 records/sec, Memory: 59.5%
+2025-09-27 07:51:08,567 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:51:09,476 - INFO - Processed 200,000 records at 811 records/sec, Memory: 59.5%
+2025-09-27 07:51:10,065 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:51:10,462 - INFO - Processed 200,000 records at 808 records/sec, Memory: 59.5%
+2025-09-27 07:51:11,247 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:51:11,379 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:51:11,467 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:51:11,670 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:51:11,766 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:51:12,144 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:51:12,187 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:51:12,363 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:51:12,661 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:51:15,846 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:51:16,483 - INFO - Processed 200,000 records at 789 records/sec, Memory: 59.5%
+2025-09-27 07:51:16,749 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:51:16,866 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:51:17,049 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:51:17,179 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:51:17,572 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:51:20,447 - INFO - Processed 200,000 records at 777 records/sec, Memory: 59.5%
+2025-09-27 07:51:20,948 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:51:23,440 - INFO - Processed 200,000 records at 768 records/sec, Memory: 59.6%
+2025-09-27 07:51:24,084 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:51:24,259 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:51:24,385 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:51:24,565 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:51:24,863 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:51:25,455 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:51:25,478 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:51:25,652 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:51:25,779 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:51:25,964 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:51:26,265 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:51:27,882 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:51:28,764 - INFO - Processed 200,000 records at 752 records/sec, Memory: 59.6%
+2025-09-27 07:51:29,059 - INFO - Processed 200,000 records at 751 records/sec, Memory: 59.6%
+2025-09-27 07:51:29,177 - INFO - Processed 200,000 records at 751 records/sec, Memory: 59.6%
+2025-09-27 07:51:34,593 - INFO - Processed 200,000 records at 736 records/sec, Memory: 59.6%
+2025-09-27 07:51:35,086 - INFO - Processed 200,000 records at 735 records/sec, Memory: 59.5%
+2025-09-27 07:51:36,778 - INFO - Processed 200,000 records at 730 records/sec, Memory: 59.3%
+2025-09-27 07:51:37,648 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:51:37,951 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:51:38,146 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:51:38,147 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:51:38,147 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:51:38,156 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:51:38,182 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:51:38,183 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:51:38,283 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:51:38,373 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:51:38,375 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:51:38,447 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:51:38,644 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:51:41,178 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:51:41,474 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:51:44,765 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:51:44,774 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:51:44,885 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:51:45,059 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:51:45,183 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:51:45,355 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:51:47,277 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:51:49,143 - INFO - Processed 200,000 records at 699 records/sec, Memory: 59.3%
+2025-09-27 07:51:49,358 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:51:49,869 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:51:50,044 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:51:50,168 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:51:50,348 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:51:50,685 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:51:51,158 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:51:55,553 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:51:55,663 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:51:55,786 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:51:55,962 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:51:56,188 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:51:56,284 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:51:58,146 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:51:58,274 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:51:58,453 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:51:58,585 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:51:58,974 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:52:00,070 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:52:00,545 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:52:00,546 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:52:00,546 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:52:00,644 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:52:00,681 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:52:00,964 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:52:01,046 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:52:04,068 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:52:04,258 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:52:04,448 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:52:04,646 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:52:04,788 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:52:05,242 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:52:07,086 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:52:07,363 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:52:07,540 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:52:07,667 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:52:07,853 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:52:07,957 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:52:10,586 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:52:12,371 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:52:14,482 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:52:14,663 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:52:14,847 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:52:14,980 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:52:15,084 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:52:16,456 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:52:19,359 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:52:19,687 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:52:22,974 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:52:26,153 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:52:26,278 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:52:26,457 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:52:26,645 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:52:26,842 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:52:29,348 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:52:31,361 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:52:33,351 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:52:33,543 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:52:33,684 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:52:34,150 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:52:36,149 - ERROR - Chunk processing error: Error tokenizing data. C error: Expected 10 fields in line 58589, saw 19
+
+2025-09-27 07:52:36,243 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:52:36,252 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:52:36,384 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:52:36,656 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:52:36,661 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:52:39,159 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:52:39,355 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:52:39,551 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:52:39,948 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:52:41,450 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:52:52,076 - INFO - Processed 300,000 records at 859 records/sec, Memory: 59.5%
+2025-09-27 07:52:52,450 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:52:52,577 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:52:52,644 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:52:52,660 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:52:52,740 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:52:52,750 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:52:52,751 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:52:52,755 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:52:52,846 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:52:52,859 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:52:52,980 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:52:53,043 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:52:53,049 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:52:53,065 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:52:53,154 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:52:53,245 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:52:53,642 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:52:55,345 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:52:58,046 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:52:58,187 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:52:58,386 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:52:58,541 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:52:58,884 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:53:02,387 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:02,686 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:53:04,381 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:53:05,850 - INFO - Processed 300,000 records at 827 records/sec, Memory: 59.5%
+2025-09-27 07:53:06,440 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:06,479 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:06,481 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:06,571 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:53:06,681 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:07,080 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:53:08,943 - INFO - Processed 300,000 records at 820 records/sec, Memory: 59.5%
+2025-09-27 07:53:09,541 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:53:09,667 - INFO - Processed 300,000 records at 818 records/sec, Memory: 59.5%
+2025-09-27 07:53:10,885 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:11,058 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:11,183 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:11,363 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:11,559 - ERROR - Chunk processing error: Error tokenizing data. C error: Expected 10 fields in line 44183, saw 19
+
+2025-09-27 07:53:11,765 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:53:12,648 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:12,768 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:12,942 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:13,066 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:13,381 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:53:13,584 - INFO - Processed 300,000 records at 809 records/sec, Memory: 59.6%
+2025-09-27 07:53:13,647 - INFO - Processed 300,000 records at 809 records/sec, Memory: 59.6%
+2025-09-27 07:53:14,760 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:53:15,454 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:15,553 - INFO - Processed 300,000 records at 805 records/sec, Memory: 59.6%
+2025-09-27 07:53:15,560 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:15,565 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:15,842 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:15,871 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:53:15,945 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:15,978 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:53:16,082 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:16,278 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:16,478 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:16,674 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:16,971 - INFO - Processed 300,000 records at 802 records/sec, Memory: 59.6%
+2025-09-27 07:53:17,083 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:53:17,546 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:53:17,562 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:17,750 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:17,940 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:18,080 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:18,542 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:53:19,484 - INFO - Processed 300,000 records at 797 records/sec, Memory: 59.6%
+2025-09-27 07:53:20,386 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:53:22,972 - INFO - Processed 300,000 records at 789 records/sec, Memory: 59.7%
+2025-09-27 07:53:23,350 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:23,473 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:23,661 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:23,848 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:23,952 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:53:26,862 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:53:30,169 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:53:30,247 - INFO - Processed 300,000 records at 774 records/sec, Memory: 59.7%
+2025-09-27 07:53:31,858 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:31,987 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:32,167 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:32,355 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:32,458 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:53:32,553 - INFO - Processed 300,000 records at 770 records/sec, Memory: 59.7%
+2025-09-27 07:53:33,441 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:53:34,077 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:34,382 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:53:35,076 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:53:37,048 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:37,174 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:37,358 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:37,545 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:37,670 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:53:40,046 - ERROR - Chunk processing error: Error tokenizing data. C error: Expected 10 fields in line 5084, saw 19
+
+2025-09-27 07:53:40,242 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:53:42,963 - INFO - Processed 300,000 records at 750 records/sec, Memory: 59.8%
+2025-09-27 07:53:43,555 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:43,678 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:44,043 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:44,077 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:44,276 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:53:44,340 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:53:46,159 - INFO - Processed 300,000 records at 744 records/sec, Memory: 59.8%
+2025-09-27 07:53:47,854 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:47,978 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:48,154 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:48,284 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:48,685 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:53:49,474 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:53:49,552 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:49,685 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:49,869 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:50,059 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:50,440 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:53:53,662 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:53:57,074 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:57,266 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:57,484 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:57,661 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:57,673 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:57,969 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:53:58,042 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:53:58,267 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:58,450 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:58,645 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:58,842 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:59,040 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:53:59,440 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:54:00,172 - INFO - Processed 300,000 records at 719 records/sec, Memory: 59.7%
+2025-09-27 07:54:01,083 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:54:05,688 - INFO - Processed 300,000 records at 710 records/sec, Memory: 59.8%
+2025-09-27 07:54:14,460 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:54:14,753 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:54:14,753 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:54:14,754 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:54:14,755 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:54:14,756 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:54:14,757 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:54:14,757 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:54:14,778 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:54:14,859 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:54:14,873 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:54:14,944 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:54:14,970 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:54:15,061 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:54:15,442 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:54:19,854 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:54:22,461 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:54:22,644 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:54:22,787 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:54:22,862 - ERROR - Chunk processing error: Error tokenizing data. C error: Expected 10 fields in line 800, saw 19
+
+2025-09-27 07:54:23,043 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:54:23,152 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:54:23,175 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:54:23,251 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:54:23,345 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:54:23,540 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:54:23,889 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:54:28,051 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:54:28,271 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:54:28,356 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:54:28,367 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:54:28,755 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:54:28,840 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:54:37,581 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:54:37,772 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:54:37,980 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:54:38,241 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:54:38,587 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:54:39,081 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:54:39,546 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:54:39,754 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:54:39,962 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:54:40,258 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:54:40,442 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:54:40,641 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:54:40,743 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:54:42,867 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:54:43,074 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:54:43,341 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:54:43,555 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:54:43,949 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:54:44,064 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:54:46,477 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:54:46,580 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:54:46,640 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:54:46,759 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:54:46,782 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:54:47,166 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:54:47,250 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:54:52,668 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:54:52,864 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:54:52,983 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:54:53,060 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:54:53,070 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:54:53,250 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:54:55,040 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:54:55,340 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:54:59,354 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:55:03,341 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:55:03,550 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:55:03,761 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:55:03,965 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:55:04,068 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:55:04,751 - INFO - Processed 400,000 records at 830 records/sec, Memory: 60.1%
+2025-09-27 07:55:06,556 - ERROR - Chunk processing error: Error tokenizing data. C error: Expected 10 fields in line 15059, saw 19
+
+2025-09-27 07:55:06,683 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:55:06,785 - INFO - Processed 400,000 records at 827 records/sec, Memory: 60.1%
+2025-09-27 07:55:07,081 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:55:07,188 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:55:07,352 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:55:07,645 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:55:08,048 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:55:08,468 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:55:08,780 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:55:08,780 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:55:08,971 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:55:09,047 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:55:12,067 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:55:12,459 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:55:12,460 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:55:12,643 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:55:12,644 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:55:13,454 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:55:13,580 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:55:13,752 - INFO - Processed 400,000 records at 815 records/sec, Memory: 60.2%
+2025-09-27 07:55:13,765 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:55:13,849 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:55:14,143 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:55:14,144 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:55:14,354 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:55:14,476 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:55:14,646 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:55:14,957 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:55:17,142 - INFO - Processed 400,000 records at 809 records/sec, Memory: 60.2%
+2025-09-27 07:55:18,683 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:55:20,179 - INFO - Processed 400,000 records at 804 records/sec, Memory: 60.2%
+2025-09-27 07:55:20,380 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:55:20,560 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:55:20,640 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:55:20,653 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:55:20,953 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:55:23,665 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:55:23,675 - INFO - Processed 400,000 records at 799 records/sec, Memory: 60.2%
+2025-09-27 07:55:24,277 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:55:24,447 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:55:24,566 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:55:24,653 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:55:24,874 - INFO - Processed 400,000 records at 797 records/sec, Memory: 60.2%
+2025-09-27 07:55:25,485 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:55:25,984 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:55:26,287 - INFO - Processed 400,000 records at 795 records/sec, Memory: 60.2%
+2025-09-27 07:55:26,348 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:55:29,374 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:55:29,470 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:55:29,642 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:55:29,762 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:55:29,860 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:55:31,884 - INFO - Processed 400,000 records at 786 records/sec, Memory: 60.3%
+2025-09-27 07:55:32,761 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:55:34,082 - INFO - Processed 400,000 records at 782 records/sec, Memory: 60.3%
+2025-09-27 07:55:34,579 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:55:34,757 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:55:34,881 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:55:34,946 - INFO - Processed 400,000 records at 781 records/sec, Memory: 60.3%
+2025-09-27 07:55:35,058 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:55:35,365 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:55:35,368 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:55:37,580 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:55:37,746 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:55:37,864 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:55:38,163 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:55:39,258 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:55:39,778 - INFO - Processed 400,000 records at 774 records/sec, Memory: 60.3%
+2025-09-27 07:55:41,051 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:55:44,841 - INFO - Processed 400,000 records at 766 records/sec, Memory: 60.4%
+2025-09-27 07:55:47,568 - INFO - Processed 400,000 records at 762 records/sec, Memory: 60.4%
+2025-09-27 07:55:48,246 - INFO - Processed 400,000 records at 761 records/sec, Memory: 60.4%
+2025-09-27 07:55:52,798 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:55:52,798 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:55:52,799 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:55:52,884 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:55:53,423 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:55:53,450 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:55:53,857 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:55:53,976 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:55:53,977 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:55:53,977 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:55:53,978 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:55:53,978 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:55:53,979 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:55:53,979 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:55:53,980 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:55:53,980 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:55:53,980 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:55:53,980 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:55:53,981 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:55:54,053 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:55:54,146 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:55:54,148 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:55:54,149 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:55:54,168 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:55:54,183 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:55:54,240 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:55:54,257 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:55:54,283 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:55:54,572 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:55:54,865 - INFO - Processed 400,000 records at 752 records/sec, Memory: 60.5%
+2025-09-27 07:55:55,751 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:55:59,043 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:55:59,165 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:55:59,341 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:55:59,458 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:56:00,043 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:56:07,264 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:56:08,277 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:56:08,475 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:56:08,682 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:56:09,150 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:56:09,181 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:56:11,844 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:56:11,844 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:56:11,855 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:56:11,874 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:56:11,945 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:56:11,955 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:56:12,051 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:56:12,077 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:56:12,367 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:56:12,451 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:56:13,361 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:56:13,576 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:56:13,850 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:56:14,349 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:56:14,641 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:56:14,657 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:56:16,077 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:56:16,340 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:56:16,549 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:56:16,761 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:56:17,159 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:56:18,241 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:56:19,046 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:56:19,246 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:56:19,449 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:56:19,660 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:56:19,761 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:56:22,157 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:56:25,556 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:56:26,954 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:56:27,153 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:56:27,357 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:56:27,567 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:56:27,662 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:56:33,057 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:56:33,061 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:56:33,570 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:56:33,648 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:56:34,071 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:56:34,376 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:56:34,470 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:56:34,470 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:56:34,567 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:56:34,655 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:56:35,781 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:56:35,951 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:56:36,071 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:56:36,378 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:56:36,541 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:56:38,242 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:56:38,361 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:56:38,484 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:56:38,881 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:56:42,245 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:56:42,245 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:56:42,367 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:56:42,545 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:56:42,857 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:56:46,885 - INFO - Processed 500,000 records at 856 records/sec, Memory: 60.7%
+2025-09-27 07:56:47,483 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:56:48,684 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:56:48,859 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:56:48,988 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:56:49,151 - INFO - Processed 500,000 records at 853 records/sec, Memory: 60.8%
+2025-09-27 07:56:49,172 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:56:49,482 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:56:49,553 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:56:49,764 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:56:49,786 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:56:49,848 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:56:49,974 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:56:50,158 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:56:50,165 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:56:50,767 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:56:50,884 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:56:51,059 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:56:51,082 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:56:51,367 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:56:52,149 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:56:54,882 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:56:55,051 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:56:55,172 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:56:55,274 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:56:57,243 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:56:58,687 - INFO - Processed 500,000 records at 839 records/sec, Memory: 60.8%
+2025-09-27 07:56:59,265 - INFO - Processed 500,000 records at 838 records/sec, Memory: 60.8%
+2025-09-27 07:56:59,745 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:57:00,070 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:57:00,345 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:57:01,483 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:57:01,654 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:57:01,790 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:57:01,887 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:57:08,268 - INFO - Processed 500,000 records at 826 records/sec, Memory: 60.8%
+2025-09-27 07:57:08,660 - INFO - Processed 500,000 records at 825 records/sec, Memory: 60.8%
+2025-09-27 07:57:09,187 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:57:10,654 - INFO - Processed 500,000 records at 823 records/sec, Memory: 60.9%
+2025-09-27 07:57:11,153 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:57:11,254 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:57:11,279 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:57:11,341 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:57:11,571 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:57:11,685 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:57:13,263 - INFO - Processed 500,000 records at 819 records/sec, Memory: 60.9%
+2025-09-27 07:57:13,964 - INFO - Processed 500,000 records at 818 records/sec, Memory: 60.9%
+2025-09-27 07:57:14,439 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:57:14,665 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:57:14,668 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:57:14,871 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:57:14,883 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:57:16,943 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:57:17,066 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:57:17,252 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:57:17,379 - INFO - Processed 500,000 records at 814 records/sec, Memory: 60.8%
+2025-09-27 07:57:17,384 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:57:17,842 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:57:17,855 - INFO - Processed 500,000 records at 813 records/sec, Memory: 60.8%
+2025-09-27 07:57:18,377 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:57:19,878 - INFO - Processed 500,000 records at 810 records/sec, Memory: 60.9%
+2025-09-27 07:57:20,784 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:57:20,866 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:57:20,874 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:57:21,060 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:57:21,070 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:57:21,465 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:57:21,482 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:57:22,057 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:57:22,243 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:57:22,381 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:57:22,575 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:57:23,142 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:57:25,643 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:57:29,048 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:57:29,176 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:57:29,355 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:57:29,588 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:57:29,651 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:57:29,881 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:57:32,373 - INFO - Processed 500,000 records at 794 records/sec, Memory: 60.9%
+2025-09-27 07:57:33,471 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:57:34,385 - INFO - Processed 500,000 records at 792 records/sec, Memory: 60.9%
+2025-09-27 07:57:45,180 - INFO - Processed 500,000 records at 778 records/sec, Memory: 60.9%
+2025-09-27 07:57:50,892 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:57:51,082 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:57:51,344 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:57:51,345 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:57:51,346 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:57:51,346 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:57:51,347 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:57:51,359 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:57:51,360 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:57:51,364 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:57:51,365 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:57:51,366 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:57:51,456 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:57:51,544 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:57:51,582 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:57:51,642 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:57:51,669 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:57:51,840 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:57:51,851 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:57:51,869 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:57:52,068 - ERROR - Chunk processing error: Error tokenizing data. C error: Expected 10 fields in line 50087, saw 19
+
+2025-09-27 07:57:52,270 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:57:52,365 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:57:52,476 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:57:52,681 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:57:52,941 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:57:53,354 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:57:55,877 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:57:57,151 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:57:57,348 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:57:57,560 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:57:57,778 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:57:58,267 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:57:58,665 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:58:01,144 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:58:01,380 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:58:01,656 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:58:01,940 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:58:02,159 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:58:02,549 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:58:03,383 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:58:03,856 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:58:04,151 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:58:04,370 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:58:04,645 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:58:04,863 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:58:05,258 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:58:07,658 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:58:08,447 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:58:08,660 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:58:08,879 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:58:09,150 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:58:09,263 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:58:10,358 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:58:14,682 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:58:14,687 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:58:14,947 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:58:15,162 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:58:15,461 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:58:15,648 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:58:15,685 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:58:15,767 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:58:16,174 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:58:16,278 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:58:21,665 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:58:21,874 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:58:22,085 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:58:22,346 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:58:22,473 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:58:26,981 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:58:27,550 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:58:29,841 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:58:29,958 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:58:30,078 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:58:30,475 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:58:32,752 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:58:34,487 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:58:34,663 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:58:34,841 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:58:35,176 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:58:36,541 - ERROR - Chunk processing error: Error tokenizing data. C error: Expected 10 fields in line 58224, saw 19
+
+2025-09-27 07:58:36,668 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:58:36,775 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:58:36,844 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:58:37,179 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:58:37,180 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:58:37,865 - INFO - Processed 600,000 records at 863 records/sec, Memory: 61.0%
+2025-09-27 07:58:38,956 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:58:39,161 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:58:39,342 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:58:39,475 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:58:39,866 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:58:40,580 - INFO - Processed 500,000 records at 717 records/sec, Memory: 61.0%
+2025-09-27 07:58:40,978 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:58:43,653 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:58:43,663 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:58:43,679 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:58:43,844 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:58:44,048 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:58:44,076 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:58:44,155 - INFO - Processed 600,000 records at 856 records/sec, Memory: 61.1%
+2025-09-27 07:58:44,847 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:58:45,084 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:58:45,151 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:58:45,167 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:58:45,256 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:58:45,482 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:58:46,949 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:58:47,583 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:58:47,758 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:58:47,941 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:58:48,043 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:58:50,743 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:58:51,057 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:58:51,377 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:58:54,285 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:58:54,552 - INFO - Processed 600,000 records at 843 records/sec, Memory: 61.2%
+2025-09-27 07:58:55,147 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:58:55,273 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:58:55,459 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:58:55,650 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:58:55,777 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:59:01,155 - INFO - Processed 600,000 records at 835 records/sec, Memory: 61.2%
+2025-09-27 07:59:02,043 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:59:02,255 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:59:02,970 - INFO - Processed 600,000 records at 833 records/sec, Memory: 61.2%
+2025-09-27 07:59:03,089 - INFO - Processed 600,000 records at 833 records/sec, Memory: 61.2%
+2025-09-27 07:59:03,571 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:59:03,745 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:59:03,878 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:59:04,287 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:59:04,677 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:59:04,958 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:59:05,075 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:59:05,246 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:59:05,371 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:59:05,779 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:59:05,863 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:59:08,480 - INFO - Processed 600,000 records at 827 records/sec, Memory: 61.3%
+2025-09-27 07:59:08,770 - INFO - Processed 600,000 records at 827 records/sec, Memory: 61.3%
+2025-09-27 07:59:09,177 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:59:09,354 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:59:09,479 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:59:09,749 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:59:09,842 - INFO - Processed 600,000 records at 825 records/sec, Memory: 61.3%
+2025-09-27 07:59:09,973 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:59:10,044 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:59:12,940 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:59:13,074 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:59:13,262 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:59:13,454 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:59:13,643 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:59:13,878 - INFO - Processed 600,000 records at 821 records/sec, Memory: 61.3%
+2025-09-27 07:59:13,974 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:59:14,344 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:59:16,055 - INFO - Processed 600,000 records at 818 records/sec, Memory: 61.3%
+2025-09-27 07:59:16,772 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:59:16,953 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:59:17,085 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:59:17,270 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:59:17,742 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:59:17,978 - INFO - Processed 600,000 records at 816 records/sec, Memory: 61.3%
+2025-09-27 07:59:18,352 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:59:18,849 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:59:18,972 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:59:19,151 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:59:19,281 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:59:19,376 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:59:21,081 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:59:22,140 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:59:25,073 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:59:25,254 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:59:25,440 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:59:25,562 - INFO - Processed 600,000 records at 808 records/sec, Memory: 61.4%
+2025-09-27 07:59:25,573 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:59:25,674 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:59:26,273 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:59:26,346 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:59:26,683 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:59:27,275 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:59:32,179 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:59:32,358 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:59:32,539 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:59:32,671 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:59:32,782 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:59:34,964 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:59:38,250 - INFO - Processed 600,000 records at 794 records/sec, Memory: 61.4%
+2025-09-27 07:59:39,780 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:59:39,946 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:59:40,156 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:59:40,370 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:59:40,642 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:59:41,173 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:59:41,557 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:59:41,940 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:59:42,176 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:59:42,444 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:59:42,655 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:59:43,172 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:59:43,667 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:59:46,847 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:59:47,054 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:59:47,266 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:59:47,480 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:59:48,068 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:59:49,467 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:59:49,787 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:59:50,051 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:59:50,262 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:59:50,480 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:59:51,077 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:59:52,455 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:59:53,049 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:59:53,262 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:59:53,483 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:59:53,751 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:59:53,967 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 07:59:54,562 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:59:57,440 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 07:59:59,989 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:00:00,271 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:00:00,564 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:00:00,864 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:00:01,168 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:00:01,270 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:00:01,662 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:00:01,852 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:00:01,972 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:00:02,249 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:00:02,540 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:00:02,769 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:00:03,051 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:00:03,578 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:00:05,441 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:00:06,164 - INFO - Processed 600,000 records at 766 records/sec, Memory: 61.5%
+2025-09-27 08:00:06,171 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:00:06,386 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:00:06,658 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:00:06,880 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:00:07,162 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:00:07,270 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:00:07,452 - INFO - Processed 600,000 records at 765 records/sec, Memory: 61.5%
+2025-09-27 08:00:08,564 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:00:32,052 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:00:32,175 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:00:32,243 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:00:32,360 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:00:32,363 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:00:32,370 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:00:32,374 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:00:32,487 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:00:32,587 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:00:32,967 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:00:32,968 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:00:34,356 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:00:34,484 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:00:34,565 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:00:34,762 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:00:34,788 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:00:34,883 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:00:35,473 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:00:37,047 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:00:41,469 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:00:41,680 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:00:41,761 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:00:42,047 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:00:42,074 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:00:42,371 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:00:42,443 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:00:43,149 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:00:43,292 - INFO - Processed 700,000 records at 853 records/sec, Memory: 61.6%
+2025-09-27 08:00:43,880 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:00:43,988 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:00:44,343 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:00:44,644 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:00:44,950 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:00:45,261 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:00:45,582 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:00:45,958 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:00:46,580 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:00:47,884 - INFO - Processed 700,000 records at 848 records/sec, Memory: 61.7%
+2025-09-27 08:00:49,363 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:00:49,473 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:00:49,664 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:00:49,971 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:00:50,282 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:00:50,654 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:00:50,980 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:00:51,448 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:00:52,049 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:00:54,170 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:00:55,354 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:00:55,675 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:00:56,047 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:00:56,370 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:00:56,752 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:00:57,141 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:00:57,476 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:00:57,876 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:00:58,279 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:00:59,052 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:01:01,656 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:01:01,861 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:01:02,160 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:01:02,256 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:01:02,351 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:01:02,480 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:01:02,647 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:01:02,742 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:01:03,149 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:01:03,374 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:01:04,058 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:01:04,060 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:01:04,172 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:01:04,366 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:01:04,370 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:01:04,685 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:01:04,749 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:01:04,882 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:01:05,051 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:01:05,685 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:01:08,657 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:01:13,841 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:01:14,154 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:01:14,478 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:01:14,851 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:01:15,165 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:01:15,547 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:01:15,864 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:01:15,987 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:01:20,968 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:01:21,255 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:01:21,355 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:01:22,154 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:01:33,560 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:01:35,269 - INFO - Processed 700,000 records at 802 records/sec, Memory: 61.7%
+2025-09-27 08:01:36,051 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:01:36,241 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:01:36,346 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:01:36,556 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:01:36,662 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:01:36,945 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:01:36,985 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:01:37,180 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:01:37,283 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:01:37,359 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:01:37,860 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:01:51,889 - INFO - Processed 700,000 records at 787 records/sec, Memory: 61.7%
+2025-09-27 08:01:52,361 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:01:57,045 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:01:57,169 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:01:57,346 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:01:57,476 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:01:57,973 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:02:00,980 - INFO - Processed 700,000 records at 779 records/sec, Memory: 61.8%
+2025-09-27 08:02:02,040 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:02:05,343 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:02:05,461 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:02:05,582 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:02:05,767 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:02:06,175 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:02:07,353 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:02:09,850 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:02:09,868 - INFO - Processed 700,000 records at 772 records/sec, Memory: 61.8%
+2025-09-27 08:02:09,980 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:02:10,158 - INFO - Processed 700,000 records at 772 records/sec, Memory: 61.8%
+2025-09-27 08:02:10,163 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:02:10,349 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:02:10,773 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:02:10,981 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:02:20,353 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:02:20,547 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:02:20,685 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:02:20,878 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:02:21,076 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:02:21,566 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:02:25,461 - INFO - Processed 700,000 records at 759 records/sec, Memory: 61.8%
+2025-09-27 08:02:26,959 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:02:29,783 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:02:29,967 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:02:30,159 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:02:30,356 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:02:30,550 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:02:30,975 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:02:31,078 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:02:31,440 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:02:31,469 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:02:31,653 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:02:31,784 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:02:31,882 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:02:34,850 - INFO - Processed 700,000 records at 751 records/sec, Memory: 61.9%
+2025-09-27 08:02:37,155 - INFO - Processed 700,000 records at 749 records/sec, Memory: 61.9%
+2025-09-27 08:02:38,064 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:02:39,042 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:02:39,280 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:02:39,454 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:02:39,585 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:02:39,764 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:02:39,858 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:02:45,143 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:02:47,571 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:02:48,065 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:02:48,140 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:02:48,985 - INFO - Processed 700,000 records at 740 records/sec, Memory: 62.0%
+2025-09-27 08:02:51,670 - INFO - Processed 700,000 records at 738 records/sec, Memory: 62.0%
+2025-09-27 08:02:51,775 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:02:51,885 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:02:52,074 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:02:52,456 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:02:52,488 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:02:52,782 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:02:54,678 - ERROR - Chunk processing error: Error tokenizing data. C error: Expected 10 fields in line 54572, saw 19
+
+2025-09-27 08:02:54,882 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:02:55,141 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:02:55,350 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:02:55,566 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:02:56,082 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:02:56,541 - INFO - Processed 700,000 records at 734 records/sec, Memory: 62.0%
+2025-09-27 08:02:58,262 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:02:59,878 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:00,049 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:00,550 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:00,754 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:03:00,767 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:00,767 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:00,853 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:03:00,945 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:01,149 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:01,358 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:01,766 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:03:02,085 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:03:04,257 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:04,476 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:04,760 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:05,045 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:05,278 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:05,841 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:03:05,849 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:03:09,546 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:09,761 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:09,980 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:10,255 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:10,481 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:10,985 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:03:13,061 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:03:14,271 - INFO - Processed 700,000 records at 721 records/sec, Memory: 62.1%
+2025-09-27 08:03:14,569 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:14,842 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:15,058 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:15,274 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:15,364 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:03:17,142 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:03:17,982 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:03:20,240 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:20,442 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:20,653 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:20,871 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:20,964 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:03:22,369 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:03:26,175 - INFO - Processed 700,000 records at 712 records/sec, Memory: 62.2%
+2025-09-27 08:03:27,058 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:27,447 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:03:27,867 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:03:32,761 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:32,975 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:33,380 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:03:33,382 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:33,383 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:33,763 - ERROR - Chunk processing error: Error tokenizing data. C error: Expected 10 fields in line 51079, saw 19
+
+2025-09-27 08:03:33,850 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:03:33,880 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:34,074 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:34,169 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:34,179 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:34,384 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:03:34,570 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:03:38,544 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:38,668 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:38,850 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:38,983 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:39,462 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:03:41,157 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:03:41,766 - INFO - Processed 800,000 records at 801 records/sec, Memory: 62.3%
+2025-09-27 08:03:43,866 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:43,954 - INFO - Processed 800,000 records at 799 records/sec, Memory: 62.3%
+2025-09-27 08:03:43,955 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:44,148 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:44,245 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:44,556 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:03:44,578 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:03:44,872 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:44,954 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:44,966 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:45,152 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:45,160 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:45,462 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:03:45,546 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:03:45,971 - INFO - Processed 700,000 records at 698 records/sec, Memory: 62.3%
+2025-09-27 08:03:50,053 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:50,175 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:50,458 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:50,863 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:50,863 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:50,864 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:50,970 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:03:51,043 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:51,072 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:03:51,177 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:51,370 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:51,457 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:03:52,049 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:03:55,183 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:03:58,374 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:58,546 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:58,681 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:58,868 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:03:58,957 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:03:59,148 - INFO - Processed 800,000 records at 787 records/sec, Memory: 62.4%
+2025-09-27 08:03:59,751 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:04:02,250 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:04:02,565 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:04:06,353 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:04:06,570 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:04:06,751 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:04:06,883 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:04:07,068 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:04:07,165 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:04:13,243 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:04:14,867 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:04:16,152 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:04:16,374 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:04:16,441 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:04:16,480 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:04:16,688 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:04:16,884 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:04:17,242 - INFO - Processed 800,000 records at 773 records/sec, Memory: 62.5%
+2025-09-27 08:04:17,948 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:04:18,076 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:04:18,263 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:04:18,459 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:04:18,962 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:04:19,042 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:04:21,842 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:04:21,971 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:04:22,161 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:04:22,348 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:04:22,685 - INFO - Processed 800,000 records at 769 records/sec, Memory: 62.6%
+2025-09-27 08:04:22,859 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:04:25,981 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:04:27,654 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:04:27,781 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:04:27,983 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:04:28,183 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:04:28,384 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:04:28,868 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:04:29,487 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:04:30,356 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:04:30,471 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:04:30,669 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:04:30,871 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:04:31,073 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:04:31,564 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:04:33,585 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:04:35,673 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:04:35,762 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:04:35,967 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:04:36,056 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:04:36,070 - INFO - Processed 800,000 records at 760 records/sec, Memory: 62.8%
+2025-09-27 08:04:36,070 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:04:36,563 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:04:37,681 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:04:41,653 - INFO - Processed 800,000 records at 756 records/sec, Memory: 62.8%
+2025-09-27 08:04:42,579 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:04:42,579 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:04:42,580 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:04:42,672 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:04:42,741 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:04:42,945 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:04:43,152 - INFO - Processed 800,000 records at 755 records/sec, Memory: 62.8%
+2025-09-27 08:04:43,971 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:04:44,444 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:04:44,652 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:04:50,449 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:04:50,582 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:04:50,770 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:04:50,963 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:04:51,145 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:04:51,353 - INFO - Processed 800,000 records at 749 records/sec, Memory: 63.0%
+2025-09-27 08:04:52,779 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:05:01,396 - INFO - Processed 800,000 records at 742 records/sec, Memory: 62.9%
+2025-09-27 08:05:08,881 - INFO - Processed 800,000 records at 737 records/sec, Memory: 63.0%
+2025-09-27 08:05:09,009 - INFO - Processed 800,000 records at 737 records/sec, Memory: 63.0%
+2025-09-27 08:05:16,847 - INFO - Processed 800,000 records at 731 records/sec, Memory: 62.9%
+2025-09-27 08:05:17,578 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:05:18,059 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:05:18,121 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:05:18,767 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:05:18,773 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:05:19,347 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:05:19,348 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:05:19,349 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:05:19,349 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:05:19,350 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:05:19,350 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:05:19,351 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:05:19,351 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:05:19,352 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:05:19,352 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:05:19,353 - ERROR - Chunk processing error: Error tokenizing data. C error: Expected 10 fields in line 54994, saw 19
+
+2025-09-27 08:05:19,353 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:05:19,354 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:05:19,355 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:05:19,355 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:05:19,550 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:05:19,567 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:05:19,569 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:05:19,570 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:05:19,647 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:05:19,769 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:05:19,843 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:05:19,845 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:05:19,847 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:05:19,859 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:05:19,877 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:05:19,948 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:05:19,964 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:05:20,044 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:05:20,277 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:05:20,365 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:05:20,881 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:05:21,448 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:05:21,450 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:05:21,450 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:05:21,462 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:05:21,656 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:05:25,984 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:05:26,482 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:05:27,358 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:05:28,861 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:05:29,063 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:05:29,272 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:05:29,544 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:05:29,772 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:05:30,155 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:05:30,863 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:05:35,581 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:05:35,761 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:05:35,944 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:05:36,080 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:05:36,375 - INFO - Processed 800,000 records at 718 records/sec, Memory: 63.2%
+2025-09-27 08:05:37,776 - INFO - Processed 900,000 records at 807 records/sec, Memory: 63.2%
+2025-09-27 08:05:38,398 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:05:38,398 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:05:38,398 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:05:38,556 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:05:38,674 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:05:38,676 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:05:39,191 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:05:39,239 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:05:39,242 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:05:39,290 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:05:39,400 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:05:39,541 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:05:40,761 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:05:43,071 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:05:45,582 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:05:45,772 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:05:45,970 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:05:46,169 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:05:46,369 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:05:47,790 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:05:48,049 - INFO - Processed 800,000 records at 711 records/sec, Memory: 62.8%
+2025-09-27 08:05:48,576 - INFO - Motivation analyzer initialized with 15 categories
+2025-09-27 08:05:57,650 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:05:58,176 - ERROR - Chunk processing error: No reason column or empty data
+2025-09-27 08:06:13,840 - INFO - Processed 800,000 records at 695 records/sec, Memory: 63.0%
+2025-09-27 08:06:39,634 - INFO - Processed 900,000 records at 765 records/sec, Memory: 58.7%
+2025-09-27 08:06:39,901 - INFO - Processed 900,000 records at 765 records/sec, Memory: 58.7%
+2025-09-27 08:06:44,364 - INFO - Processed 900,000 records at 762 records/sec, Memory: 58.7%
