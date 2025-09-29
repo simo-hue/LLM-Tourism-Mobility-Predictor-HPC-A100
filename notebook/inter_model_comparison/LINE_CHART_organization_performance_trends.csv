@@ -1,0 +1,13 @@
+organization,strategy_name,hit_rate,performance_score
+Alibaba,Base Version,23.4,39.9
+Alibaba,With Geospatial,57.0,69.8
+Alibaba,Geospatial + Temporal,54.9,68.4
+Mistral AI,Base Version,9.6,36.6
+Mistral AI,With Geospatial,39.8,57.8
+Mistral AI,Geospatial + Temporal,37.6,56.3
+Meta,Base Version,11.2,36.2
+Meta,With Geospatial,38.7,56.1
+Meta,Geospatial + Temporal,36.9,55.8
+DeepSeek,Base Version,9.7,36.8
+DeepSeek,With Geospatial,34.2,53.9
+DeepSeek,Geospatial + Temporal,32.5,52.2

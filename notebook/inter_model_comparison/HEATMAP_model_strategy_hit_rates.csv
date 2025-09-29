@@ -1,0 +1,7 @@
+model_name,Base Version,With Geospatial,Geospatial + Temporal
+Qwen2.5 14B,30.9,65.7,63.8
+Qwen2.5 7B,15.8,48.2,46.1
+Mistral 7B,8.5,42.5,40.2
+Llama3.1 8B,11.2,38.7,36.9
+Mixtral 8x7B,10.8,37.2,35.1
+DeepSeek-Coder 33B,9.7,34.2,32.5

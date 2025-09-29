@@ -1,0 +1,4 @@
+strategy_name,hit_rate,success_rate,total_predictions
+With Geospatial,48.3,99.9,7489504
+Geospatial + Temporal,47.0,100.0,7796769
+Base Version,12.1,99.3,7622321
