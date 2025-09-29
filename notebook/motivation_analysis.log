@@ -1672,3 +1672,4 @@
 2025-09-27 08:06:39,634 - INFO - Processed 900,000 records at 765 records/sec, Memory: 58.7%
 2025-09-27 08:06:39,901 - INFO - Processed 900,000 records at 765 records/sec, Memory: 58.7%
 2025-09-27 08:06:44,364 - INFO - Processed 900,000 records at 762 records/sec, Memory: 58.7%
+2025-09-27 17:30:42,770 - INFO - Processed 900,000 records at 26 records/sec, Memory: 65.0%

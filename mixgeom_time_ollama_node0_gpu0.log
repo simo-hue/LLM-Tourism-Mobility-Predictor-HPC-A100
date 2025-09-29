@@ -1,0 +1,250 @@
+2025/09/29 08:54:11 routes.go:1158: INFO server config env="map[CUDA_VISIBLE_DEVICES:0 GPU_DEVICE_ORDINAL:0,1,2,3 HIP_VISIBLE_DEVICES: HSA_OVERRIDE_GFX_VERSION: HTTPS_PROXY: HTTP_PROXY: NO_PROXY: OLLAMA_DEBUG:false OLLAMA_FLASH_ATTENTION:true OLLAMA_GPU_OVERHEAD:0 OLLAMA_HOST:http://0.0.0.0:39001 OLLAMA_INTEL_GPU:false OLLAMA_KEEP_ALIVE:8h0m0s OLLAMA_LLM_LIBRARY:cuda_v12 OLLAMA_LOAD_TIMEOUT:5m0s OLLAMA_MAX_LOADED_MODELS:1 OLLAMA_MAX_QUEUE:32 OLLAMA_MODELS:/leonardo_work/IscrC_LLM-Mob/.ollama/models OLLAMA_MULTIUSER_CACHE:false OLLAMA_NOHISTORY:false OLLAMA_NOPRUNE:false OLLAMA_NUM_PARALLEL:8 OLLAMA_ORIGINS:[http://localhost https://localhost http://localhost:* https://localhost:* http://127.0.0.1 https://127.0.0.1 http://127.0.0.1:* https://127.0.0.1:* http://0.0.0.0 https://0.0.0.0 http://0.0.0.0:* https://0.0.0.0:* app://* file://* tauri://*] OLLAMA_SCHED_SPREAD:false OLLAMA_TMPDIR:/leonardo_work/IscrC_LLM-Mob/tmp_ollama_20809283 ROCR_VISIBLE_DEVICES:0,1,2,3 http_proxy: https_proxy: no_proxy:]"
+time=2025-09-29T08:54:12.013+02:00 level=INFO source=images.go:754 msg="total blobs: 42"
+time=2025-09-29T08:54:12.303+02:00 level=INFO source=images.go:761 msg="total unused blobs removed: 0"
+time=2025-09-29T08:54:12.325+02:00 level=INFO source=routes.go:1205 msg="Listening on [::]:39001 (version 0.3.14)"
+time=2025-09-29T08:54:12.337+02:00 level=INFO source=common.go:135 msg="extracting embedded files" dir=/leonardo_work/IscrC_LLM-Mob/tmp_ollama_20809283/ollama944461461/runners
+time=2025-09-29T08:54:55.656+02:00 level=INFO source=common.go:49 msg="Dynamic LLM libraries" runners="[cpu cpu_avx cpu_avx2 cuda_v11 cuda_v12 rocm_v60102]"
+time=2025-09-29T08:54:55.671+02:00 level=INFO source=gpu.go:221 msg="looking for compatible GPUs"
+time=2025-09-29T08:54:55.885+02:00 level=INFO source=types.go:123 msg="inference compute" id=GPU-ec4f9d11-db58-22aa-b9fa-94dbf050cbd6 library=cuda variant=v12 compute=8.0 driver=12.2 name="NVIDIA A100-SXM-64GB" total="63.4 GiB" available="63.0 GiB"
+[GIN] 2025/09/29 - 08:54:56 | 200 |  218.268973ms |       127.0.0.1 | GET      "/api/tags"
+time=2025-09-29T08:54:56.429+02:00 level=INFO source=sched.go:714 msg="new model will fit in available VRAM in single GPU, loading" model=/leonardo_work/IscrC_LLM-Mob/.ollama/models/blobs/sha256-6e7fdda508e91cb0f63de5c15ff79ac63a1584ccafd751c07ca12b7f442101b8 gpu=GPU-ec4f9d11-db58-22aa-b9fa-94dbf050cbd6 parallel=8 available=67593371648 required="51.6 GiB"
+time=2025-09-29T08:54:56.509+02:00 level=INFO source=server.go:105 msg="system memory" total="502.9 GiB" free="490.5 GiB" free_swap="0 B"
+time=2025-09-29T08:54:56.511+02:00 level=INFO source=memory.go:326 msg="offload to cuda" layers.requested=-1 layers.model=81 layers.offload=81 layers.split="" memory.available="[63.0 GiB]" memory.gpu_overhead="0 B" memory.required.full="51.6 GiB" memory.required.partial="51.6 GiB" memory.required.kv="5.0 GiB" memory.required.allocations="[51.6 GiB]" memory.weights.total="47.5 GiB" memory.weights.repeating="46.6 GiB" memory.weights.nonrepeating="974.6 MiB" memory.graph.full="2.1 GiB" memory.graph.partial="2.6 GiB"
+time=2025-09-29T08:54:56.514+02:00 level=INFO source=server.go:172 msg="user override" OLLAMA_LLM_LIBRARY=cuda_v12 path=/leonardo_work/IscrC_LLM-Mob/tmp_ollama_20809283/ollama944461461/runners/cuda_v12
+time=2025-09-29T08:54:56.517+02:00 level=INFO source=server.go:388 msg="starting llama server" cmd="/leonardo_work/IscrC_LLM-Mob/tmp_ollama_20809283/ollama944461461/runners/cuda_v12/ollama_llama_server --model /leonardo_work/IscrC_LLM-Mob/.ollama/models/blobs/sha256-6e7fdda508e91cb0f63de5c15ff79ac63a1584ccafd751c07ca12b7f442101b8 --ctx-size 16384 --batch-size 512 --embedding --n-gpu-layers 81 --threads 32 --flash-attn --parallel 8 --port 34363"
+time=2025-09-29T08:54:56.517+02:00 level=INFO source=sched.go:449 msg="loaded runners" count=1
+time=2025-09-29T08:54:56.517+02:00 level=INFO source=server.go:587 msg="waiting for llama runner to start responding"
+time=2025-09-29T08:54:56.517+02:00 level=INFO source=server.go:621 msg="waiting for server to become available" status="llm server error"
+INFO [main] starting c++ runner | tid="22866017267712" timestamp=1759128901
+INFO [main] build info | build=10 commit="3a8c75e" tid="22866017267712" timestamp=1759128901
+INFO [main] system info | n_threads=32 n_threads_batch=32 system_info="AVX = 1 | AVX_VNNI = 0 | AVX2 = 0 | AVX512 = 0 | AVX512_VBMI = 0 | AVX512_VNNI = 0 | AVX512_BF16 = 0 | FMA = 0 | NEON = 0 | SVE = 0 | ARM_FMA = 0 | F16C = 0 | FP16_VA = 0 | RISCV_VECT = 0 | WASM_SIMD = 0 | BLAS = 1 | SSE3 = 1 | SSSE3 = 1 | VSX = 0 | MATMUL_INT8 = 0 | LLAMAFILE = 1 | " tid="22866017267712" timestamp=1759128901 total_threads=32
+INFO [main] HTTP server listening | hostname="127.0.0.1" n_threads_http="31" port="34363" tid="22866017267712" timestamp=1759128901
+time=2025-09-29T08:55:01.280+02:00 level=INFO source=server.go:621 msg="waiting for server to become available" status="llm server loading model"
+llama_model_loader: loaded meta data with 35 key-value pairs and 963 tensors from /leonardo_work/IscrC_LLM-Mob/.ollama/models/blobs/sha256-6e7fdda508e91cb0f63de5c15ff79ac63a1584ccafd751c07ca12b7f442101b8 (version GGUF V3 (latest))
+llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+llama_model_loader: - kv   0:                       general.architecture str              = qwen2
+llama_model_loader: - kv   1:                               general.type str              = model
+llama_model_loader: - kv   2:                               general.name str              = Qwen2.5 72B Instruct
+llama_model_loader: - kv   3:                           general.finetune str              = Instruct
+llama_model_loader: - kv   4:                           general.basename str              = Qwen2.5
+llama_model_loader: - kv   5:                         general.size_label str              = 72B
+llama_model_loader: - kv   6:                            general.license str              = other
+llama_model_loader: - kv   7:                       general.license.name str              = qwen
+llama_model_loader: - kv   8:                       general.license.link str              = https://huggingface.co/Qwen/Qwen2.5-7...
+llama_model_loader: - kv   9:                   general.base_model.count u32              = 1
+llama_model_loader: - kv  10:                  general.base_model.0.name str              = Qwen2.5 72B
+llama_model_loader: - kv  11:          general.base_model.0.organization str              = Qwen
+llama_model_loader: - kv  12:              general.base_model.0.repo_url str              = https://huggingface.co/Qwen/Qwen2.5-72B
+llama_model_loader: - kv  13:                               general.tags arr[str,2]       = ["chat", "text-generation"]
+llama_model_loader: - kv  14:                          general.languages arr[str,1]       = ["en"]
+llama_model_loader: - kv  15:                          qwen2.block_count u32              = 80
+llama_model_loader: - kv  16:                       qwen2.context_length u32              = 32768
+llama_model_loader: - kv  17:                     qwen2.embedding_length u32              = 8192
+llama_model_loader: - kv  18:                  qwen2.feed_forward_length u32              = 29568
+llama_model_loader: - kv  19:                 qwen2.attention.head_count u32              = 64
+llama_model_loader: - kv  20:              qwen2.attention.head_count_kv u32              = 8
+llama_model_loader: - kv  21:                       qwen2.rope.freq_base f32              = 1000000.000000
+llama_model_loader: - kv  22:     qwen2.attention.layer_norm_rms_epsilon f32              = 0.000001
+llama_model_loader: - kv  23:                          general.file_type u32              = 15
+llama_model_loader: - kv  24:                       tokenizer.ggml.model str              = gpt2
+llama_model_loader: - kv  25:                         tokenizer.ggml.pre str              = qwen2
+llama_model_loader: - kv  26:                      tokenizer.ggml.tokens arr[str,152064]  = ["!", "\"", "#", "$", "%", "&", "'", ...
+llama_model_loader: - kv  27:                  tokenizer.ggml.token_type arr[i32,152064]  = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ...
+llama_model_loader: - kv  28:                      tokenizer.ggml.merges arr[str,151387]  = ["Ġ Ġ", "ĠĠ ĠĠ", "i n", "Ġ t",...
+llama_model_loader: - kv  29:                tokenizer.ggml.eos_token_id u32              = 151645
+llama_model_loader: - kv  30:            tokenizer.ggml.padding_token_id u32              = 151643
+llama_model_loader: - kv  31:                tokenizer.ggml.bos_token_id u32              = 151643
+llama_model_loader: - kv  32:               tokenizer.ggml.add_bos_token bool             = false
+llama_model_loader: - kv  33:                    tokenizer.chat_template str              = {%- if tools %}\n    {{- '<|im_start|>...
+llama_model_loader: - kv  34:               general.quantization_version u32              = 2
+llama_model_loader: - type  f32:  401 tensors
+llama_model_loader: - type q5_0:   40 tensors
+llama_model_loader: - type q8_0:   40 tensors
+llama_model_loader: - type q4_K:  401 tensors
+llama_model_loader: - type q5_K:   40 tensors
+llama_model_loader: - type q6_K:   41 tensors
+llm_load_vocab: special tokens cache size = 22
+llm_load_vocab: token to piece cache size = 0.9310 MB
+llm_load_print_meta: format           = GGUF V3 (latest)
+llm_load_print_meta: arch             = qwen2
+llm_load_print_meta: vocab type       = BPE
+llm_load_print_meta: n_vocab          = 152064
+llm_load_print_meta: n_merges         = 151387
+llm_load_print_meta: vocab_only       = 0
+llm_load_print_meta: n_ctx_train      = 32768
+llm_load_print_meta: n_embd           = 8192
+llm_load_print_meta: n_layer          = 80
+llm_load_print_meta: n_head           = 64
+llm_load_print_meta: n_head_kv        = 8
+llm_load_print_meta: n_rot            = 128
+llm_load_print_meta: n_swa            = 0
+llm_load_print_meta: n_embd_head_k    = 128
+llm_load_print_meta: n_embd_head_v    = 128
+llm_load_print_meta: n_gqa            = 8
+llm_load_print_meta: n_embd_k_gqa     = 1024
+llm_load_print_meta: n_embd_v_gqa     = 1024
+llm_load_print_meta: f_norm_eps       = 0.0e+00
+llm_load_print_meta: f_norm_rms_eps   = 1.0e-06
+llm_load_print_meta: f_clamp_kqv      = 0.0e+00
+llm_load_print_meta: f_max_alibi_bias = 0.0e+00
+llm_load_print_meta: f_logit_scale    = 0.0e+00
+llm_load_print_meta: n_ff             = 29568
+llm_load_print_meta: n_expert         = 0
+llm_load_print_meta: n_expert_used    = 0
+llm_load_print_meta: causal attn      = 1
+llm_load_print_meta: pooling type     = 0
+llm_load_print_meta: rope type        = 2
+llm_load_print_meta: rope scaling     = linear
+llm_load_print_meta: freq_base_train  = 1000000.0
+llm_load_print_meta: freq_scale_train = 1
+llm_load_print_meta: n_ctx_orig_yarn  = 32768
+llm_load_print_meta: rope_finetuned   = unknown
+llm_load_print_meta: ssm_d_conv       = 0
+llm_load_print_meta: ssm_d_inner      = 0
+llm_load_print_meta: ssm_d_state      = 0
+llm_load_print_meta: ssm_dt_rank      = 0
+llm_load_print_meta: ssm_dt_b_c_rms   = 0
+llm_load_print_meta: model type       = 70B
+llm_load_print_meta: model ftype      = Q4_K - Medium
+llm_load_print_meta: model params     = 72.71 B
+llm_load_print_meta: model size       = 44.15 GiB (5.22 BPW) 
+llm_load_print_meta: general.name     = Qwen2.5 72B Instruct
+llm_load_print_meta: BOS token        = 151643 '<|endoftext|>'
+llm_load_print_meta: EOS token        = 151645 '<|im_end|>'
+llm_load_print_meta: PAD token        = 151643 '<|endoftext|>'
+llm_load_print_meta: LF token         = 148848 'ÄĬ'
+llm_load_print_meta: EOT token        = 151643 '<|endoftext|>'
+llm_load_print_meta: EOG token        = 151643 '<|endoftext|>'
+llm_load_print_meta: EOG token        = 151645 '<|im_end|>'
+llm_load_print_meta: max token length = 256
+ggml_cuda_init: GGML_CUDA_FORCE_MMQ:    no
+ggml_cuda_init: GGML_CUDA_FORCE_CUBLAS: no
+ggml_cuda_init: found 1 CUDA devices:
+  Device 0: NVIDIA A100-SXM-64GB, compute capability 8.0, VMM: yes
+llm_load_tensors: ggml ctx size =    0.85 MiB
+llm_load_tensors: offloading 80 repeating layers to GPU
+llm_load_tensors: offloading non-repeating layers to GPU
+llm_load_tensors: offloaded 81/81 layers to GPU
+llm_load_tensors:        CPU buffer size =   668.25 MiB
+llm_load_tensors:      CUDA0 buffer size = 44545.20 MiB
+time=2025-09-29T08:56:56.404+02:00 level=WARN source=server.go:594 msg="client connection closed before server finished loading, aborting load"
+time=2025-09-29T08:56:56.404+02:00 level=ERROR source=sched.go:455 msg="error loading llama server" error="timed out waiting for llama runner to start: context canceled"
+[GIN] 2025/09/29 - 08:56:56 | 499 |          2m0s |       127.0.0.1 | POST     "/api/generate"
+[GIN] 2025/09/29 - 08:57:26 | 200 |   16.061653ms |       127.0.0.1 | GET      "/api/tags"
+time=2025-09-29T08:57:26.408+02:00 level=INFO source=sched.go:714 msg="new model will fit in available VRAM in single GPU, loading" model=/leonardo_work/IscrC_LLM-Mob/.ollama/models/blobs/sha256-6e7fdda508e91cb0f63de5c15ff79ac63a1584ccafd751c07ca12b7f442101b8 gpu=GPU-ec4f9d11-db58-22aa-b9fa-94dbf050cbd6 parallel=8 available=67593371648 required="51.6 GiB"
+time=2025-09-29T08:57:26.488+02:00 level=INFO source=server.go:105 msg="system memory" total="502.9 GiB" free="488.6 GiB" free_swap="0 B"
+time=2025-09-29T08:57:26.489+02:00 level=INFO source=memory.go:326 msg="offload to cuda" layers.requested=-1 layers.model=81 layers.offload=81 layers.split="" memory.available="[63.0 GiB]" memory.gpu_overhead="0 B" memory.required.full="51.6 GiB" memory.required.partial="51.6 GiB" memory.required.kv="5.0 GiB" memory.required.allocations="[51.6 GiB]" memory.weights.total="47.5 GiB" memory.weights.repeating="46.6 GiB" memory.weights.nonrepeating="974.6 MiB" memory.graph.full="2.1 GiB" memory.graph.partial="2.6 GiB"
+time=2025-09-29T08:57:26.492+02:00 level=INFO source=server.go:172 msg="user override" OLLAMA_LLM_LIBRARY=cuda_v12 path=/leonardo_work/IscrC_LLM-Mob/tmp_ollama_20809283/ollama944461461/runners/cuda_v12
+time=2025-09-29T08:57:26.492+02:00 level=INFO source=server.go:388 msg="starting llama server" cmd="/leonardo_work/IscrC_LLM-Mob/tmp_ollama_20809283/ollama944461461/runners/cuda_v12/ollama_llama_server --model /leonardo_work/IscrC_LLM-Mob/.ollama/models/blobs/sha256-6e7fdda508e91cb0f63de5c15ff79ac63a1584ccafd751c07ca12b7f442101b8 --ctx-size 16384 --batch-size 512 --embedding --n-gpu-layers 81 --threads 32 --flash-attn --parallel 8 --port 44055"
+time=2025-09-29T08:57:26.493+02:00 level=INFO source=sched.go:449 msg="loaded runners" count=1
+time=2025-09-29T08:57:26.493+02:00 level=INFO source=server.go:587 msg="waiting for llama runner to start responding"
+time=2025-09-29T08:57:26.493+02:00 level=INFO source=server.go:621 msg="waiting for server to become available" status="llm server error"
+INFO [main] starting c++ runner | tid="23277510885376" timestamp=1759129046
+INFO [main] build info | build=10 commit="3a8c75e" tid="23277510885376" timestamp=1759129046
+INFO [main] system info | n_threads=32 n_threads_batch=32 system_info="AVX = 1 | AVX_VNNI = 0 | AVX2 = 0 | AVX512 = 0 | AVX512_VBMI = 0 | AVX512_VNNI = 0 | AVX512_BF16 = 0 | FMA = 0 | NEON = 0 | SVE = 0 | ARM_FMA = 0 | F16C = 0 | FP16_VA = 0 | RISCV_VECT = 0 | WASM_SIMD = 0 | BLAS = 1 | SSE3 = 1 | SSSE3 = 1 | VSX = 0 | MATMUL_INT8 = 0 | LLAMAFILE = 1 | " tid="23277510885376" timestamp=1759129046 total_threads=32
+INFO [main] HTTP server listening | hostname="127.0.0.1" n_threads_http="31" port="44055" tid="23277510885376" timestamp=1759129046
+llama_model_loader: loaded meta data with 35 key-value pairs and 963 tensors from /leonardo_work/IscrC_LLM-Mob/.ollama/models/blobs/sha256-6e7fdda508e91cb0f63de5c15ff79ac63a1584ccafd751c07ca12b7f442101b8 (version GGUF V3 (latest))
+llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+llama_model_loader: - kv   0:                       general.architecture str              = qwen2
+llama_model_loader: - kv   1:                               general.type str              = model
+llama_model_loader: - kv   2:                               general.name str              = Qwen2.5 72B Instruct
+llama_model_loader: - kv   3:                           general.finetune str              = Instruct
+llama_model_loader: - kv   4:                           general.basename str              = Qwen2.5
+llama_model_loader: - kv   5:                         general.size_label str              = 72B
+llama_model_loader: - kv   6:                            general.license str              = other
+llama_model_loader: - kv   7:                       general.license.name str              = qwen
+llama_model_loader: - kv   8:                       general.license.link str              = https://huggingface.co/Qwen/Qwen2.5-7...
+llama_model_loader: - kv   9:                   general.base_model.count u32              = 1
+llama_model_loader: - kv  10:                  general.base_model.0.name str              = Qwen2.5 72B
+llama_model_loader: - kv  11:          general.base_model.0.organization str              = Qwen
+llama_model_loader: - kv  12:              general.base_model.0.repo_url str              = https://huggingface.co/Qwen/Qwen2.5-72B
+llama_model_loader: - kv  13:                               general.tags arr[str,2]       = ["chat", "text-generation"]
+llama_model_loader: - kv  14:                          general.languages arr[str,1]       = ["en"]
+llama_model_loader: - kv  15:                          qwen2.block_count u32              = 80
+llama_model_loader: - kv  16:                       qwen2.context_length u32              = 32768
+llama_model_loader: - kv  17:                     qwen2.embedding_length u32              = 8192
+llama_model_loader: - kv  18:                  qwen2.feed_forward_length u32              = 29568
+llama_model_loader: - kv  19:                 qwen2.attention.head_count u32              = 64
+llama_model_loader: - kv  20:              qwen2.attention.head_count_kv u32              = 8
+llama_model_loader: - kv  21:                       qwen2.rope.freq_base f32              = 1000000.000000
+llama_model_loader: - kv  22:     qwen2.attention.layer_norm_rms_epsilon f32              = 0.000001
+llama_model_loader: - kv  23:                          general.file_type u32              = 15
+llama_model_loader: - kv  24:                       tokenizer.ggml.model str              = gpt2
+llama_model_loader: - kv  25:                         tokenizer.ggml.pre str              = qwen2
+llama_model_loader: - kv  26:                      tokenizer.ggml.tokens arr[str,152064]  = ["!", "\"", "#", "$", "%", "&", "'", ...
+llama_model_loader: - kv  27:                  tokenizer.ggml.token_type arr[i32,152064]  = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ...
+llama_model_loader: - kv  28:                      tokenizer.ggml.merges arr[str,151387]  = ["Ġ Ġ", "ĠĠ ĠĠ", "i n", "Ġ t",...
+llama_model_loader: - kv  29:                tokenizer.ggml.eos_token_id u32              = 151645
+llama_model_loader: - kv  30:            tokenizer.ggml.padding_token_id u32              = 151643
+llama_model_loader: - kv  31:                tokenizer.ggml.bos_token_id u32              = 151643
+llama_model_loader: - kv  32:               tokenizer.ggml.add_bos_token bool             = false
+llama_model_loader: - kv  33:                    tokenizer.chat_template str              = {%- if tools %}\n    {{- '<|im_start|>...
+llama_model_loader: - kv  34:               general.quantization_version u32              = 2
+llama_model_loader: - type  f32:  401 tensors
+llama_model_loader: - type q5_0:   40 tensors
+llama_model_loader: - type q8_0:   40 tensors
+llama_model_loader: - type q4_K:  401 tensors
+llama_model_loader: - type q5_K:   40 tensors
+llama_model_loader: - type q6_K:   41 tensors
+time=2025-09-29T08:57:26.744+02:00 level=INFO source=server.go:621 msg="waiting for server to become available" status="llm server loading model"
+llm_load_vocab: special tokens cache size = 22
+llm_load_vocab: token to piece cache size = 0.9310 MB
+llm_load_print_meta: format           = GGUF V3 (latest)
+llm_load_print_meta: arch             = qwen2
+llm_load_print_meta: vocab type       = BPE
+llm_load_print_meta: n_vocab          = 152064
+llm_load_print_meta: n_merges         = 151387
+llm_load_print_meta: vocab_only       = 0
+llm_load_print_meta: n_ctx_train      = 32768
+llm_load_print_meta: n_embd           = 8192
+llm_load_print_meta: n_layer          = 80
+llm_load_print_meta: n_head           = 64
+llm_load_print_meta: n_head_kv        = 8
+llm_load_print_meta: n_rot            = 128
+llm_load_print_meta: n_swa            = 0
+llm_load_print_meta: n_embd_head_k    = 128
+llm_load_print_meta: n_embd_head_v    = 128
+llm_load_print_meta: n_gqa            = 8
+llm_load_print_meta: n_embd_k_gqa     = 1024
+llm_load_print_meta: n_embd_v_gqa     = 1024
+llm_load_print_meta: f_norm_eps       = 0.0e+00
+llm_load_print_meta: f_norm_rms_eps   = 1.0e-06
+llm_load_print_meta: f_clamp_kqv      = 0.0e+00
+llm_load_print_meta: f_max_alibi_bias = 0.0e+00
+llm_load_print_meta: f_logit_scale    = 0.0e+00
+llm_load_print_meta: n_ff             = 29568
+llm_load_print_meta: n_expert         = 0
+llm_load_print_meta: n_expert_used    = 0
+llm_load_print_meta: causal attn      = 1
+llm_load_print_meta: pooling type     = 0
+llm_load_print_meta: rope type        = 2
+llm_load_print_meta: rope scaling     = linear
+llm_load_print_meta: freq_base_train  = 1000000.0
+llm_load_print_meta: freq_scale_train = 1
+llm_load_print_meta: n_ctx_orig_yarn  = 32768
+llm_load_print_meta: rope_finetuned   = unknown
+llm_load_print_meta: ssm_d_conv       = 0
+llm_load_print_meta: ssm_d_inner      = 0
+llm_load_print_meta: ssm_d_state      = 0
+llm_load_print_meta: ssm_dt_rank      = 0
+llm_load_print_meta: ssm_dt_b_c_rms   = 0
+llm_load_print_meta: model type       = 70B
+llm_load_print_meta: model ftype      = Q4_K - Medium
+llm_load_print_meta: model params     = 72.71 B
+llm_load_print_meta: model size       = 44.15 GiB (5.22 BPW) 
+llm_load_print_meta: general.name     = Qwen2.5 72B Instruct
+llm_load_print_meta: BOS token        = 151643 '<|endoftext|>'
+llm_load_print_meta: EOS token        = 151645 '<|im_end|>'
+llm_load_print_meta: PAD token        = 151643 '<|endoftext|>'
+llm_load_print_meta: LF token         = 148848 'ÄĬ'
+llm_load_print_meta: EOT token        = 151643 '<|endoftext|>'
+llm_load_print_meta: EOG token        = 151643 '<|endoftext|>'
+llm_load_print_meta: EOG token        = 151645 '<|im_end|>'
+llm_load_print_meta: max token length = 256
+ggml_cuda_init: GGML_CUDA_FORCE_MMQ:    no
+ggml_cuda_init: GGML_CUDA_FORCE_CUBLAS: no
+ggml_cuda_init: found 1 CUDA devices:
+  Device 0: NVIDIA A100-SXM-64GB, compute capability 8.0, VMM: yes
+llm_load_tensors: ggml ctx size =    0.85 MiB
+time=2025-09-29T08:57:28.197+02:00 level=INFO source=server.go:621 msg="waiting for server to become available" status="llm server not responding"
+time=2025-09-29T08:57:28.448+02:00 level=INFO source=server.go:621 msg="waiting for server to become available" status="llm server loading model"
