@@ -1,0 +1,21 @@
+Year,Value,Metric
+2014,19.4,Top-1 Accuracy
+2015,18.29,Top-1 Accuracy
+2016,19.0,Top-1 Accuracy
+2017,17.95,Top-1 Accuracy
+2018,19.0,Top-1 Accuracy
+2019,19.5,Top-1 Accuracy
+2020,14.47,Top-1 Accuracy
+2021,15.93,Top-1 Accuracy
+2022,18.27,Top-1 Accuracy
+2023,16.24,Top-1 Accuracy
+2014,52.22,Top-5 Hit Rate
+2015,51.54,Top-5 Hit Rate
+2016,51.52,Top-5 Hit Rate
+2017,50.42,Top-5 Hit Rate
+2018,49.69,Top-5 Hit Rate
+2019,50.57,Top-5 Hit Rate
+2020,47.9,Top-5 Hit Rate
+2021,48.61,Top-5 Hit Rate
+2022,49.34,Top-5 Hit Rate
+2023,48.77,Top-5 Hit Rate
