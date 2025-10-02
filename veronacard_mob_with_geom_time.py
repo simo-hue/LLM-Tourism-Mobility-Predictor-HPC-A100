@@ -1,3 +1,4 @@
+# ============= IMPORT =============
 import argparse
 import json
 import logging
@@ -53,8 +54,6 @@ class Config:
     DEFAULT_ANCHOR_RULE = "penultimate"
     
     # Parallelism - OPTIMIZED FOR A100 64GB CAPACITY
-    ENABLE_ROUND_ROBIN = True  # Abilita round-robin
-    HOST_SELECTION_STRATEGY = "balanced"  # "round_robin", "performance", "balanced"
     MAX_CONCURRENT_PER_GPU = 3
     
     # File paths
@@ -149,6 +148,7 @@ class Statistics:
     def set_circuit_breaker(self, active: bool):
         with self._lock:
             self._data['circuit_breaker_active'] = active
+
 # Global instances
 stats = Statistics()
 write_lock = Lock()  # Global lock for file writing
@@ -214,12 +214,11 @@ class CircuitBreaker:
 # ============= HOST HEALTH MONITORING =============
 class HostHealthMonitor:
     """
-    Monitors health status of Ollama hosts and provides load balancing.
+    Monitors health status of Ollama hosts.
     
     Features:
     - Health checks with configurable intervals
     - Response time tracking
-    - Round-robin load balancing
     - Performance-based host selection
     - Automatic failover
     """
@@ -231,7 +230,7 @@ class HostHealthMonitor:
         self.response_times = {host: [] for host in self.hosts}
         self._lock = Lock()
         self._max_response_history = 5
-        self._round_robin_index = 0  # ✅ NUOVO: Indice per round-robin
+        self._round_robin_index = 0  
         
         # Log di warning per inizializzazione vuota
         if not hosts:
@@ -426,7 +425,7 @@ class OllamaConnectionManager:
                 self.hosts = [f"http://127.0.0.1:{port}" for port in ports]
                 logger.info(f"Multi-GPU configuration: {len(self.hosts)} instances")
                 
-                self.rate_limiter = Semaphore(len(self.hosts) * Config.MAX_CONCURRENT_PER_GPU)  # 2 richieste per GPU contemporaneamente
+                self.rate_limiter = Semaphore(len(self.hosts) * Config.MAX_CONCURRENT_PER_GPU) 
                 
             else:
                 # Single GPU fallback
@@ -632,14 +631,14 @@ class OllamaConnectionManager:
                     "stream": False,
                     "format": "json",
                     "options": {
-                        "num_ctx": 2048,      # REDUCED: DeepSeek R1 32B memory constraint
+                        "num_ctx": 2048,      
                         "num_predict": 256,   # Reduced for faster completion
                         "temperature": 0.1,
                         "top_p": 0.9,
-                        "num_thread": 32,     # MAX: Use all available cores (32 limit)
-                        "num_batch": 1024,    # INCREASED: Better utilize A100 64GB VRAM
+                        "num_thread": 32,     
+                        "num_batch": 1024,    
                         "repeat_penalty": 1.1,
-                        "stop": ["<|im_end|>", "<|endoftext|>"],  # Stop tokens for DeepSeek R1
+                        "stop": ["<|im_end|>", "<|endoftext|>"],  
                     }
                 }
                 
@@ -720,38 +719,7 @@ class OllamaConnectionManager:
         
         logger.error(f"All {Config.MAX_RETRIES_PER_REQUEST} attempts failed")
         return None
-
-class SafeOllamaConnectionManager(OllamaConnectionManager):
-    """Versione con inizializzazione sicura garantita"""
-    
-    def __init__(self):
-        super().__init__()
-        self._initialized = False
-    
-    def setup_connections(self) -> List[str]:
-        """Setup with initialization flag"""
-        try:
-            result = super().setup_connections()
-            self._initialized = True
-            logger.info("OllamaConnectionManager fully initialized")
-            return result
-        except Exception as e:
-            self._initialized = False
-            logger.error(f"Failed to initialize OllamaConnectionManager: {e}")
-            raise
-    
-    def _ensure_initialized(self):
-        """Ensure manager is properly initialized"""
-        if not self._initialized:
-            raise RuntimeError(
-                "OllamaConnectionManager not initialized. Call setup_connections() first."
-            )
-    
-    def get_chat_completion(self, prompt: str, model: str = Config.MODEL_NAME) -> Optional[str]:
-        """Get chat completion with initialization check"""
-        self._ensure_initialized()
-        return super().get_chat_completion(prompt, model)
-    
+ 
 # ============= GEOGRAPHIC UTILITIES =============
 def calculate_distance(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
     """
@@ -1220,9 +1188,7 @@ class CheckpointManager:
         # Conservative approach - don't skip unless explicitly verified
         return False
 
-
 # ============= RESULTS MANAGEMENT =============
-
 class ResultsManager:
     """Handles saving and managing prediction results"""
     
@@ -1444,9 +1410,7 @@ class CardProcessor:
         except Exception:
             return None
 
-
 # ============= MAIN PROCESSING PIPELINE =============
-
 class VisitFileProcessor:
     """Orchestrates the complete processing pipeline for a visits file"""
     
@@ -1856,7 +1820,6 @@ Examples:
     except Exception as e:
         logger.error(f"Fatal error: {e}")
         sys.exit(1)
-
 
 if __name__ == "__main__":
     main()
