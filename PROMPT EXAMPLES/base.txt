@@ -1,0 +1,12 @@
+return f"""
+            Sei un assistente turistico esperto di Verona.
+            <cluster_id>: {cluster_id}
+            <history>: {history}
+            <current_poi>: {current_poi}
+
+            Obiettivo: suggerisci i {top_k} POI più probabili che l'utente visiterà dopo.
+            • Escludi i POI già in <history> e <current_poi>.
+            • Rispondi con **una sola riga** JSON:
+            {{ "prediction": [...], "reason": "..." }}
+            Rispondi in italiano.
+        """
