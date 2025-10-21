@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VeronaCard Clustering Multi-Year Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        h1 { color: #2c3e50; }
+        h2 { color: #34495e; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+        table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #3498db; color: white; }
+        tr:nth-child(even) { background-color: #f2f2f2; }
+        .metric { background-color: #e8f4f8; padding: 15px; margin: 10px 0; border-radius: 5px; }
+        .year-section { border-left: 4px solid #3498db; padding-left: 20px; margin: 30px 0; }
+    </style>
+</head>
+<body>
+    <h1>🎯 VeronaCard Tourist Clustering Analysis - Multi-Year Report</h1>
+
+    <div class="metric">
+        <h2>📊 Overview</h2>
+        <ul>
+            <li><b>Years Analyzed:</b> 9</li>
+            <li><b>Clustering Algorithm:</b> K-Means (K=7)</li>
+            <li><b>Total Files Processed:</b> 12</li>
+        </ul>
+    </div>
+
+    <h2>📈 Multi-Year Comparison</h2>
+    <table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Anno</th>
+      <th>N. Turisti</th>
+      <th>N. Visite</th>
+      <th>Silhouette</th>
+      <th>Cluster Maggiore</th>
+      <th>Size Maggiore</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2014</td>
+      <td>70,236</td>
+      <td>369,017</td>
+      <td>0.0767</td>
+      <td>0</td>
+      <td>19,490</td>
+    </tr>
+    <tr>
+      <td>2015</td>
+      <td>71,759</td>
+      <td>367,905</td>
+      <td>0.0999</td>
+      <td>1</td>
+      <td>31,064</td>
+    </tr>
+    <tr>
+      <td>2016</td>
+      <td>76,452</td>
+      <td>381,791</td>
+      <td>0.1267</td>
+      <td>1</td>
+      <td>31,821</td>
+    </tr>
+    <tr>
+      <td>2017</td>
+      <td>89,352</td>
+      <td>439,369</td>
+      <td>0.1138</td>
+      <td>0</td>
+      <td>33,636</td>
+    </tr>
+    <tr>
+      <td>2018</td>
+      <td>86,222</td>
+      <td>424,793</td>
+      <td>0.0802</td>
+      <td>2</td>
+      <td>27,185</td>
+    </tr>
+    <tr>
+      <td>2019</td>
+      <td>77,583</td>
+      <td>395,302</td>
+      <td>0.1143</td>
+      <td>4</td>
+      <td>24,900</td>
+    </tr>
+    <tr>
+      <td>2020</td>
+      <td>7,658</td>
+      <td>38,035</td>
+      <td>0.1072</td>
+      <td>3</td>
+      <td>2,358</td>
+    </tr>
+    <tr>
+      <td>original</td>
+      <td>84,988</td>
+      <td>376,551</td>
+      <td>0.1249</td>
+      <td>3</td>
+      <td>31,109</td>
+    </tr>
+    <tr>
+      <td>parziale</td>
+      <td>12,240</td>
+      <td>57,449</td>
+      <td>0.1332</td>
+      <td>0</td>
+      <td>4,652</td>
+    </tr>
+  </tbody>
+</table>
+
+    <div class="year-section">
+        <h2>📅 Year 2014</h2>
+        <p><b>Tourists:</b> 70,236 | <b>Visits:</b> 369,017 | <b>Silhouette:</b> 0.0767</p>
+        <h3>Cluster Distribution</h3>
+        <ul>
+    <li>Cluster 0: 19,490 tourists</li><li>Cluster 1: 2,240 tourists</li><li>Cluster 2: 15,422 tourists</li><li>Cluster 3: 18,990 tourists</li><li>Cluster 4: 13,508 tourists</li><li>Cluster 5: 544 tourists</li><li>Cluster 6: 42 tourists</li></ul></div>
+    <div class="year-section">
+        <h2>📅 Year 2015</h2>
+        <p><b>Tourists:</b> 71,759 | <b>Visits:</b> 367,905 | <b>Silhouette:</b> 0.0999</p>
+        <h3>Cluster Distribution</h3>
+        <ul>
+    <li>Cluster 0: 656 tourists</li><li>Cluster 1: 31,064 tourists</li><li>Cluster 2: 26,102 tourists</li><li>Cluster 3: 176 tourists</li><li>Cluster 4: 13,245 tourists</li><li>Cluster 5: 498 tourists</li><li>Cluster 6: 18 tourists</li></ul></div>
+    <div class="year-section">
+        <h2>📅 Year 2016</h2>
+        <p><b>Tourists:</b> 76,452 | <b>Visits:</b> 381,791 | <b>Silhouette:</b> 0.1267</p>
+        <h3>Cluster Distribution</h3>
+        <ul>
+    <li>Cluster 0: 16,357 tourists</li><li>Cluster 1: 31,821 tourists</li><li>Cluster 2: 15,795 tourists</li><li>Cluster 3: 10,153 tourists</li><li>Cluster 4: 85 tourists</li><li>Cluster 5: 334 tourists</li><li>Cluster 6: 1,907 tourists</li></ul></div>
+    <div class="year-section">
+        <h2>📅 Year 2017</h2>
+        <p><b>Tourists:</b> 89,352 | <b>Visits:</b> 439,369 | <b>Silhouette:</b> 0.1138</p>
+        <h3>Cluster Distribution</h3>
+        <ul>
+    <li>Cluster 0: 33,636 tourists</li><li>Cluster 1: 16,945 tourists</li><li>Cluster 2: 11,282 tourists</li><li>Cluster 3: 26,666 tourists</li><li>Cluster 4: 501 tourists</li><li>Cluster 5: 34 tourists</li><li>Cluster 6: 288 tourists</li></ul></div>
+    <div class="year-section">
+        <h2>📅 Year 2018</h2>
+        <p><b>Tourists:</b> 86,222 | <b>Visits:</b> 424,793 | <b>Silhouette:</b> 0.0802</p>
+        <h3>Cluster Distribution</h3>
+        <ul>
+    <li>Cluster 0: 15,034 tourists</li><li>Cluster 1: 21,772 tourists</li><li>Cluster 2: 27,185 tourists</li><li>Cluster 3: 21,910 tourists</li><li>Cluster 4: 35 tourists</li><li>Cluster 5: 87 tourists</li><li>Cluster 6: 199 tourists</li></ul></div>
+    <div class="year-section">
+        <h2>📅 Year 2019</h2>
+        <p><b>Tourists:</b> 77,583 | <b>Visits:</b> 395,302 | <b>Silhouette:</b> 0.1143</p>
+        <h3>Cluster Distribution</h3>
+        <ul>
+    <li>Cluster 0: 2,679 tourists</li><li>Cluster 1: 9,950 tourists</li><li>Cluster 2: 16,126 tourists</li><li>Cluster 3: 11,370 tourists</li><li>Cluster 4: 24,900 tourists</li><li>Cluster 5: 12,442 tourists</li><li>Cluster 6: 116 tourists</li></ul></div>
+    <div class="year-section">
+        <h2>📅 Year 2020</h2>
+        <p><b>Tourists:</b> 7,658 | <b>Visits:</b> 38,035 | <b>Silhouette:</b> 0.1072</p>
+        <h3>Cluster Distribution</h3>
+        <ul>
+    <li>Cluster 0: 1,652 tourists</li><li>Cluster 1: 1,809 tourists</li><li>Cluster 2: 368 tourists</li><li>Cluster 3: 2,358 tourists</li><li>Cluster 4: 13 tourists</li><li>Cluster 5: 476 tourists</li><li>Cluster 6: 982 tourists</li></ul></div>
+    <div class="year-section">
+        <h2>📅 Year original</h2>
+        <p><b>Tourists:</b> 84,988 | <b>Visits:</b> 376,551 | <b>Silhouette:</b> 0.1249</p>
+        <h3>Cluster Distribution</h3>
+        <ul>
+    <li>Cluster 0: 4,340 tourists</li><li>Cluster 1: 17,540 tourists</li><li>Cluster 2: 10,171 tourists</li><li>Cluster 3: 31,109 tourists</li><li>Cluster 4: 4,155 tourists</li><li>Cluster 5: 136 tourists</li><li>Cluster 6: 17,537 tourists</li></ul></div>
+    <div class="year-section">
+        <h2>📅 Year parziale</h2>
+        <p><b>Tourists:</b> 12,240 | <b>Visits:</b> 57,449 | <b>Silhouette:</b> 0.1332</p>
+        <h3>Cluster Distribution</h3>
+        <ul>
+    <li>Cluster 0: 4,652 tourists</li><li>Cluster 1: 2,051 tourists</li><li>Cluster 2: 1,163 tourists</li><li>Cluster 3: 18 tourists</li><li>Cluster 4: 2,314 tourists</li><li>Cluster 5: 1,038 tourists</li><li>Cluster 6: 1,004 tourists</li></ul></div>
+</body>
+</html>
