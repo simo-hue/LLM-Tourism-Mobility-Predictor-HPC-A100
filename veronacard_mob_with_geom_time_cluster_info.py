@@ -1021,8 +1021,130 @@ class PromptBuilder:
             "hour": hour,
             "minute": timestamp.minute,
             "is_weekend": is_weekend,
-            "typical_hours": typical_hours
+            "typical_hours": typical_hours,
+            "timestamp": timestamp  # Keep full timestamp for T6
         }
+
+    @staticmethod
+    def compute_poi_peak_hours(df: pd.DataFrame) -> Dict[str, List[int]]:
+        """
+        T1: Calculate top 3 peak hours for each POI.
+
+        This should be called ONCE during initialization, before processing cards.
+
+        Args:
+            df: DataFrame with 'name_short' and 'timestamp' columns
+
+        Returns:
+            Dictionary mapping POI name to list of peak hours
+            Example: {'Arena': [10, 11, 12], 'Casa Giulietta': [12, 13, 14], ...}
+        """
+        poi_peak_hours = {}
+
+        for poi in df['name_short'].unique():
+            poi_visits = df[df['name_short'] == poi]
+
+            if len(poi_visits) > 0:
+                # Get top 3 most frequent hours
+                hour_counts = poi_visits['timestamp'].dt.hour.value_counts()
+                top_hours = hour_counts.head(3).index.tolist()
+                poi_peak_hours[poi] = sorted(top_hours)
+            else:
+                poi_peak_hours[poi] = []
+
+        return poi_peak_hours
+
+    @staticmethod
+    def extract_seasonality_features(timestamp: pd.Timestamp) -> Dict[str, str]:
+        """
+        T6: Extract seasonal and weekly patterns.
+
+        Args:
+            timestamp: Current timestamp
+
+        Returns:
+            Dictionary with 'season', 'tourist_intensity', 'day_type'
+        """
+        month = timestamp.month
+        day_of_week = timestamp.dayofweek
+        is_weekend = day_of_week >= 5
+
+        # Seasonal classification (Northern Hemisphere)
+        if month in [12, 1, 2]:
+            season = "winter"
+        elif month in [3, 4, 5]:
+            season = "spring"
+        elif month in [6, 7, 8]:
+            season = "summer"
+        else:
+            season = "autumn"
+
+        # Tourist intensity (Verona specific)
+        if month in [7, 8, 12]:  # Peak season (summer holidays + Christmas)
+            tourist_intensity = "high"
+        elif month in [4, 5, 6, 9, 10]:  # Shoulder season
+            tourist_intensity = "medium"
+        else:  # January-March, November
+            tourist_intensity = "low"
+
+        # Day type
+        day_type = "weekend" if is_weekend else "weekday"
+
+        return {
+            'season': season,
+            'tourist_intensity': tourist_intensity,
+            'day_type': day_type
+        }
+
+    @staticmethod
+    def format_poi_timing_context(
+        current_hour: int,
+        nearby_pois: List[Dict[str, Any]],
+        poi_peak_hours: Dict[str, List[int]],
+        max_pois: int = 3
+    ) -> str:
+        """
+        T1: Generate timing hints for nearby POIs.
+
+        Args:
+            current_hour: Current hour of the day (0-23)
+            nearby_pois: List of dicts with 'name' and 'distance' keys
+            poi_peak_hours: Pre-computed peak hours dictionary
+            max_pois: Maximum number of POIs to include
+
+        Returns:
+            Formatted string for prompt
+            Example: "Timing: Duomo (peak now), Torre Lamberti (peak 15h)"
+        """
+        poi_timing = []
+
+        for poi_info in nearby_pois[:max_pois]:
+            poi_name = poi_info['name']
+            peak_hours = poi_peak_hours.get(poi_name, [])
+
+            if not peak_hours:
+                continue
+
+            # Check if current hour is a peak hour
+            if current_hour in peak_hours:
+                timing_hint = "peak now"
+            else:
+                # Find next peak hour
+                future_peaks = [h for h in peak_hours if h > current_hour]
+                if future_peaks:
+                    next_peak = min(future_peaks)
+                    timing_hint = f"peak {next_peak}h"
+                else:
+                    # Next peak is tomorrow (use first peak of the day)
+                    next_peak = min(peak_hours)
+                    timing_hint = f"peak {next_peak}h"
+
+            poi_timing.append(f"{poi_name} ({timing_hint})")
+
+        if poi_timing:
+            return "Timing: " + ", ".join(poi_timing)
+        else:
+            return ""
 
     @staticmethod
     def create_prompt(
@@ -1030,6 +1152,7 @@ class PromptBuilder:
         user_clusters: pd.DataFrame,
         cluster_preferences: Dict[int, List[str]],
         pois_df: pd.DataFrame,
+        poi_peak_hours: Dict[str, List[int]],
         card_id: str,
         top_k: int = Config.TOP_K,
         anchor_rule: Union[str, int] = Config.DEFAULT_ANCHOR_RULE
@@ -1100,7 +1223,7 @@ class PromptBuilder:
             for poi in nearby_pois
         ])
 
-        # Build temporal context string with specific time
+        # Build temporal context string with T1 (Peak Hours) and T6 (Seasonality)
         temporal_context = ""
         if temporal_info:
             time_parts = []
@@ -1109,7 +1232,24 @@ class PromptBuilder:
             if temporal_info['typical_hours']:
                 typical_str = ",".join([f"{h}h" for h in temporal_info['typical_hours']])
                 time_parts.append(f"(usual {typical_str})")
+
+            # T6: Add seasonality context
+            if 'timestamp' in temporal_info:
+                seasonality = PromptBuilder.extract_seasonality_features(temporal_info['timestamp'])
+                season_str = f"{seasonality['season'].capitalize()} {seasonality['day_type']}, {seasonality['tourist_intensity']} season"
+                time_parts.append(f"[{season_str}]")
+
             temporal_context = f"Time: {' '.join(time_parts)}\n            "
+
+            # T1: Add POI peak hours timing
+            poi_timing = PromptBuilder.format_poi_timing_context(
+                temporal_info['hour'],
+                nearby_pois,
+                poi_peak_hours,
+                max_pois=3
+            )
+            if poi_timing:
+                temporal_context += f"{poi_timing}\n            "
 
         # Get cluster preferences and format as ranking (Strategy 4: Ranking Order)
         cluster_top_pois = cluster_preferences.get(cluster_id, [])
@@ -1122,7 +1262,7 @@ class PromptBuilder:
             Current: {current_poi}
             Nearby POIs: {pois_list}
 
-            Suggest {top_k} most likely next POIs considering cluster preference order, time and distances.
+            Suggest {top_k} most likely next POIs considering cluster preferences, peak hours, seasonality, time and distances.
             Reply ONLY JSON with this format: {{"prediction": ["poi1", "poi2", ...], "reason": "brief explanation"}}"""
 
 # ============= CHECKPOINT MANAGEMENT =============
@@ -1282,6 +1422,7 @@ class CardProcessor:
         user_clusters: DataFrame,
         cluster_preferences: Dict[int, List[str]],
         pois_df: DataFrame,
+        poi_peak_hours: Dict[str, List[int]],
         ollama_manager: OllamaConnectionManager,
         checkpoint_manager: CheckpointManager,
         results_manager: ResultsManager
@@ -1290,6 +1431,7 @@ class CardProcessor:
         self.user_clusters = user_clusters
         self.cluster_preferences = cluster_preferences
         self.pois_df = pois_df
+        self.poi_peak_hours = poi_peak_hours
         self.ollama_manager = ollama_manager
         self.checkpoint_manager = checkpoint_manager
         self.results_manager = results_manager
@@ -1328,6 +1470,7 @@ class CardProcessor:
                     self.user_clusters,
                     self.cluster_preferences,
                     self.pois_df,
+                    self.poi_peak_hours,
                     card_id,
                     top_k=Config.TOP_K,
                     anchor_rule=Config.DEFAULT_ANCHOR_RULE
@@ -1514,11 +1657,21 @@ class VisitFileProcessor:
             for cid, pois in cluster_preferences.items():
                 logger.info(f"  Cluster {cid}: {' > '.join(pois)}")
 
+            # T1: Pre-compute POI peak hours
+            logger.info("Computing POI peak hours (T1)...")
+            poi_peak_hours = PromptBuilder.compute_poi_peak_hours(filtered_df)
+            logger.info(f"Peak hours computed for {len(poi_peak_hours)} POIs")
+
+            # Log sample peak hours
+            sample_pois = list(poi_peak_hours.keys())[:5]
+            for poi in sample_pois:
+                logger.info(f"  {poi}: peak hours = {poi_peak_hours[poi]}")
+
             user_clusters = pd.DataFrame({
                 "card_id": user_poi_matrix.index,
                 "cluster": clusters
             })
-            
+
             # Select cards to process
             eligible_cards = self._get_eligible_cards(filtered_df)
             
@@ -1549,6 +1702,7 @@ class VisitFileProcessor:
                 user_clusters,
                 cluster_preferences,
                 pois_df,
+                poi_peak_hours,
                 self.ollama_manager,
                 checkpoint_manager,
                 results_manager
