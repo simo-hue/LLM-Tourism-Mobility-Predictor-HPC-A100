@@ -30,7 +30,7 @@ class Config:
     """Centralized configuration to avoid global variables"""
     
     # Model configuration
-    MODEL_NAME = "mistral:7b" #llama3.1:8b - qwen2.5:7b - qwen2.5:14b - mixtral:8x7b - mistral:7b
+    MODEL_NAME = "mixtral:8x7b" #llama3.1:8b - qwen2.5:7b - qwen2.5:14b - mixtral:8x7b - mistral:7b - deepseek-coder_33b
     TOP_K = 5  # Number of POI predictions
     
     # HPC optimization parameters - OPTIMIZED FOR 4x A100
@@ -51,7 +51,7 @@ class Config:
     MAX_503_RETRIES = 20    # ✅ NUOVO: retry dedicati per 503
     
     # Anchor rule for POI selection
-    DEFAULT_ANCHOR_RULE = "penultimate"
+    DEFAULT_ANCHOR_RULE = "middle"
     
     # Parallelism - OPTIMIZED FOR A100 64GB CAPACITY
     MAX_CONCURRENT_PER_GPU = 3
@@ -59,7 +59,7 @@ class Config:
     # File paths
     OLLAMA_PORT_FILE = "ollama_ports.txt"
     LOG_DIR = Path(__file__).resolve().parent / "logs"
-    RESULTS_DIR = Path(__file__).resolve().parent / "results/penultimate/mistral_7b/with_geom_time_cluster/"
+    RESULTS_DIR = Path(__file__).resolve().parent / "results/middle/mixtral_8x7b/with_geom_time_cluster/"
     DATA_DIR = Path(__file__).resolve().parent / "data" / "verona"
     POI_FILE = DATA_DIR / "vc_site.csv"
 
@@ -1022,13 +1022,13 @@ class PromptBuilder:
             "minute": timestamp.minute,
             "is_weekend": is_weekend,
             "typical_hours": typical_hours,
-            "timestamp": timestamp  # Keep full timestamp for T6
+            "timestamp": timestamp  # Keep full timestamp for seasonality
         }
 
     @staticmethod
     def compute_poi_peak_hours(df: pd.DataFrame) -> Dict[str, List[int]]:
         """
-        T1: Calculate top 3 peak hours for each POI.
+        Calculate top 3 peak hours for each POI.
 
         This should be called ONCE during initialization, before processing cards.
 
@@ -1057,7 +1057,7 @@ class PromptBuilder:
     @staticmethod
     def extract_seasonality_features(timestamp: pd.Timestamp) -> Dict[str, str]:
         """
-        T6: Extract seasonal and weekly patterns.
+        Extract seasonal and weekly patterns.
 
         Args:
             timestamp: Current timestamp
@@ -1104,7 +1104,7 @@ class PromptBuilder:
         max_pois: int = 3
     ) -> str:
         """
-        T1: Generate timing hints for nearby POIs.
+        Generate timing hints for nearby POIs based on peak hours.
 
         Args:
             current_hour: Current hour of the day (0-23)
@@ -1223,7 +1223,7 @@ class PromptBuilder:
             for poi in nearby_pois
         ])
 
-        # Build temporal context string with T1 (Peak Hours) and T6 (Seasonality)
+        # Build temporal context string with Peak Hours and Seasonality
         temporal_context = ""
         if temporal_info:
             time_parts = []
@@ -1233,7 +1233,7 @@ class PromptBuilder:
                 typical_str = ",".join([f"{h}h" for h in temporal_info['typical_hours']])
                 time_parts.append(f"(usual {typical_str})")
 
-            # T6: Add seasonality context
+            # Add seasonality context
             if 'timestamp' in temporal_info:
                 seasonality = PromptBuilder.extract_seasonality_features(temporal_info['timestamp'])
                 season_str = f"{seasonality['season'].capitalize()} {seasonality['day_type']}, {seasonality['tourist_intensity']} season"
@@ -1241,7 +1241,7 @@ class PromptBuilder:
 
             temporal_context = f"Time: {' '.join(time_parts)}\n            "
 
-            # T1: Add POI peak hours timing
+            # Add POI peak hours timing
             poi_timing = PromptBuilder.format_poi_timing_context(
                 temporal_info['hour'],
                 nearby_pois,
@@ -1657,8 +1657,8 @@ class VisitFileProcessor:
             for cid, pois in cluster_preferences.items():
                 logger.info(f"  Cluster {cid}: {' > '.join(pois)}")
 
-            # T1: Pre-compute POI peak hours
-            logger.info("Computing POI peak hours (T1)...")
+            # Pre-compute POI peak hours
+            logger.info("Computing POI peak hours...")
             poi_peak_hours = PromptBuilder.compute_poi_peak_hours(filtered_df)
             logger.info(f"Peak hours computed for {len(poi_peak_hours)} POIs")
 
@@ -1746,7 +1746,7 @@ class VisitFileProcessor:
         
         # OPTIMIZED: Reduced stabilization time for faster startup
         logger.info("Waiting 60s for model stabilization...")
-        time.sleep(60)  # REDUCED: Faster startup with mistral:7b
+        time.sleep(60)  
         
         # ✅ NUOVO: Test pre-processing per verificare che tutto sia OK
         logger.info("Running pre-flight check on all hosts...")

@@ -1,0 +1,203 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}  % For mathematical formatting
+\usepackage{listings} % For code listings
+\usepackage{xcolor}   % For colors
+\usepackage{booktabs} % For professional tables
+
+% Configure listings package for better prompt display
+\lstset{
+  basicstyle=\footnotesize\ttfamily,
+  breaklines=true,
+  columns=flexible,
+  keepspaces=true,
+  showstringspaces=false,
+  frame=single,
+  captionpos=b,
+  aboveskip=10pt,
+  belowskip=10pt,
+  xleftmargin=10pt,
+  xrightmargin=10pt
+}
+
+\title{tmp}
+\author{Simone Mattioli}
+\date{October 2025}
+
+\begin{document}
+
+\maketitle
+
+\section{Experiments}
+
+\subsection{Experimental Infrastructure and Setup}
+
+All experiments were conducted on Leonardo, the Italian supercomputer operated by CINECA. Access to this state-of-the-art HPC infrastructure was granted through the IscrC\_LLM-Mob project allocation. Leonardo's Booster module features NVIDIA A100 GPUs with 64GB of VRAM memory per device, interconnected via NVIDIA NVLink and powered by dual-socket Intel Xeon Sapphire Rapids CPUs with 56 cores per socket. This configuration enables efficient parallel processing of large-scale mobility prediction tasks across multiple GPU instances.
+
+The computational infrastructure consists of:
+\begin{itemize}
+    \item \textbf{GPU Resources}: $4 \times$ NVIDIA A100 64GB GPUs with NVLink interconnect
+    \item \textbf{CPU Architecture}: $2 \times$ Intel Xeon Sapphire Rapids (112 total cores)
+    \item \textbf{Memory Configuration}: 512GB DDR5 system RAM + \\ 256GB GPU VRAM
+    \item \textbf{Model Deployment}: Ollama framework with multi-instance GPU distribution
+\end{itemize}
+
+\subsection{Multi-Model Comparative Framework}
+
+The experimental framework is designed for systematic comparative analysis across multiple Large Language Model architectures. While initial development and optimization utilized LLaMA 3.1 8B as the baseline model, the system supports evaluation of diverse LLM families through the Ollama infrastructure.
+
+\subsection{Hierarchical Prompt Engineering Strategies}
+
+We define four hierarchical prompting strategies, each building upon the previous to evaluate the incremental contribution of different contextual features on next-POI prediction accuracy. All strategies leverage K-means clustering ($k=7$) to segment tourists into behavioral profiles, but differ in how cluster information and contextual features are exploited.
+
+\begin{enumerate}
+
+\item \textbf{Baseline Strategy (POI Names Only):}
+The foundational approach provides the model with a chronologically ordered sequence of previously visited POIs, represented exclusively by their canonical names. The cluster ID is provided for reference but without explicit preference information.
+
+\begin{lstlisting}[caption=Baseline Prompt Template]
+Tourist cluster 3 in Verona.
+Visited POIs: Arena, Casa_Giulietta, Torre_Lamberti
+Current location: Duomo
+
+Suggest the 5 most likely next POIs considering typical
+tourist movement patterns in Verona.
+
+Respond ONLY in JSON format:
+{
+  "prediction": ["poi1", "poi2", "poi3", "poi4", "poi5"],
+  "reason": "brief explanation"
+}
+\end{lstlisting}
+
+\item \textbf{Geospatial Strategy (Names + Geographic Coordinates):}
+This strategy enriches each POI with precise geographic coordinates and implements a dynamically generated list of the nearest POIs ordered by Haversine distance. The system computes distances from the anchor POI to all unvisited locations, then filters results to include only the top 10 nearest POIs within a maximum 5km radius to optimize prompt length while maintaining geographical relevance and walkability constraints.
+
+\begin{lstlisting}[caption=Geospatial-Enhanced Prompt Template]
+Tourist cluster 3 in Verona.
+Visited: Arena, Casa_Giulietta, Torre_Lamberti
+Current: Duomo
+Nearby POIs: Museo_Castelvecchio (0.3km), Basilica_San_Zeno (0.8km),
+  Ponte_Pietra (1.2km), Teatro_Romano (1.4km), Giardino_Giusti (1.8km)
+
+Suggest 5 most likely next POIs considering cluster preferences,
+time and distances.
+
+Respond ONLY in JSON format:
+{
+  "prediction": ["poi1", "poi2", "poi3", "poi4", "poi5"],
+  "reason": "brief spatial reasoning"
+}
+\end{lstlisting}
+
+The distance calculation uses the Haversine formula (lines 724-751 in implementation) to compute great-circle distances between coordinates, ensuring accurate geographic proximity estimates for urban-scale tourism scenarios.
+
+\item \textbf{Geospatial-Temporal Strategy (Names + Coordinates + Timestamps):}
+This strategy integrates advanced temporal intelligence with the geospatial context. The system extracts comprehensive temporal features from visit timestamps and enriches prompts with two key temporal components:
+
+\textbf{POI Peak Hours:} Pre-computed peak visiting hours for each POI based on historical visit patterns. For each nearby POI, the system determines whether the current time coincides with peak hours or calculates the time until next peak, enabling time-aware recommendations (lines 1029-1147).
+
+\textbf{Seasonality Features:} Seasonal classification (winter/spring/summer/autumn), tourist intensity categorization (high/medium/low based on Verona tourism patterns), and day-type detection (weekday/weekend) to capture broader temporal dynamics (lines 1058-1097).
+
+\begin{lstlisting}[caption=Geospatial-Temporal Prompt Template]
+Tourist cluster 3 in Verona.
+Time: Mon 14:30 (usual 10h, 14h, 18h) [Summer weekend, high season]
+Timing: Museo_Castelvecchio (peak now), Torre_Lamberti (peak 15h),
+  Basilica_San_Zeno (peak 11h)
+Visited: Arena, Casa_Giulietta, Torre_Lamberti
+Current: Duomo
+Nearby POIs: Museo_Castelvecchio (0.3km), Basilica_San_Zeno (0.8km),
+  Ponte_Pietra (1.2km), Teatro_Romano (1.4km)
+
+Suggest 5 most likely next POIs considering cluster preferences,
+peak hours, seasonality, time and distances.
+
+Respond ONLY in JSON format:
+{
+  "prediction": ["poi1", "poi2", "poi3", "poi4", "poi5"],
+  "reason": "brief spatio-temporal reasoning"
+}
+\end{lstlisting}
+
+The temporal feature extraction (lines 979-1026) includes: hour-of-day (0-23), day-of-week, weekend detection, time-period classification (Morning: 6-11, Afternoon: 12-17, Evening: 18-22, Late/Early: otherwise), and user-specific typical visiting hours computed from their complete visit history.
+
+\item \textbf{Cluster-Preferences Strategy (Full Context + Behavioral Profiling):}
+This most sophisticated strategy combines all previous contextual features with explicit behavioral profiling through \textbf{cluster centroid analysis}. The key innovation lies in how cluster information is leveraged: rather than simply providing a cluster ID, the system extracts and communicates cluster-specific POI preferences in ranked format.
+
+\textbf{Cluster Preference Extraction:} After performing K-means clustering ($k=7$) on the user-POI interaction matrix (lines 1628-1638), the system extracts cluster centroids and inverse-transforms them from the scaled space to obtain interpretable POI affinity scores (lines 1640-1654). For each cluster, the top-5 POIs with highest centroid values are identified and formatted as a ranked preference list: \texttt{POI1 > POI2 > POI3 > POI4 > POI5}.
+
+This ranking is directly injected into the prompt (line 1256), enabling the LLM to align predictions with demonstrated behavioral patterns of similar tourists.
+
+\begin{lstlisting}[caption=Cluster-Preferences Prompt Template]
+Tourist cluster 3 (preference: Arena > Casa_Giulietta > Duomo >
+  Torre_Lamberti > Museo_Castelvecchio).
+Time: Mon 14:30 (usual 10h, 14h, 18h) [Summer weekend, high season]
+Timing: Museo_Castelvecchio (peak now), Torre_Lamberti (peak 15h),
+  Basilica_San_Zeno (peak 11h)
+Visited: Arena, Casa_Giulietta, Torre_Lamberti
+Current: Duomo
+Nearby POIs: Museo_Castelvecchio (0.3km), Basilica_San_Zeno (0.8km),
+  Ponte_Pietra (1.2km), Teatro_Romano (1.4km)
+
+Suggest 5 most likely next POIs considering cluster preferences,
+peak hours, seasonality, time and distances.
+
+Respond ONLY in JSON format:
+{
+  "prediction": ["poi1", "poi2", "poi3", "poi4", "poi5"],
+  "reason": "brief explanation"
+}
+\end{lstlisting}
+
+The cluster preferences are computed once during initialization (lines 1650-1658) and reused across all predictions, ensuring computational efficiency. The system logs cluster characterization for interpretability: each of the 7 clusters is associated with a distinct POI preference profile that captures different tourist typologies (e.g., cultural heritage enthusiasts, religious site visitors, panoramic viewpoint seekers).
+
+\end{enumerate}
+
+\subsection{Experimental Protocol and Anchor Selection Mechanism}
+
+Our evaluation adopts a systematic approach using the VeronaCard dataset, which provides complete tourist mobility trajectories spanning multiple years (2014-2023). The experimental protocol incorporates the following components:
+
+\begin{itemize}
+    \item \textbf{User Segmentation via Clustering:} Tourist behaviors are segmented using K-means clustering ($k=7$, StandardScaler normalization, $n\_init=10$) applied to user-POI visit frequency matrices (line 1628-1638). The clustering enables extraction of behavioral profiles and cluster-specific POI preferences for personalized prompting.
+
+    \item \textbf{Flexible Anchor Selection Mechanism:} We implement a configurable anchor selection system (lines 875-923) that determines the "current location" reference point within a trajectory. The system supports three anchor rules:
+    \begin{itemize}
+        \item \textbf{Penultimate} (default): Uses the second-to-last POI in the sequence as anchor, predicting the final visit. For a sequence $[POI_1, POI_2, ..., POI_{n-1}, POI_n]$, anchor is $POI_{n-1}$ and target is $POI_n$.
+        \item \textbf{Middle}: Uses the middle element as anchor with special handling. For full sequence length $n$, anchor index is $(n-1)/2$, ensuring the target (anchor+1) remains within bounds (lines 903-921).
+    \end{itemize}
+
+    The anchor mechanism includes validation logic to prevent out-of-bounds indices and ensure meaningful train-test splits. Default experiments use \texttt{anchor\_rule="middle"} (Config line 54) to balance context richness with prediction difficulty.
+
+    \item \textbf{Distance-Based POI Ranking:} Geospatial context generation (lines 926-976) uses Haversine distance calculations to rank unvisited POIs by proximity to the anchor location. The system dynamically filters POIs within a maximum 5km radius and returns the top-10 nearest candidates with computed distances, excluding already-visited locations to prevent trivial recommendations.
+
+    \item \textbf{Temporal Feature Pre-computation:} To optimize performance, POI peak hours are computed once globally across the entire dataset (lines 1660-1668) before individual trajectory processing. This pre-computation identifies the top-3 most frequent visiting hours for each POI, enabling efficient integration into prompts without per-card recomputation.
+
+    \item \textbf{Robust Checkpointing and Recovery:} The system implements incremental checkpointing (lines 1268-1334) with automatic state persistence every 1000 processed cards (Config line 39). Each processed card ID is appended to a checkpoint file, enabling intelligent resume via \texttt{--append} flag that skips completed predictions during HPC job restarts or failures.
+\end{itemize}
+
+\subsection{Evaluation Metrics and Quality Assurance}
+
+Our framework utilizes a comprehensive evaluation framework comprising multiple recommendation quality metrics, implemented with robust LLM response validation:
+
+\begin{itemize}
+    \item \textbf{Top-1 Accuracy:} $\text{Acc}_{@1} = \frac{1}{N}\sum_{i=1}^{N}\mathbf{1}\{y_i = \hat{y}_i^{(1)}\}$
+    \item \textbf{Top-k Hit Rate:} $\text{HR}_{@k} = \frac{1}{N}\sum_{i=1}^{N}\mathbf{1}\{y_i \in \{\hat{y}_i^{(1)}, \ldots, \hat{y}_i^{(k)}\}\}$
+    \item \textbf{Mean Reciprocal Rank:} $\text{MRR} = \frac{1}{N}\sum_{i=1}^{N}\frac{1}{\text{rank}_i}$
+    \item \textbf{Catalogue Coverage:} $\text{Coverage} = \frac{|\bigcup_{i}\{\hat{y}_i^{(1)}, \ldots, \hat{y}_i^{(k)}\}|}{|\mathcal{P}|}$
+\end{itemize}
+
+where $y_i$ represents the ground-truth next POI, $\hat{y}_i^{(j)}$ indicates the $j$-th ranked prediction, and $\mathcal{P}$ denotes the complete POI catalogue. Our primary evaluation focus is HR@5, which is most relevant for practical tourism recommendation system applications.
+
+The system additionally implements advanced JSON response validation, handling edge cases such as malformed responses, timeouts, and parsing errors, ensuring robustness when processing large-scale datasets with millions of LLM inference calls.
+
+The complete framework is implemented in Python 3.11+ with comprehensive logging (lines 67-95) and automatic checkpointing. The codebase supports parallel execution, append mode for incremental experiments, and single-file processing via command-line arguments.
+
+The main processing script (\texttt{veronacard\_mob\_with\_geom\_time\_cluster\_info.py}) is fully parameterized via command-line interface:
+\begin{itemize}
+    \item \texttt{--file <path>}: Process single dataset file
+    \item \texttt{--max-users <N>}: Limit processing to first N users (for testing)
+    \item \texttt{--append}: Resume from checkpoint (intelligent skip of completed cards)
+    \item \texttt{--force}: Ignore existing results and reprocess all data
+\end{itemize}
+
+\end{document}
