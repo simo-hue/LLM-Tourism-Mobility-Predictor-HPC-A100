@@ -4,3 +4,5 @@ venv/
 nome_ambiente/
 .vscode/*.pdf
 DOCUMENTAZIONE UFFICIALE/PRESENTAZIONE/
+notebook/cache/
+notebook/cache/*.pkl
