@@ -1,0 +1,53 @@
+2025-10-28 10:16:58 [INFO] Starting baseline test with strategy: NEAREST
+2025-10-28 10:16:58 [INFO] Results will be saved to: /leonardo_work/IscrC_LLM-Mob/LLM-Mob-As-Mobility-Interpreter/results/middle/baseline_heuristics
+2025-10-28 10:16:58 [INFO] Found 12 files to process
+2025-10-28 10:16:59 [INFO] Loaded 65892 completed cards from checkpoint
+2025-10-28 10:16:59 [INFO] File dati_2014 has 65892 completed cards
+2025-10-28 10:16:59 [INFO] Loaded 65892 completed cards from checkpoint
+2025-10-28 10:16:59 [INFO] File dati_2014 has 65892 completed cards
+2025-10-28 10:16:59 [INFO] Processing dati_2014.csv with strategy 'nearest'
+2025-10-28 10:16:59 [INFO] Loaded 65892 completed cards from checkpoint
+2025-10-28 10:16:59 [INFO] Loading and preprocessing data...
+2025-10-28 10:16:59 [INFO] Loaded 22 POIs from vc_site.csv
+2025-10-28 10:17:00 [INFO] Loaded 370377 visits from dati_2014.csv
+2025-10-28 10:17:01 [INFO] Valid visits after merge: 370377
+2025-10-28 10:17:01 [INFO] Multi-visit cards: 70236 / 71557
+2025-10-28 10:17:01 [INFO] Performing user clustering...
+2025-10-28 10:17:36 [INFO] Cluster preferences extracted (for 'popular' strategy).
+2025-10-28 10:17:36 [INFO] StrategyPredictor initialized with 22 POIs.
+2025-10-28 10:17:36 [INFO] Processing 0 cards
+2025-10-28 10:17:36 [INFO] No cards to process
+2025-10-28 10:17:36 [INFO] Loaded 66677 completed cards from checkpoint
+2025-10-28 10:17:36 [INFO] File dati_2015 has 66677 completed cards
+2025-10-28 10:17:36 [INFO] Loaded 66677 completed cards from checkpoint
+2025-10-28 10:17:36 [INFO] File dati_2015 has 66677 completed cards
+2025-10-28 10:17:36 [INFO] Processing dati_2015.csv with strategy 'nearest'
+2025-10-28 10:17:36 [INFO] Loaded 66677 completed cards from checkpoint
+2025-10-28 10:17:36 [INFO] Loading and preprocessing data...
+2025-10-28 10:17:36 [INFO] Loaded 22 POIs from vc_site.csv
+2025-10-28 10:17:38 [INFO] Loaded 369588 visits from dati_2015.csv
+2025-10-28 10:17:38 [INFO] Valid visits after merge: 369588
+2025-10-28 10:17:38 [INFO] Multi-visit cards: 71759 / 73424
+2025-10-28 10:17:38 [INFO] Performing user clustering...
+2025-10-28 10:18:03 [INFO] Cluster preferences extracted (for 'popular' strategy).
+2025-10-28 10:18:03 [INFO] StrategyPredictor initialized with 22 POIs.
+2025-10-28 10:18:03 [INFO] Processing 0 cards
+2025-10-28 10:18:03 [INFO] No cards to process
+2025-10-28 10:18:03 [INFO] Loaded 16185 completed cards from checkpoint
+2025-10-28 10:18:03 [INFO] File dati_2016 has 16185 completed cards
+2025-10-28 10:18:03 [INFO] Loaded 16185 completed cards from checkpoint
+2025-10-28 10:18:03 [INFO] File dati_2016 has 16185 completed cards
+2025-10-28 10:18:03 [INFO] Processing dati_2016.csv with strategy 'nearest'
+2025-10-28 10:18:03 [INFO] Loaded 16185 completed cards from checkpoint
+2025-10-28 10:18:03 [INFO] Loading and preprocessing data...
+2025-10-28 10:18:03 [INFO] Loaded 22 POIs from vc_site.csv
+2025-10-28 10:18:04 [INFO] Loaded 383517 visits from dati_2016.csv
+2025-10-28 10:18:04 [INFO] Valid visits after merge: 383517
+2025-10-28 10:18:04 [INFO] Multi-visit cards: 76452 / 78152
+2025-10-28 10:18:04 [INFO] Performing user clustering...
+2025-10-28 10:18:29 [INFO] Cluster preferences extracted (for 'popular' strategy).
+2025-10-28 10:18:29 [INFO] StrategyPredictor initialized with 22 POIs.
+2025-10-28 10:18:29 [INFO] Processing 54081 cards
+2025-10-28 10:18:29 [INFO] Using 64 CPU workers
+2025-10-28 10:20:21 [INFO] 
+Interrupted by user
