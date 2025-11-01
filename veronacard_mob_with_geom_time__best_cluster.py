@@ -30,7 +30,7 @@ class Config:
     """Centralized configuration to avoid global variables"""
     
     # Model configuration
-    MODEL_NAME = "llama3.1:8b" #llama3.1:8b - qwen2.5:7b - qwen2.5:14b - mixtral:8x7b - mistral:7b - deepseek-coder_33b
+    MODEL_NAME = "mistral:7b" #llama3.1:8b - qwen2.5:7b - qwen2.5:14b - mixtral:8x7b - mistral:7b - deepseek-coder:33b
     modello = MODEL_NAME.replace(":", "_")
     strategia = "with_geom_time_best_cluster"
     
@@ -50,11 +50,11 @@ class Config:
     CIRCUIT_BREAKER_THRESHOLD = 100
     
     # 503 specific handling
-    RETRY_ON_503_WAIT = 60  # ✅ NUOVO: attesa specifica per 503
-    MAX_503_RETRIES = 20    # ✅ NUOVO: retry dedicati per 503
+    RETRY_ON_503_WAIT = 60  
+    MAX_503_RETRIES = 20    
     
     # Anchor rule for POI selection
-    DEFAULT_ANCHOR_RULE = "middle"
+    DEFAULT_ANCHOR_RULE = "penultimate"
     
     # Parallelism - OPTIMIZED FOR A100 64GB CAPACITY
     MAX_CONCURRENT_PER_GPU = 3

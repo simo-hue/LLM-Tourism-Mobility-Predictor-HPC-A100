@@ -1,0 +1,512 @@
+2025/11/01 07:16:47 routes.go:1158: INFO server config env="map[CUDA_VISIBLE_DEVICES:1 GPU_DEVICE_ORDINAL:0,1,2,3 HIP_VISIBLE_DEVICES: HSA_OVERRIDE_GFX_VERSION: HTTPS_PROXY: HTTP_PROXY: NO_PROXY: OLLAMA_DEBUG:false OLLAMA_FLASH_ATTENTION:true OLLAMA_GPU_OVERHEAD:0 OLLAMA_HOST:http://127.0.0.1:39002 OLLAMA_INTEL_GPU:false OLLAMA_KEEP_ALIVE:8h0m0s OLLAMA_LLM_LIBRARY:cuda_v12 OLLAMA_LOAD_TIMEOUT:5m0s OLLAMA_MAX_LOADED_MODELS:1 OLLAMA_MAX_QUEUE:16 OLLAMA_MODELS:/leonardo_work/IscrC_LLM-Mob/.ollama/models OLLAMA_MULTIUSER_CACHE:false OLLAMA_NOHISTORY:false OLLAMA_NOPRUNE:false OLLAMA_NUM_PARALLEL:4 OLLAMA_ORIGINS:[http://localhost https://localhost http://localhost:* https://localhost:* http://127.0.0.1 https://127.0.0.1 http://127.0.0.1:* https://127.0.0.1:* http://0.0.0.0 https://0.0.0.0 http://0.0.0.0:* https://0.0.0.0:* app://* file://* tauri://*] OLLAMA_SCHED_SPREAD:false OLLAMA_TMPDIR:/leonardo_work/IscrC_LLM-Mob/tmp_ollama_23741293 ROCR_VISIBLE_DEVICES:0,1,2,3 http_proxy: https_proxy: no_proxy:]"
+time=2025-11-01T07:16:47.838+01:00 level=INFO source=images.go:754 msg="total blobs: 42"
+time=2025-11-01T07:16:47.843+01:00 level=INFO source=images.go:761 msg="total unused blobs removed: 0"
+time=2025-11-01T07:16:47.847+01:00 level=INFO source=routes.go:1205 msg="Listening on 127.0.0.1:39002 (version 0.3.14)"
+time=2025-11-01T07:16:47.848+01:00 level=WARN source=common.go:254 msg="process still running, skipping" pid=621351 path=/leonardo_work/IscrC_LLM-Mob/tmp_ollama_23741293/ollama80089195/ollama.pid
+time=2025-11-01T07:16:47.850+01:00 level=INFO source=common.go:135 msg="extracting embedded files" dir=/leonardo_work/IscrC_LLM-Mob/tmp_ollama_23741293/ollama4053613982/runners
+time=2025-11-01T07:16:57.685+01:00 level=INFO source=common.go:49 msg="Dynamic LLM libraries" runners="[cpu cpu_avx cpu_avx2 cuda_v11 cuda_v12 rocm_v60102]"
+time=2025-11-01T07:16:57.685+01:00 level=INFO source=gpu.go:221 msg="looking for compatible GPUs"
+time=2025-11-01T07:16:57.809+01:00 level=INFO source=types.go:123 msg="inference compute" id=GPU-a9c86f6c-ec6c-7907-ebe8-e7aee9d5d327 library=cuda variant=v12 compute=8.0 driver=12.2 name="NVIDIA A100-SXM-64GB" total="63.4 GiB" available="63.0 GiB"
+[GIN] 2025/11/01 - 07:19:35 | 200 |    7.946419ms |       127.0.0.1 | GET      "/api/tags"
+time=2025-11-01T07:19:36.033+01:00 level=INFO source=sched.go:714 msg="new model will fit in available VRAM in single GPU, loading" model=/leonardo_work/IscrC_LLM-Mob/.ollama/models/blobs/sha256-f2dc41fa964b42bfe34e9fb09c0acdcfbfd6e52f1332930b4eacc9d6ad1c6cd2 gpu=GPU-a9c86f6c-ec6c-7907-ebe8-e7aee9d5d327 parallel=4 available=67595927552 required="27.3 GiB"
+time=2025-11-01T07:19:36.119+01:00 level=INFO source=server.go:105 msg="system memory" total="502.9 GiB" free="487.9 GiB" free_swap="0 B"
+time=2025-11-01T07:19:36.129+01:00 level=INFO source=memory.go:326 msg="offload to cuda" layers.requested=-1 layers.model=33 layers.offload=33 layers.split="" memory.available="[63.0 GiB]" memory.gpu_overhead="0 B" memory.required.full="27.3 GiB" memory.required.partial="27.3 GiB" memory.required.kv="1.0 GiB" memory.required.allocations="[27.3 GiB]" memory.weights.total="25.5 GiB" memory.weights.repeating="25.4 GiB" memory.weights.nonrepeating="102.6 MiB" memory.graph.full="560.0 MiB" memory.graph.partial="838.0 MiB"
+time=2025-11-01T07:19:36.252+01:00 level=INFO source=server.go:172 msg="user override" OLLAMA_LLM_LIBRARY=cuda_v12 path=/leonardo_work/IscrC_LLM-Mob/tmp_ollama_23741293/ollama4053613982/runners/cuda_v12
+time=2025-11-01T07:19:36.287+01:00 level=INFO source=server.go:388 msg="starting llama server" cmd="/leonardo_work/IscrC_LLM-Mob/tmp_ollama_23741293/ollama4053613982/runners/cuda_v12/ollama_llama_server --model /leonardo_work/IscrC_LLM-Mob/.ollama/models/blobs/sha256-f2dc41fa964b42bfe34e9fb09c0acdcfbfd6e52f1332930b4eacc9d6ad1c6cd2 --ctx-size 8192 --batch-size 512 --embedding --n-gpu-layers 33 --threads 32 --flash-attn --parallel 4 --port 41789"
+time=2025-11-01T07:19:36.288+01:00 level=INFO source=sched.go:449 msg="loaded runners" count=1
+time=2025-11-01T07:19:36.297+01:00 level=INFO source=server.go:587 msg="waiting for llama runner to start responding"
+time=2025-11-01T07:19:36.314+01:00 level=INFO source=server.go:621 msg="waiting for server to become available" status="llm server error"
+INFO [main] starting c++ runner | tid="23139466489856" timestamp=1761977986
+INFO [main] build info | build=10 commit="3a8c75e" tid="23139466489856" timestamp=1761977986
+INFO [main] system info | n_threads=32 n_threads_batch=32 system_info="AVX = 1 | AVX_VNNI = 0 | AVX2 = 0 | AVX512 = 0 | AVX512_VBMI = 0 | AVX512_VNNI = 0 | AVX512_BF16 = 0 | FMA = 0 | NEON = 0 | SVE = 0 | ARM_FMA = 0 | F16C = 0 | FP16_VA = 0 | RISCV_VECT = 0 | WASM_SIMD = 0 | BLAS = 1 | SSE3 = 1 | SSSE3 = 1 | VSX = 0 | MATMUL_INT8 = 0 | LLAMAFILE = 1 | " tid="23139466489856" timestamp=1761977986 total_threads=32
+INFO [main] HTTP server listening | hostname="127.0.0.1" n_threads_http="31" port="41789" tid="23139466489856" timestamp=1761977986
+llama_model_loader: loaded meta data with 40 key-value pairs and 323 tensors from /leonardo_work/IscrC_LLM-Mob/.ollama/models/blobs/sha256-f2dc41fa964b42bfe34e9fb09c0acdcfbfd6e52f1332930b4eacc9d6ad1c6cd2 (version GGUF V3 (latest))
+llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+llama_model_loader: - kv   0:                       general.architecture str              = llama
+llama_model_loader: - kv   1:                               general.type str              = model
+llama_model_loader: - kv   2:                               general.name str              = Mixtral 8x7B Instruct v0.1
+llama_model_loader: - kv   3:                            general.version str              = v0.1
+llama_model_loader: - kv   4:                           general.finetune str              = Instruct
+llama_model_loader: - kv   5:                           general.basename str              = Mixtral
+llama_model_loader: - kv   6:                         general.size_label str              = 8x7B
+llama_model_loader: - kv   7:                            general.license str              = apache-2.0
+llama_model_loader: - kv   8:                   general.base_model.count u32              = 1
+llama_model_loader: - kv   9:                  general.base_model.0.name str              = Mixtral 8x7B v0.1
+llama_model_loader: - kv  10:               general.base_model.0.version str              = v0.1
+llama_model_loader: - kv  11:          general.base_model.0.organization str              = Mistralai
+llama_model_loader: - kv  12:              general.base_model.0.repo_url str              = https://huggingface.co/mistralai/Mixt...
+llama_model_loader: - kv  13:                          general.languages arr[str,5]       = ["fr", "it", "de", "es", "en"]
+llama_model_loader: - kv  14:                          llama.block_count u32              = 32
+llama_model_loader: - kv  15:                       llama.context_length u32              = 32768
+llama_model_loader: - kv  16:                     llama.embedding_length u32              = 4096
+llama_model_loader: - kv  17:                  llama.feed_forward_length u32              = 14336
+llama_model_loader: - kv  18:                 llama.attention.head_count u32              = 32
+llama_model_loader: - kv  19:              llama.attention.head_count_kv u32              = 8
+llama_model_loader: - kv  20:                       llama.rope.freq_base f32              = 1000000.000000
+llama_model_loader: - kv  21:     llama.attention.layer_norm_rms_epsilon f32              = 0.000010
+llama_model_loader: - kv  22:                         llama.expert_count u32              = 8
+llama_model_loader: - kv  23:                    llama.expert_used_count u32              = 2
+llama_model_loader: - kv  24:                          general.file_type u32              = 2
+llama_model_loader: - kv  25:                           llama.vocab_size u32              = 32000
+llama_model_loader: - kv  26:                 llama.rope.dimension_count u32              = 128
+llama_model_loader: - kv  27:                       tokenizer.ggml.model str              = llama
+llama_model_loader: - kv  28:                         tokenizer.ggml.pre str              = default
+llama_model_loader: - kv  29:                      tokenizer.ggml.tokens arr[str,32000]   = ["<unk>", "<s>", "</s>", "<0x00>", "<...
+llama_model_loader: - kv  30:                      tokenizer.ggml.scores arr[f32,32000]   = [-1000.000000, -1000.000000, -1000.00...
+llama_model_loader: - kv  31:                  tokenizer.ggml.token_type arr[i32,32000]   = [3, 3, 3, 6, 6, 6, 6, 6, 6, 6, 6, 6, ...
+llama_model_loader: - kv  32:                tokenizer.ggml.bos_token_id u32              = 1
+llama_model_loader: - kv  33:                tokenizer.ggml.eos_token_id u32              = 2
+llama_model_loader: - kv  34:            tokenizer.ggml.unknown_token_id u32              = 0
+llama_model_loader: - kv  35:               tokenizer.ggml.add_bos_token bool             = true
+llama_model_loader: - kv  36:               tokenizer.ggml.add_eos_token bool             = false
+llama_model_loader: - kv  37:                    tokenizer.chat_template str              = {%- if messages[0]['role'] == 'system...
+llama_model_loader: - kv  38:            tokenizer.ggml.add_space_prefix bool             = false
+llama_model_loader: - kv  39:               general.quantization_version u32              = 2
+llama_model_loader: - type  f32:   97 tensors
+llama_model_loader: - type q4_0:  161 tensors
+llama_model_loader: - type q8_0:   64 tensors
+llama_model_loader: - type q6_K:    1 tensors
+llm_load_vocab: special_eos_id is not in special_eog_ids - the tokenizer config may be incorrect
+llm_load_vocab: special tokens cache size = 3
+time=2025-11-01T07:19:46.341+01:00 level=INFO source=server.go:621 msg="waiting for server to become available" status="llm server loading model"
+llm_load_vocab: token to piece cache size = 0.1637 MB
+llm_load_print_meta: format           = GGUF V3 (latest)
+llm_load_print_meta: arch             = llama
+llm_load_print_meta: vocab type       = SPM
+llm_load_print_meta: n_vocab          = 32000
+llm_load_print_meta: n_merges         = 0
+llm_load_print_meta: vocab_only       = 0
+llm_load_print_meta: n_ctx_train      = 32768
+llm_load_print_meta: n_embd           = 4096
+llm_load_print_meta: n_layer          = 32
+llm_load_print_meta: n_head           = 32
+llm_load_print_meta: n_head_kv        = 8
+llm_load_print_meta: n_rot            = 128
+llm_load_print_meta: n_swa            = 0
+llm_load_print_meta: n_embd_head_k    = 128
+llm_load_print_meta: n_embd_head_v    = 128
+llm_load_print_meta: n_gqa            = 4
+llm_load_print_meta: n_embd_k_gqa     = 1024
+llm_load_print_meta: n_embd_v_gqa     = 1024
+llm_load_print_meta: f_norm_eps       = 0.0e+00
+llm_load_print_meta: f_norm_rms_eps   = 1.0e-05
+llm_load_print_meta: f_clamp_kqv      = 0.0e+00
+llm_load_print_meta: f_max_alibi_bias = 0.0e+00
+llm_load_print_meta: f_logit_scale    = 0.0e+00
+llm_load_print_meta: n_ff             = 14336
+llm_load_print_meta: n_expert         = 8
+llm_load_print_meta: n_expert_used    = 2
+llm_load_print_meta: causal attn      = 1
+llm_load_print_meta: pooling type     = 0
+llm_load_print_meta: rope type        = 0
+llm_load_print_meta: rope scaling     = linear
+llm_load_print_meta: freq_base_train  = 1000000.0
+llm_load_print_meta: freq_scale_train = 1
+llm_load_print_meta: n_ctx_orig_yarn  = 32768
+llm_load_print_meta: rope_finetuned   = unknown
+llm_load_print_meta: ssm_d_conv       = 0
+llm_load_print_meta: ssm_d_inner      = 0
+llm_load_print_meta: ssm_d_state      = 0
+llm_load_print_meta: ssm_dt_rank      = 0
+llm_load_print_meta: ssm_dt_b_c_rms   = 0
+llm_load_print_meta: model type       = 8x7B
+llm_load_print_meta: model ftype      = Q4_0
+llm_load_print_meta: model params     = 46.70 B
+llm_load_print_meta: model size       = 24.63 GiB (4.53 BPW) 
+llm_load_print_meta: general.name     = Mixtral 8x7B Instruct v0.1
+llm_load_print_meta: BOS token        = 1 '<s>'
+llm_load_print_meta: EOS token        = 2 '</s>'
+llm_load_print_meta: UNK token        = 0 '<unk>'
+llm_load_print_meta: LF token         = 13 '<0x0A>'
+llm_load_print_meta: EOG token        = 2 '</s>'
+llm_load_print_meta: max token length = 48
+ggml_cuda_init: GGML_CUDA_FORCE_MMQ:    no
+ggml_cuda_init: GGML_CUDA_FORCE_CUBLAS: no
+ggml_cuda_init: found 1 CUDA devices:
+  Device 0: NVIDIA A100-SXM-64GB, compute capability 8.0, VMM: yes
+llm_load_tensors: ggml ctx size =    0.29 MiB
+time=2025-11-01T07:19:47.794+01:00 level=INFO source=server.go:621 msg="waiting for server to become available" status="llm server not responding"
+time=2025-11-01T07:19:48.045+01:00 level=INFO source=server.go:621 msg="waiting for server to become available" status="llm server loading model"
+time=2025-11-01T07:19:49.498+01:00 level=INFO source=server.go:621 msg="waiting for server to become available" status="llm server not responding"
+time=2025-11-01T07:19:49.854+01:00 level=INFO source=server.go:621 msg="waiting for server to become available" status="llm server loading model"
+llm_load_tensors: offloading 32 repeating layers to GPU
+llm_load_tensors: offloading non-repeating layers to GPU
+llm_load_tensors: offloaded 33/33 layers to GPU
+llm_load_tensors:        CPU buffer size =    70.31 MiB
+llm_load_tensors:      CUDA0 buffer size = 25147.55 MiB
+llama_new_context_with_model: n_ctx      = 8192
+llama_new_context_with_model: n_batch    = 512
+llama_new_context_with_model: n_ubatch   = 512
+llama_new_context_with_model: flash_attn = 1
+llama_new_context_with_model: freq_base  = 1000000.0
+llama_new_context_with_model: freq_scale = 1
+llama_kv_cache_init:      CUDA0 KV buffer size =  1024.00 MiB
+llama_new_context_with_model: KV self size  = 1024.00 MiB, K (f16):  512.00 MiB, V (f16):  512.00 MiB
+llama_new_context_with_model:  CUDA_Host  output buffer size =     0.55 MiB
+llama_new_context_with_model:      CUDA0 compute buffer size =   144.00 MiB
+llama_new_context_with_model:  CUDA_Host compute buffer size =    24.01 MiB
+llama_new_context_with_model: graph nodes  = 1383
+llama_new_context_with_model: graph splits = 2
+INFO [main] model loaded | tid="23139466489856" timestamp=1761977994
+time=2025-11-01T07:19:54.617+01:00 level=INFO source=server.go:626 msg="llama runner started in 18.33 seconds"
+[GIN] 2025/11/01 - 07:19:54 | 200 | 18.861826408s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:20:46 | 200 |     7.09664ms |       127.0.0.1 | GET      "/api/tags"
+time=2025-11-01T07:22:39.072+01:00 level=INFO source=sched.go:714 msg="new model will fit in available VRAM in single GPU, loading" model=/leonardo_work/IscrC_LLM-Mob/.ollama/models/blobs/sha256-f5074b1221da0f5a2910d33b642efa5b9eb58cfdddca1c79e16d7ad28aa2b31f gpu=GPU-a9c86f6c-ec6c-7907-ebe8-e7aee9d5d327 parallel=4 available=67595927552 required="6.2 GiB"
+time=2025-11-01T07:22:39.154+01:00 level=INFO source=server.go:105 msg="system memory" total="502.9 GiB" free="487.1 GiB" free_swap="0 B"
+time=2025-11-01T07:22:39.154+01:00 level=INFO source=memory.go:326 msg="offload to cuda" layers.requested=-1 layers.model=33 layers.offload=33 layers.split="" memory.available="[63.0 GiB]" memory.gpu_overhead="0 B" memory.required.full="6.2 GiB" memory.required.partial="6.2 GiB" memory.required.kv="1.0 GiB" memory.required.allocations="[6.2 GiB]" memory.weights.total="4.9 GiB" memory.weights.repeating="4.8 GiB" memory.weights.nonrepeating="105.0 MiB" memory.graph.full="560.0 MiB" memory.graph.partial="585.0 MiB"
+time=2025-11-01T07:22:39.158+01:00 level=INFO source=server.go:172 msg="user override" OLLAMA_LLM_LIBRARY=cuda_v12 path=/leonardo_work/IscrC_LLM-Mob/tmp_ollama_23741293/ollama4053613982/runners/cuda_v12
+time=2025-11-01T07:22:39.158+01:00 level=INFO source=server.go:388 msg="starting llama server" cmd="/leonardo_work/IscrC_LLM-Mob/tmp_ollama_23741293/ollama4053613982/runners/cuda_v12/ollama_llama_server --model /leonardo_work/IscrC_LLM-Mob/.ollama/models/blobs/sha256-f5074b1221da0f5a2910d33b642efa5b9eb58cfdddca1c79e16d7ad28aa2b31f --ctx-size 8192 --batch-size 512 --embedding --n-gpu-layers 33 --threads 32 --flash-attn --parallel 4 --port 34409"
+time=2025-11-01T07:22:39.159+01:00 level=INFO source=sched.go:449 msg="loaded runners" count=1
+time=2025-11-01T07:22:39.159+01:00 level=INFO source=server.go:587 msg="waiting for llama runner to start responding"
+time=2025-11-01T07:22:39.159+01:00 level=INFO source=server.go:621 msg="waiting for server to become available" status="llm server error"
+INFO [main] starting c++ runner | tid="22745958178816" timestamp=1761978159
+INFO [main] build info | build=10 commit="3a8c75e" tid="22745958178816" timestamp=1761978159
+INFO [main] system info | n_threads=32 n_threads_batch=32 system_info="AVX = 1 | AVX_VNNI = 0 | AVX2 = 0 | AVX512 = 0 | AVX512_VBMI = 0 | AVX512_VNNI = 0 | AVX512_BF16 = 0 | FMA = 0 | NEON = 0 | SVE = 0 | ARM_FMA = 0 | F16C = 0 | FP16_VA = 0 | RISCV_VECT = 0 | WASM_SIMD = 0 | BLAS = 1 | SSE3 = 1 | SSSE3 = 1 | VSX = 0 | MATMUL_INT8 = 0 | LLAMAFILE = 1 | " tid="22745958178816" timestamp=1761978159 total_threads=32
+INFO [main] HTTP server listening | hostname="127.0.0.1" n_threads_http="31" port="34409" tid="22745958178816" timestamp=1761978159
+llama_model_loader: loaded meta data with 25 key-value pairs and 291 tensors from /leonardo_work/IscrC_LLM-Mob/.ollama/models/blobs/sha256-f5074b1221da0f5a2910d33b642efa5b9eb58cfdddca1c79e16d7ad28aa2b31f (version GGUF V3 (latest))
+llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+llama_model_loader: - kv   0:                       general.architecture str              = llama
+llama_model_loader: - kv   1:                               general.name str              = Mistral-7B-Instruct-v0.3
+llama_model_loader: - kv   2:                          llama.block_count u32              = 32
+llama_model_loader: - kv   3:                       llama.context_length u32              = 32768
+llama_model_loader: - kv   4:                     llama.embedding_length u32              = 4096
+llama_model_loader: - kv   5:                  llama.feed_forward_length u32              = 14336
+llama_model_loader: - kv   6:                 llama.attention.head_count u32              = 32
+llama_model_loader: - kv   7:              llama.attention.head_count_kv u32              = 8
+llama_model_loader: - kv   8:                       llama.rope.freq_base f32              = 1000000.000000
+llama_model_loader: - kv   9:     llama.attention.layer_norm_rms_epsilon f32              = 0.000010
+llama_model_loader: - kv  10:                          general.file_type u32              = 15
+llama_model_loader: - kv  11:                           llama.vocab_size u32              = 32768
+llama_model_loader: - kv  12:                 llama.rope.dimension_count u32              = 128
+llama_model_loader: - kv  13:                       tokenizer.ggml.model str              = llama
+llama_model_loader: - kv  14:                         tokenizer.ggml.pre str              = default
+llama_model_loader: - kv  15:                      tokenizer.ggml.tokens arr[str,32768]   = ["<unk>", "<s>", "</s>", "[INST]", "[...
+llama_model_loader: - kv  16:                      tokenizer.ggml.scores arr[f32,32768]   = [0.000000, 0.000000, 0.000000, 0.0000...
+llama_model_loader: - kv  17:                  tokenizer.ggml.token_type arr[i32,32768]   = [2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, ...
+llama_model_loader: - kv  18:                tokenizer.ggml.bos_token_id u32              = 1
+llama_model_loader: - kv  19:                tokenizer.ggml.eos_token_id u32              = 2
+llama_model_loader: - kv  20:            tokenizer.ggml.unknown_token_id u32              = 0
+llama_model_loader: - kv  21:               tokenizer.ggml.add_bos_token bool             = true
+llama_model_loader: - kv  22:               tokenizer.ggml.add_eos_token bool             = false
+llama_model_loader: - kv  23:                    tokenizer.chat_template str              = {{ bos_token }}{% for message in mess...
+llama_model_loader: - kv  24:               general.quantization_version u32              = 2
+llama_model_loader: - type  f32:   65 tensors
+llama_model_loader: - type q4_K:  193 tensors
+llama_model_loader: - type q6_K:   33 tensors
+llm_load_vocab: special_eos_id is not in special_eog_ids - the tokenizer config may be incorrect
+llm_load_vocab: special tokens cache size = 771
+llm_load_vocab: token to piece cache size = 0.1731 MB
+llm_load_print_meta: format           = GGUF V3 (latest)
+llm_load_print_meta: arch             = llama
+llm_load_print_meta: vocab type       = SPM
+llm_load_print_meta: n_vocab          = 32768
+llm_load_print_meta: n_merges         = 0
+llm_load_print_meta: vocab_only       = 0
+llm_load_print_meta: n_ctx_train      = 32768
+llm_load_print_meta: n_embd           = 4096
+llm_load_print_meta: n_layer          = 32
+llm_load_print_meta: n_head           = 32
+llm_load_print_meta: n_head_kv        = 8
+llm_load_print_meta: n_rot            = 128
+llm_load_print_meta: n_swa            = 0
+llm_load_print_meta: n_embd_head_k    = 128
+llm_load_print_meta: n_embd_head_v    = 128
+llm_load_print_meta: n_gqa            = 4
+llm_load_print_meta: n_embd_k_gqa     = 1024
+llm_load_print_meta: n_embd_v_gqa     = 1024
+llm_load_print_meta: f_norm_eps       = 0.0e+00
+llm_load_print_meta: f_norm_rms_eps   = 1.0e-05
+llm_load_print_meta: f_clamp_kqv      = 0.0e+00
+llm_load_print_meta: f_max_alibi_bias = 0.0e+00
+llm_load_print_meta: f_logit_scale    = 0.0e+00
+llm_load_print_meta: n_ff             = 14336
+llm_load_print_meta: n_expert         = 0
+llm_load_print_meta: n_expert_used    = 0
+llm_load_print_meta: causal attn      = 1
+llm_load_print_meta: pooling type     = 0
+llm_load_print_meta: rope type        = 0
+llm_load_print_meta: rope scaling     = linear
+llm_load_print_meta: freq_base_train  = 1000000.0
+llm_load_print_meta: freq_scale_train = 1
+llm_load_print_meta: n_ctx_orig_yarn  = 32768
+llm_load_print_meta: rope_finetuned   = unknown
+llm_load_print_meta: ssm_d_conv       = 0
+llm_load_print_meta: ssm_d_inner      = 0
+llm_load_print_meta: ssm_d_state      = 0
+llm_load_print_meta: ssm_dt_rank      = 0
+llm_load_print_meta: ssm_dt_b_c_rms   = 0
+llm_load_print_meta: model type       = 7B
+llm_load_print_meta: model ftype      = Q4_K - Medium
+llm_load_print_meta: model params     = 7.25 B
+llm_load_print_meta: model size       = 4.07 GiB (4.83 BPW) 
+llm_load_print_meta: general.name     = Mistral-7B-Instruct-v0.3
+llm_load_print_meta: BOS token        = 1 '<s>'
+llm_load_print_meta: EOS token        = 2 '</s>'
+llm_load_print_meta: UNK token        = 0 '<unk>'
+llm_load_print_meta: LF token         = 781 '<0x0A>'
+llm_load_print_meta: EOG token        = 2 '</s>'
+llm_load_print_meta: max token length = 48
+ggml_cuda_init: GGML_CUDA_FORCE_MMQ:    no
+ggml_cuda_init: GGML_CUDA_FORCE_CUBLAS: no
+ggml_cuda_init: found 1 CUDA devices:
+  Device 0: NVIDIA A100-SXM-64GB, compute capability 8.0, VMM: yes
+llm_load_tensors: ggml ctx size =    0.27 MiB
+time=2025-11-01T07:22:39.410+01:00 level=INFO source=server.go:621 msg="waiting for server to become available" status="llm server loading model"
+llm_load_tensors: offloading 32 repeating layers to GPU
+llm_load_tensors: offloading non-repeating layers to GPU
+llm_load_tensors: offloaded 33/33 layers to GPU
+llm_load_tensors:        CPU buffer size =    72.00 MiB
+llm_load_tensors:      CUDA0 buffer size =  4097.52 MiB
+[GIN] 2025/11/01 - 07:23:16 | 200 |    7.616738ms |       127.0.0.1 | GET      "/api/tags"
+llama_new_context_with_model: n_ctx      = 8192
+llama_new_context_with_model: n_batch    = 512
+llama_new_context_with_model: n_ubatch   = 512
+llama_new_context_with_model: flash_attn = 1
+llama_new_context_with_model: freq_base  = 1000000.0
+llama_new_context_with_model: freq_scale = 1
+llama_kv_cache_init:      CUDA0 KV buffer size =  1024.00 MiB
+llama_new_context_with_model: KV self size  = 1024.00 MiB, K (f16):  512.00 MiB, V (f16):  512.00 MiB
+llama_new_context_with_model:  CUDA_Host  output buffer size =     0.56 MiB
+llama_new_context_with_model:      CUDA0 compute buffer size =    88.00 MiB
+llama_new_context_with_model:  CUDA_Host compute buffer size =    24.01 MiB
+llama_new_context_with_model: graph nodes  = 903
+llama_new_context_with_model: graph splits = 2
+INFO [main] model loaded | tid="22745958178816" timestamp=1761978197
+time=2025-11-01T07:23:17.534+01:00 level=INFO source=server.go:626 msg="llama runner started in 38.38 seconds"
+[GIN] 2025/11/01 - 07:23:17 | 200 | 39.192675316s |       127.0.0.1 | POST     "/api/chat"
+time=2025-11-01T07:24:26.606+01:00 level=INFO source=sched.go:714 msg="new model will fit in available VRAM in single GPU, loading" model=/leonardo_work/IscrC_LLM-Mob/.ollama/models/blobs/sha256-f5074b1221da0f5a2910d33b642efa5b9eb58cfdddca1c79e16d7ad28aa2b31f gpu=GPU-a9c86f6c-ec6c-7907-ebe8-e7aee9d5d327 parallel=4 available=67595927552 required="6.7 GiB"
+time=2025-11-01T07:24:26.798+01:00 level=INFO source=server.go:105 msg="system memory" total="502.9 GiB" free="487.6 GiB" free_swap="0 B"
+time=2025-11-01T07:24:26.798+01:00 level=INFO source=memory.go:326 msg="offload to cuda" layers.requested=-1 layers.model=33 layers.offload=33 layers.split="" memory.available="[63.0 GiB]" memory.gpu_overhead="0 B" memory.required.full="6.7 GiB" memory.required.partial="6.7 GiB" memory.required.kv="1.0 GiB" memory.required.allocations="[6.7 GiB]" memory.weights.total="4.9 GiB" memory.weights.repeating="4.8 GiB" memory.weights.nonrepeating="105.0 MiB" memory.graph.full="1.1 GiB" memory.graph.partial="1.1 GiB"
+time=2025-11-01T07:24:26.802+01:00 level=INFO source=server.go:172 msg="user override" OLLAMA_LLM_LIBRARY=cuda_v12 path=/leonardo_work/IscrC_LLM-Mob/tmp_ollama_23741293/ollama4053613982/runners/cuda_v12
+time=2025-11-01T07:24:26.802+01:00 level=INFO source=server.go:388 msg="starting llama server" cmd="/leonardo_work/IscrC_LLM-Mob/tmp_ollama_23741293/ollama4053613982/runners/cuda_v12/ollama_llama_server --model /leonardo_work/IscrC_LLM-Mob/.ollama/models/blobs/sha256-f5074b1221da0f5a2910d33b642efa5b9eb58cfdddca1c79e16d7ad28aa2b31f --ctx-size 8192 --batch-size 1024 --embedding --n-gpu-layers 33 --threads 32 --flash-attn --parallel 4 --port 45231"
+time=2025-11-01T07:24:26.802+01:00 level=INFO source=sched.go:449 msg="loaded runners" count=1
+time=2025-11-01T07:24:26.802+01:00 level=INFO source=server.go:587 msg="waiting for llama runner to start responding"
+time=2025-11-01T07:24:26.803+01:00 level=INFO source=server.go:621 msg="waiting for server to become available" status="llm server error"
+INFO [main] starting c++ runner | tid="22573403328512" timestamp=1761978266
+INFO [main] build info | build=10 commit="3a8c75e" tid="22573403328512" timestamp=1761978266
+INFO [main] system info | n_threads=32 n_threads_batch=32 system_info="AVX = 1 | AVX_VNNI = 0 | AVX2 = 0 | AVX512 = 0 | AVX512_VBMI = 0 | AVX512_VNNI = 0 | AVX512_BF16 = 0 | FMA = 0 | NEON = 0 | SVE = 0 | ARM_FMA = 0 | F16C = 0 | FP16_VA = 0 | RISCV_VECT = 0 | WASM_SIMD = 0 | BLAS = 1 | SSE3 = 1 | SSSE3 = 1 | VSX = 0 | MATMUL_INT8 = 0 | LLAMAFILE = 1 | " tid="22573403328512" timestamp=1761978266 total_threads=32
+INFO [main] HTTP server listening | hostname="127.0.0.1" n_threads_http="31" port="45231" tid="22573403328512" timestamp=1761978266
+llama_model_loader: loaded meta data with 25 key-value pairs and 291 tensors from /leonardo_work/IscrC_LLM-Mob/.ollama/models/blobs/sha256-f5074b1221da0f5a2910d33b642efa5b9eb58cfdddca1c79e16d7ad28aa2b31f (version GGUF V3 (latest))
+llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+llama_model_loader: - kv   0:                       general.architecture str              = llama
+llama_model_loader: - kv   1:                               general.name str              = Mistral-7B-Instruct-v0.3
+llama_model_loader: - kv   2:                          llama.block_count u32              = 32
+llama_model_loader: - kv   3:                       llama.context_length u32              = 32768
+llama_model_loader: - kv   4:                     llama.embedding_length u32              = 4096
+llama_model_loader: - kv   5:                  llama.feed_forward_length u32              = 14336
+llama_model_loader: - kv   6:                 llama.attention.head_count u32              = 32
+llama_model_loader: - kv   7:              llama.attention.head_count_kv u32              = 8
+llama_model_loader: - kv   8:                       llama.rope.freq_base f32              = 1000000.000000
+llama_model_loader: - kv   9:     llama.attention.layer_norm_rms_epsilon f32              = 0.000010
+llama_model_loader: - kv  10:                          general.file_type u32              = 15
+llama_model_loader: - kv  11:                           llama.vocab_size u32              = 32768
+llama_model_loader: - kv  12:                 llama.rope.dimension_count u32              = 128
+llama_model_loader: - kv  13:                       tokenizer.ggml.model str              = llama
+llama_model_loader: - kv  14:                         tokenizer.ggml.pre str              = default
+llama_model_loader: - kv  15:                      tokenizer.ggml.tokens arr[str,32768]   = ["<unk>", "<s>", "</s>", "[INST]", "[...
+llama_model_loader: - kv  16:                      tokenizer.ggml.scores arr[f32,32768]   = [0.000000, 0.000000, 0.000000, 0.0000...
+llama_model_loader: - kv  17:                  tokenizer.ggml.token_type arr[i32,32768]   = [2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, ...
+llama_model_loader: - kv  18:                tokenizer.ggml.bos_token_id u32              = 1
+llama_model_loader: - kv  19:                tokenizer.ggml.eos_token_id u32              = 2
+llama_model_loader: - kv  20:            tokenizer.ggml.unknown_token_id u32              = 0
+llama_model_loader: - kv  21:               tokenizer.ggml.add_bos_token bool             = true
+llama_model_loader: - kv  22:               tokenizer.ggml.add_eos_token bool             = false
+llama_model_loader: - kv  23:                    tokenizer.chat_template str              = {{ bos_token }}{% for message in mess...
+llama_model_loader: - kv  24:               general.quantization_version u32              = 2
+llama_model_loader: - type  f32:   65 tensors
+llama_model_loader: - type q4_K:  193 tensors
+llama_model_loader: - type q6_K:   33 tensors
+llm_load_vocab: special_eos_id is not in special_eog_ids - the tokenizer config may be incorrect
+llm_load_vocab: special tokens cache size = 771
+llm_load_vocab: token to piece cache size = 0.1731 MB
+llm_load_print_meta: format           = GGUF V3 (latest)
+llm_load_print_meta: arch             = llama
+llm_load_print_meta: vocab type       = SPM
+llm_load_print_meta: n_vocab          = 32768
+llm_load_print_meta: n_merges         = 0
+llm_load_print_meta: vocab_only       = 0
+llm_load_print_meta: n_ctx_train      = 32768
+llm_load_print_meta: n_embd           = 4096
+llm_load_print_meta: n_layer          = 32
+llm_load_print_meta: n_head           = 32
+llm_load_print_meta: n_head_kv        = 8
+llm_load_print_meta: n_rot            = 128
+llm_load_print_meta: n_swa            = 0
+llm_load_print_meta: n_embd_head_k    = 128
+llm_load_print_meta: n_embd_head_v    = 128
+llm_load_print_meta: n_gqa            = 4
+llm_load_print_meta: n_embd_k_gqa     = 1024
+llm_load_print_meta: n_embd_v_gqa     = 1024
+llm_load_print_meta: f_norm_eps       = 0.0e+00
+llm_load_print_meta: f_norm_rms_eps   = 1.0e-05
+llm_load_print_meta: f_clamp_kqv      = 0.0e+00
+llm_load_print_meta: f_max_alibi_bias = 0.0e+00
+llm_load_print_meta: f_logit_scale    = 0.0e+00
+llm_load_print_meta: n_ff             = 14336
+llm_load_print_meta: n_expert         = 0
+llm_load_print_meta: n_expert_used    = 0
+llm_load_print_meta: causal attn      = 1
+llm_load_print_meta: pooling type     = 0
+llm_load_print_meta: rope type        = 0
+llm_load_print_meta: rope scaling     = linear
+llm_load_print_meta: freq_base_train  = 1000000.0
+llm_load_print_meta: freq_scale_train = 1
+llm_load_print_meta: n_ctx_orig_yarn  = 32768
+llm_load_print_meta: rope_finetuned   = unknown
+llm_load_print_meta: ssm_d_conv       = 0
+llm_load_print_meta: ssm_d_inner      = 0
+llm_load_print_meta: ssm_d_state      = 0
+llm_load_print_meta: ssm_dt_rank      = 0
+llm_load_print_meta: ssm_dt_b_c_rms   = 0
+llm_load_print_meta: model type       = 7B
+llm_load_print_meta: model ftype      = Q4_K - Medium
+llm_load_print_meta: model params     = 7.25 B
+llm_load_print_meta: model size       = 4.07 GiB (4.83 BPW) 
+llm_load_print_meta: general.name     = Mistral-7B-Instruct-v0.3
+llm_load_print_meta: BOS token        = 1 '<s>'
+llm_load_print_meta: EOS token        = 2 '</s>'
+llm_load_print_meta: UNK token        = 0 '<unk>'
+llm_load_print_meta: LF token         = 781 '<0x0A>'
+llm_load_print_meta: EOG token        = 2 '</s>'
+llm_load_print_meta: max token length = 48
+ggml_cuda_init: GGML_CUDA_FORCE_MMQ:    no
+ggml_cuda_init: GGML_CUDA_FORCE_CUBLAS: no
+ggml_cuda_init: found 1 CUDA devices:
+  Device 0: NVIDIA A100-SXM-64GB, compute capability 8.0, VMM: yes
+llm_load_tensors: ggml ctx size =    0.27 MiB
+time=2025-11-01T07:24:27.054+01:00 level=INFO source=server.go:621 msg="waiting for server to become available" status="llm server loading model"
+llm_load_tensors: offloading 32 repeating layers to GPU
+llm_load_tensors: offloading non-repeating layers to GPU
+llm_load_tensors: offloaded 33/33 layers to GPU
+llm_load_tensors:        CPU buffer size =    72.00 MiB
+llm_load_tensors:      CUDA0 buffer size =  4097.52 MiB
+llama_new_context_with_model: n_ctx      = 8192
+llama_new_context_with_model: n_batch    = 1024
+llama_new_context_with_model: n_ubatch   = 512
+llama_new_context_with_model: flash_attn = 1
+llama_new_context_with_model: freq_base  = 1000000.0
+llama_new_context_with_model: freq_scale = 1
+llama_kv_cache_init:      CUDA0 KV buffer size =  1024.00 MiB
+llama_new_context_with_model: KV self size  = 1024.00 MiB, K (f16):  512.00 MiB, V (f16):  512.00 MiB
+llama_new_context_with_model:  CUDA_Host  output buffer size =     0.56 MiB
+llama_new_context_with_model:      CUDA0 compute buffer size =    88.00 MiB
+llama_new_context_with_model:  CUDA_Host compute buffer size =    24.01 MiB
+llama_new_context_with_model: graph nodes  = 903
+llama_new_context_with_model: graph splits = 2
+INFO [main] model loaded | tid="22573403328512" timestamp=1761978338
+time=2025-11-01T07:25:38.525+01:00 level=INFO source=server.go:626 msg="llama runner started in 71.72 seconds"
+[GIN] 2025/11/01 - 07:25:41 | 200 |         1m15s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:25:41 | 200 |         1m15s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:25:41 | 200 |         1m15s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:25:43 | 200 |  1.421893195s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:25:43 | 200 |  1.798562184s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:25:44 | 200 |  1.872403369s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:25:45 | 200 |  1.853535477s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:25:45 | 200 |  1.723525913s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:25:46 | 200 |   1.51719135s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:25:46 | 200 |  2.341076125s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:25:46 | 200 |  1.366739897s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:25:47 | 200 |  1.453038457s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:25:48 | 200 |  1.801818895s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:25:48 | 200 |  1.387785384s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:25:49 | 200 |  1.569819125s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:25:50 | 200 |  1.925722434s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:25:51 | 200 |  1.657086303s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:25:51 | 200 |  1.834990792s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:25:52 | 200 |  1.745709087s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:25:53 | 200 |  2.085569182s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:25:53 | 200 |   2.03409666s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:25:54 | 200 |  2.271121884s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:25:55 | 200 |  1.890848494s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:25:55 | 200 |  2.724528146s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:25:55 | 200 |  1.803659695s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:25:56 | 200 |  1.777736397s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:25:57 | 200 |  1.930580951s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:25:57 | 200 |  1.893461131s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:25:58 | 200 |   1.92989077s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:25:58 | 200 |  1.716157266s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:25:59 | 200 |  1.810833107s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:00 | 200 |  1.775519717s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:01 | 200 |  1.787910488s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:01 | 200 |  2.956575287s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:02 | 200 |  1.787139556s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:02 | 200 |  2.372074426s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:03 | 200 |  1.781002418s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:03 | 200 |  1.461604997s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:04 | 200 |   1.32576419s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:05 | 200 |  1.808258477s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:05 | 200 |  1.455052618s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:06 | 200 |  1.590351892s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:07 | 200 |  1.919334985s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:07 | 200 |  1.574474698s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:08 | 200 |  1.784117657s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:08 | 200 |  1.423001161s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:09 | 200 |  1.608655423s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:09 | 200 |  1.371799967s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:10 | 200 |  1.186033948s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:11 | 200 |  1.564965831s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:12 | 200 |  1.973414542s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:12 | 200 |  1.822949219s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:13 | 200 |  2.156276114s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:13 | 200 |   1.53722238s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:14 | 200 |  2.292790266s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:15 | 200 |  1.837731231s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:16 | 200 |   1.72537236s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:16 | 200 |  1.426936187s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:16 | 200 |    7.324329ms |       127.0.0.1 | GET      "/api/tags"
+[GIN] 2025/11/01 - 07:26:17 | 200 |  1.799698468s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:17 | 200 |  1.458286423s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:18 | 200 |  2.735358367s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:19 | 200 |  1.885852001s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:19 | 200 |  2.150933355s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:20 | 200 |  1.994453803s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:21 | 200 |  2.246963883s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:21 | 200 |  1.496461261s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:22 | 200 |  1.756487218s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:22 | 200 |  1.606081448s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:22 | 200 |    1.4808551s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:24 | 200 |   1.70599623s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:24 | 200 |  1.939523353s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:25 | 200 |  1.941523842s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:26 | 200 |  1.822589335s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:26 | 200 |  2.098126692s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:27 | 200 |  2.130535024s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:28 | 200 |  2.418240514s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:28 | 200 |  1.840953088s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:28 | 200 |  1.574483359s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:29 | 200 |  1.660349285s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:30 | 200 |  1.470255759s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:30 | 200 |  1.362106585s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:31 | 200 |  1.472120663s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:31 | 200 |  1.481348963s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:33 | 200 |  2.169659373s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:33 | 200 |  1.970371032s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:34 | 200 |  1.990592367s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:34 | 200 |  1.845760319s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:35 | 200 |  1.758077884s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:35 | 200 |  1.472581328s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:36 | 200 |  1.672838645s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:37 | 200 |  1.923922946s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:37 | 200 |  2.029643306s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:38 | 200 |  1.836862496s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:39 | 200 |  1.830538095s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:39 | 200 |  1.448337227s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:40 | 200 |  1.743996217s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:41 | 200 |  1.519203245s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:41 | 200 |  2.491519289s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:42 | 200 |  1.685725026s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:42 | 200 |  1.914186037s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:43 | 200 |  1.682873557s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:44 | 200 |  1.986362823s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:44 | 200 |  1.794523862s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:44 | 200 |  1.635783668s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:46 | 200 |  1.528357081s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:46 | 200 |  1.952238651s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:47 | 200 |  1.883495417s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:48 | 200 |  1.475237917s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:48 | 200 |  2.161430825s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:49 | 200 |   1.91037418s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:49 | 200 |  1.774446282s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:49 | 200 |  1.591407081s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:51 | 200 |   1.85198861s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/11/01 - 07:26:51 | 200 |  1.552933868s |       127.0.0.1 | POST     "/api/chat"

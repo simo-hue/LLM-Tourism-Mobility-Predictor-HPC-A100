@@ -1,0 +1,192 @@
+🚀 VERONA CARD - GEOM + TEMPORAL + CLUSTER VERSION
+================================================
+⚠️ ATTENZIONE: Questo script aspetterà INDEFINITAMENTE il caricamento
+Job ID: 23741293
+Nodo: lrdn2693.leonardo.local
+Data: Sat Nov  1 07:13:42 CET 2025
+
+📦 Setup ambiente HPC...
+Loading python/3.11.6--gcc--8.5.0
+  Loading requirement: bzip2/1.0.8-gp5wcz5 libmd/1.0.4-wja3f5q
+    libbsd/0.11.7-cgxjopl expat/2.5.0-bptl3xw ncurses/6.4-asx3jea
+    readline/8.2-nyw6mp6 gdbm/1.23-fs6otck libiconv/1.17-d7yvx2s
+    xz/5.4.1-hubmwr5 zlib-ng/2.1.4-6htiapk libxml2/2.10.3-5eeeokp
+    pigz/2.7-bopr5vp zstd/1.5.5-gawytfl tar/1.34-amqus5s gettext/0.22.3-2g7elif
+    libffi/3.4.4-6r7brdq libxcrypt/4.4.35-ss2rzin sqlite/3.43.2
+    util-linux-uuid/2.38.1-jkdi7kv
+✅ Python: Python 3.11.6
+✅ CUDA: Cuda compilation tools, release 12.3, V12.3.103
+
+🔍 GPU DETECTION:
+0, NVIDIA A100-SXM-64GB, 65536 MiB, 44
+1, NVIDIA A100-SXM-64GB, 65536 MiB, 43
+2, NVIDIA A100-SXM-64GB, 65536 MiB, 42
+3, NVIDIA A100-SXM-64GB, 65536 MiB, 43
+
+📁 Directory temporanea: /leonardo_work/IscrC_LLM-Mob/tmp_ollama_23741293
+💾 Spazio disponibile: 717GB
+
+🧹 Cleanup preventivo...
+
+🚀 AVVIO SISTEMA OLLAMA
+========================
+
+🔧 Avvio GPU 0 su porta 39001...
+✅ GPU 0 PID: 621351 (NO TIMEOUT)
+⏳ GPU 0 è MASTER - attesa caricamento modello SENZA LIMITI...
+   🌐 API risponde, test modello...
+   ✅ GPU 0 PRONTA dopo 1 tentativi!
+
+✅ GPU 0 completamente operativa con modello caricato
+⏳ Pausa 60s per stabilizzazione...
+
+🚀 Avvio GPU secondarie...
+
+🔧 Avvio GPU 1 su porta 39002...
+✅ GPU 1 PID: 621448 (NO TIMEOUT)
+
+🔧 Avvio GPU 2 su porta 39003...
+✅ GPU 2 PID: 621485 (NO TIMEOUT)
+
+🔧 Avvio GPU 3 su porta 39004...
+✅ GPU 3 PID: 621521 (NO TIMEOUT)
+⏳ Attesa finale stabilizzazione sistema per mixtral:8x7b (60s)...
+
+🔍 VERIFICA FINALE SISTEMA
+===========================
+GPU 0 (porta 39001): ✅ OPERATIVA
+GPU 1 (porta 39002): ✅ OPERATIVA
+GPU 2 (porta 39003): ✅ OPERATIVA
+GPU 3 (porta 39004): ✅ OPERATIVA
+
+📊 RISULTATO: 4/4 GPU operative
+✅ Porte salvate: 39001,39002,39003,39004
+📊 Starting Advanced GPU Monitor (ogni 180s)
+
+🐍 AVVIO PYTHON - TEMPORAL + GEOM + CLUSTER VERSION (Strategy 4)
+==================================================================
+
+/leonardo_work/IscrC_LLM-Mob/venv/lib/python3.11/site-packages/sklearn/utils/_param_validation.py:14: UserWarning: A NumPy version >=1.23.5 and <2.3.0 is required for this version of SciPy (detected version 2.3.3)
+  from scipy.sparse import csr_matrix, issparse
+2025-11-01 07:20:46 [INFO] Initializing Ollama connection manager...
+2025-11-01 07:20:46 [WARNING] HostHealthMonitor initialized with empty host list
+2025-11-01 07:20:46 [INFO] Setting up connections...
+2025-11-01 07:20:46 [INFO] Multi-GPU configuration: 4 instances
+2025-11-01 07:20:46 [INFO] Initialized with 4 hosts
+2025-11-01 07:20:46 [INFO] Waiting for Ollama services to start...
+2025-11-01 07:20:46 [INFO] Checking host 1/4: http://127.0.0.1:39001
+2025-11-01 07:20:46 [INFO] Host http://127.0.0.1:39001 is ready
+2025-11-01 07:20:46 [INFO] Checking host 2/4: http://127.0.0.1:39002
+2025-11-01 07:20:46 [INFO] Host http://127.0.0.1:39002 is ready
+2025-11-01 07:20:46 [INFO] Checking host 3/4: http://127.0.0.1:39003
+2025-11-01 07:20:46 [INFO] Host http://127.0.0.1:39003 is ready
+2025-11-01 07:20:46 [INFO] Checking host 4/4: http://127.0.0.1:39004
+2025-11-01 07:20:46 [INFO] Host http://127.0.0.1:39004 is ready
+2025-11-01 07:20:46 [INFO] All Ollama services are ready!
+2025-11-01 07:20:46 [INFO] Found 12 files to process
+2025-11-01 07:20:46 [INFO] Processing dati_2014.csv
+2025-11-01 07:20:46 [INFO] Loading and preprocessing data...
+2025-11-01 07:20:46 [INFO] Loaded 22 POIs from vc_site.csv
+2025-11-01 07:20:48 [INFO] Loaded 370377 visits from dati_2014.csv
+2025-11-01 07:20:48 [INFO] Valid visits after merge: 370377
+/leonardo_work/IscrC_LLM-Mob/LLM-Mob-As-Mobility-Interpreter/veronacard_mob_with_geom_time__best_cluster.py:851: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  unique_pois_per_card = df.groupby("card_id")["name_short"].nunique()
+2025-11-01 07:20:48 [INFO] Multi-visit cards: 70236 / 71557
+2025-11-01 07:20:48 [INFO] Performing user clustering...
+2025-11-01 07:20:54 [INFO] Cluster preferences extracted:
+2025-11-01 07:20:54 [INFO]   Cluster 0: Torre Lamberti > Casa Giulietta > Arena > Castelvecchio > Palazzo della Ragione
+2025-11-01 07:20:54 [INFO]   Cluster 1: Museo Storia > Arena > Casa Giulietta > Torre Lamberti > Castelvecchio
+2025-11-01 07:20:54 [INFO]   Cluster 2: Casa Giulietta > Arena > Castelvecchio > Santa Anastasia > Duomo
+2025-11-01 07:20:54 [INFO]   Cluster 3: Casa Giulietta > Santa Anastasia > Torre Lamberti > Arena > Duomo
+2025-11-01 07:20:54 [INFO]   Cluster 4: Arena > Castelvecchio > Santa Anastasia > Torre Lamberti > Duomo
+2025-11-01 07:20:54 [INFO]   Cluster 5: AMO > Arena > Santa Anastasia > Casa Giulietta > Torre Lamberti
+2025-11-01 07:20:54 [INFO]   Cluster 6: Museo Africano > Castelvecchio > Casa Giulietta > Arena > Torre Lamberti
+2025-11-01 07:20:54 [INFO] Computing POI peak hours...
+2025-11-01 07:20:55 [INFO] Peak hours computed for 21 POIs
+2025-11-01 07:20:55 [INFO]   San Zeno: peak hours = [10, 11, 12]
+2025-11-01 07:20:55 [INFO]   Giardino Giusti: peak hours = [11, 12, 15]
+2025-11-01 07:20:55 [INFO]   Santa Anastasia: peak hours = [13, 14, 15]
+2025-11-01 07:20:55 [INFO]   Castelvecchio: peak hours = [11, 15, 16]
+2025-11-01 07:20:55 [INFO]   Duomo: peak hours = [13, 14, 15]
+/leonardo_work/IscrC_LLM-Mob/LLM-Mob-As-Mobility-Interpreter/veronacard_mob_with_geom_time__best_cluster.py:1731: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  card_visit_counts = filtered_df.groupby("card_id").size()
+2025-11-01 07:20:55 [INFO] Processing 65892 cards
+2025-11-01 07:20:55 [INFO] Using 12 workers for 4 healthy hosts
+2025-11-01 07:20:55 [INFO] Waiting 60s for model stabilization...
+2025-11-01 07:21:55 [INFO] Running pre-flight check on all hosts...
+2025-11-01 07:22:38 [INFO] ✅ Pre-flight check passed for http://127.0.0.1:39001
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📊 GPU STATUS - 2025-11-01 07:23:15
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+GPU 0: 💤 IDLE
+  Compute:   0% | Memory:   0% ( 5750/ 65536 MB)
+  Temp: 45°C | Power:  79.46 W
+
+GPU 1: 💤 IDLE
+  Compute:   0% | Memory:   0% ( 4578/ 65536 MB)
+  Temp: 44°C | Power:  77.84 W
+
+GPU 2: 💤 IDLE
+  Compute:   0% | Memory:   0% ( 26866/ 65536 MB)
+  Temp: 43°C | Power:  77.36 W
+
+GPU 3: 💤 IDLE
+  Compute:   0% | Memory:   0% ( 26866/ 65536 MB)
+  Temp: 44°C | Power:  79.43 W
+
+🔄 Processi Ollama:
+  GPU 0 (PID 621351): ✅ CPU: 4.2% | RAM: 0.2GB | Port: 39001
+    └─ API: ✅ Responsive
+  GPU 1 (PID 621448): ✅ CPU: 5.5% | RAM: 0.2GB | Port: 39002
+    └─ API: ✅ Responsive
+  GPU 2 (PID 621485): ✅ CPU: 6.0% | RAM: 0.2GB | Port: 39003
+    └─ API: ✅ Responsive
+  GPU 3 (PID 621521): ✅ CPU: 6.8% | RAM: 0.2GB | Port: 39004
+    └─ API: ✅ Responsive
+
+🐍 Python Processing (Temporal + Geom + Cluster):
+  Cards processed: 0
+0
+  Errors: 0
+0
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2025-11-01 07:23:17 [INFO] ✅ Pre-flight check passed for http://127.0.0.1:39002
+2025-11-01 07:23:51 [INFO] ✅ Pre-flight check passed for http://127.0.0.1:39003
+2025-11-01 07:24:25 [INFO] ✅ Pre-flight check passed for http://127.0.0.1:39004
+Processing cards:   0%|          | 0/65892 [00:00<?, ?card/s]Processing cards:   0%|          | 1/65892 [01:14<1367:04:42, 74.69s/card]Processing cards:   0%|          | 2/65892 [01:15<567:14:49, 30.99s/card] Processing cards:   0%|          | 3/65892 [01:15<309:30:39, 16.91s/card]Processing cards:   0%|          | 6/65892 [01:15<105:19:56,  5.76s/card]Processing cards:   0%|          | 8/65892 [01:15<66:08:53,  3.61s/card] Processing cards:   0%|          | 10/65892 [01:16<43:44:47,  2.39s/card]Processing cards:   0%|          | 12/65892 [01:16<29:41:52,  1.62s/card]Processing cards:   0%|          | 13/65892 [01:16<24:19:27,  1.33s/card]Processing cards:   0%|          | 14/65892 [01:16<20:16:42,  1.11s/card]Processing cards:   0%|          | 18/65892 [01:17<10:24:30,  1.76card/s]Processing cards:   0%|          | 19/65892 [01:17<9:04:33,  2.02card/s] Processing cards:   0%|          | 22/65892 [01:18<6:43:04,  2.72card/s]Processing cards:   0%|          | 24/65892 [01:18<5:49:30,  3.14card/s]Processing cards:   0%|          | 26/65892 [01:18<4:48:56,  3.80card/s]Processing cards:   0%|          | 28/65892 [01:19<4:24:53,  4.14card/s]Processing cards:   0%|          | 31/65892 [01:19<3:03:19,  5.99card/s]Processing cards:   0%|          | 33/65892 [01:19<3:46:04,  4.86card/s]Processing cards:   0%|          | 34/65892 [01:20<3:52:01,  4.73card/s]Processing cards:   0%|          | 36/65892 [01:20<3:03:07,  5.99card/s]Processing cards:   0%|          | 37/65892 [01:20<2:59:03,  6.13card/s]Processing cards:   0%|          | 39/65892 [01:20<2:18:29,  7.93card/s]Processing cards:   0%|          | 41/65892 [01:20<2:54:50,  6.28card/s]Processing cards:   0%|          | 42/65892 [01:21<2:51:14,  6.41card/s]Processing cards:   0%|          | 44/65892 [01:21<3:21:12,  5.45card/s]Processing cards:   0%|          | 46/65892 [01:21<2:54:07,  6.30card/s]Processing cards:   0%|          | 47/65892 [01:21<2:53:49,  6.31card/s]Processing cards:   0%|          | 48/65892 [01:22<3:22:39,  5.42card/s]Processing cards:   0%|          | 50/65892 [01:22<3:02:18,  6.02card/s]Processing cards:   0%|          | 52/65892 [01:22<2:17:54,  7.96card/s]Processing cards:   0%|          | 54/65892 [01:23<3:00:10,  6.09card/s]Processing cards:   0%|          | 55/65892 [01:23<3:06:28,  5.88card/s]Processing cards:   0%|          | 57/65892 [01:23<2:22:26,  7.70card/s]Processing cards:   0%|          | 59/65892 [01:23<1:54:52,  9.55card/s]Processing cards:   0%|          | 61/65892 [01:23<2:33:37,  7.14card/s]Processing cards:   0%|          | 63/65892 [01:24<3:12:39,  5.69card/s]Processing cards:   0%|          | 65/65892 [01:24<2:50:15,  6.44card/s]Processing cards:   0%|          | 67/65892 [01:24<2:43:36,  6.71card/s]Processing cards:   0%|          | 68/65892 [01:25<2:38:07,  6.94card/s]Processing cards:   0%|          | 69/65892 [01:25<2:57:57,  6.16card/s]Processing cards:   0%|          | 70/65892 [01:25<2:43:35,  6.71card/s]Processing cards:   0%|          | 72/65892 [01:25<2:21:46,  7.74card/s]Processing cards:   0%|          | 73/65892 [01:25<2:49:59,  6.45card/s]Processing cards:   0%|          | 74/65892 [01:25<2:38:26,  6.92card/s]Processing cards:   0%|          | 75/65892 [01:26<2:49:17,  6.48card/s]Processing cards:   0%|          | 76/65892 [01:26<2:58:24,  6.15card/s]Processing cards:   0%|          | 78/65892 [01:26<3:47:57,  4.81card/s]Processing cards:   0%|          | 79/65892 [01:27<3:48:47,  4.79card/s]Processing cards:   0%|          | 82/65892 [01:27<2:12:42,  8.27card/s]Processing cards:   0%|          | 84/65892 [01:27<2:17:33,  7.97card/s]Processing cards:   0%|          | 86/65892 [01:27<2:53:00,  6.34card/s]Processing cards:   0%|          | 87/65892 [01:27<2:43:22,  6.71card/s]Processing cards:   0%|          | 88/65892 [01:28<3:01:00,  6.06card/s]Processing cards:   0%|          | 89/65892 [01:28<3:31:16,  5.19card/s]Processing cards:   0%|          | 90/65892 [01:28<3:24:32,  5.36card/s]Processing cards:   0%|          | 92/65892 [01:28<2:46:41,  6.58card/s]Processing cards:   0%|          | 93/65892 [01:29<2:53:14,  6.33card/s]Processing cards:   0%|          | 94/65892 [01:29<2:41:46,  6.78card/s]Processing cards:   0%|          | 96/65892 [01:29<3:06:23,  5.88card/s]Processing cards:   0%|          | 98/65892 [01:29<2:21:10,  7.77card/s]Processing cards:   0%|          | 100/65892 [01:29<1:56:40,  9.40card/s]Processing cards:   0%|          | 102/65892 [01:30<2:59:02,  6.12card/s]Processing cards:   0%|          | 104/65892 [01:30<2:34:43,  7.09card/s]Processing cards:   0%|          | 105/65892 [01:30<3:03:32,  5.97card/s]Processing cards:   0%|          | 107/65892 [01:31<2:49:29,  6.47card/s]Processing cards:   0%|          | 108/65892 [01:31<2:56:10,  6.22card/s]Processing cards:   0%|          | 110/65892 [01:31<2:49:38,  6.46card/s]Processing cards:   0%|          | 113/65892 [01:31<2:19:55,  7.84card/s]Processing cards:   0%|          | 114/65892 [01:32<3:21:28,  5.44card/s]Processing cards:   0%|          | 115/65892 [01:32<3:11:30,  5.72card/s]Processing cards:   0%|          | 116/65892 [01:32<3:09:58,  5.77card/s]Processing cards:   0%|          | 118/65892 [01:32<2:22:12,  7.71card/s]Processing cards:   0%|          | 119/65892 [01:32<2:33:40,  7.13card/s]Processing cards:   0%|          | 121/65892 [01:33<2:31:03,  7.26card/s]Processing cards:   0%|          | 122/65892 [01:33<2:48:51,  6.49card/s]Processing cards:   0%|          | 124/65892 [01:33<3:11:02,  5.74card/s]Processing cards:   0%|          | 125/65892 [01:34<3:36:13,  5.07card/s]Processing cards:   0%|          | 127/65892 [01:34<2:41:20,  6.79card/s]Processing cards:   0%|          | 128/65892 [01:34<2:30:48,  7.27card/s]Processing cards:   0%|          | 129/65892 [01:34<2:29:26,  7.33card/s]Processing cards:   0%|          | 131/65892 [01:34<2:55:39,  6.24card/s]Processing cards:   0%|          | 132/65892 [01:35<2:59:42,  6.10card/s]Processing cards:   0%|          | 133/65892 [01:35<3:00:02,  6.09card/s]Processing cards:   0%|          | 135/65892 [01:35<2:51:04,  6.41card/s]Processing cards:   0%|          | 136/65892 [01:35<3:06:57,  5.86card/s]Processing cards:   0%|          | 137/65892 [01:35<3:01:53,  6.03card/s]Processing cards:   0%|          | 138/65892 [01:35<2:53:53,  6.30card/s]Processing cards:   0%|          | 139/65892 [01:36<3:05:41,  5.90card/s]Processing cards:   0%|          | 140/65892 [01:36<2:57:54,  6.16card/s]Processing cards:   0%|          | 141/65892 [01:36<3:16:31,  5.58card/s]Processing cards:   0%|          | 142/65892 [01:36<2:55:45,  6.23card/s]Processing cards:   0%|          | 144/65892 [01:36<2:04:24,  8.81card/s]Processing cards:   0%|          | 145/65892 [01:36<2:37:07,  6.97card/s]Processing cards:   0%|          | 147/65892 [01:37<2:37:20,  6.96card/s]Processing cards:   0%|          | 148/65892 [01:37<2:37:02,  6.98card/s]Processing cards:   0%|          | 150/65892 [01:37<3:22:38,  5.41card/s]Processing cards:   0%|          | 152/65892 [01:38<3:00:10,  6.08card/s]Processing cards:   0%|          | 153/65892 [01:38<3:48:54,  4.79card/s]Processing cards:   0%|          | 156/65892 [01:38<2:55:17,  6.25card/s]Processing cards:   0%|          | 159/65892 [01:39<2:11:10,  8.35card/s]Processing cards:   0%|          | 160/65892 [01:39<2:27:33,  7.42card/s]Processing cards:   0%|          | 161/65892 [01:39<2:24:50,  7.56card/s]Processing cards:   0%|          | 163/65892 [01:40<3:45:27,  4.86card/s]Processing cards:   0%|          | 165/65892 [01:40<2:55:04,  6.26card/s]Processing cards:   0%|          | 167/65892 [01:40<3:02:08,  6.01card/s]Processing cards:   0%|          | 169/65892 [01:40<2:24:22,  7.59card/s]Processing cards:   0%|          | 171/65892 [01:40<2:15:39,  8.07card/s]Processing cards:   0%|          | 173/65892 [01:41<2:38:05,  6.93card/s]Processing cards:   0%|          | 174/65892 [01:41<2:35:39,  7.04card/s]Processing cards:   0%|          | 175/65892 [01:42<4:18:31,  4.24card/s]Processing cards:   0%|          | 177/65892 [01:42<3:24:10,  5.36card/s]Processing cards:   0%|          | 179/65892 [01:42<2:58:21,  6.14card/s]Processing cards:   0%|          | 182/65892 [01:42<2:06:36,  8.65card/s]Processing cards:   0%|          | 185/65892 [01:43<2:16:44,  8.01card/s]Processing cards:   0%|          | 187/65892 [01:43<3:14:59,  5.62card/s]Processing cards:   0%|          | 189/65892 [01:43<2:39:43,  6.86card/s]Processing cards:   0%|          | 191/65892 [01:44<2:49:43,  6.45card/s]Processing cards:   0%|          | 192/65892 [01:44<3:25:37,  5.33card/s]Processing cards:   0%|          | 193/65892 [01:44<3:10:46,  5.74card/s]Processing cards:   0%|          | 195/65892 [01:44<2:22:51,  7.66card/s]Processing cards:   0%|          | 197/65892 [01:44<2:14:35,  8.14card/s]Processing cards:   0%|          | 199/65892 [01:45<2:45:08,  6.63card/s]Processing cards:   0%|          | 200/65892 [01:45<2:58:35,  6.13card/s]Processing cards:   0%|          | 201/65892 [01:45<3:30:51,  5.19card/s]Processing cards:   0%|          | 204/65892 [01:46<2:36:34,  6.99card/s]Processing cards:   0%|          | 207/65892 [01:46<2:26:04,  7.49card/s]Processing cards:   0%|          | 208/65892 [01:46<3:05:28,  5.90card/s]Processing cards:   0%|          | 209/65892 [01:47<3:58:41,  4.59card/s]Processing cards:   0%|          | 211/65892 [01:47<3:00:11,  6.08card/s]Processing cards:   0%|          | 213/65892 [01:47<2:42:00,  6.76card/s]Processing cards:   0%|          | 214/65892 [01:47<3:16:50,  5.56card/s]Processing cards:   0%|          | 216/65892 [01:48<2:57:07,  6.18card/s]Processing cards:   0%|          | 218/65892 [01:48<2:55:11,  6.25card/s]Processing cards:   0%|          | 220/65892 [01:48<3:16:00,  5.58card/s]Processing cards:   0%|          | 222/65892 [01:49<2:43:08,  6.71card/s]Processing cards:   0%|          | 225/65892 [01:49<1:56:55,  9.36card/s]Processing cards:   0%|          | 227/65892 [01:49<2:28:32,  7.37card/s]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📊 GPU STATUS - 2025-11-01 07:26:16
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+GPU 0: 🔥 HIGH
+  Compute:  88% | Memory:  31% ( 5820/ 65536 MB)
+  Temp: 58°C | Power:  287.12 W
+
+GPU 1: 🔥 HIGH
+  Compute:  89% | Memory:  32% ( 5820/ 65536 MB)
+  Temp: 57°C | Power:  261.03 W
+
+GPU 2: 🔥 HIGH
+  Compute:  90% | Memory:  34% ( 5820/ 65536 MB)
+  Temp: 55°C | Power:  259.97 W
+
+GPU 3: 🔥 HIGH
+  Compute:  89% | Memory:  33% ( 5820/ 65536 MB)
+  Temp: 58°C | Power:  289.27 W
+
+🔄 Processi Ollama:
+  GPU 0 (PID 621351): ✅ CPU: 3.4% | RAM: 0.2GB | Port: 39001
+    └─ API: ✅ Responsive
+Processing cards:   0%|          | 229/65892 [01:49<2:25:35,  7.52card/s]  GPU 1 (PID 621448): ✅ CPU: 4.0% | RAM: 0.2GB | Port: 39002
+    └─ API: ✅ Responsive
+  GPU 2 (PID 621485): ✅ CPU: 4.3% | RAM: 0.2GB | Port: 39003
+    └─ API: ✅ Responsive
+  GPU 3 (PID 621521): ✅ CPU: 4.7% | RAM: 0.2GB | Port: 39004
+    └─ API: ✅ Responsive
+
+🐍 Python Processing (Temporal + Geom + Cluster):
+  Cards processed: 1
+  Errors: 0
+0
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Processing cards:   0%|          | 231/65892 [01:50<3:07:45,  5.83card/s]Processing cards:   0%|          | 233/65892 [01:50<3:27:21,  5.28card/s]Processing cards:   0%|          | 235/65892 [01:51<2:51:30,  6.38card/s]Processing cards:   0%|          | 237/65892 [01:51<2:54:19,  6.28card/s]Processing cards:   0%|          | 240/65892 [01:51<3:04:58,  5.92card/s]Processing cards:   0%|          | 241/65892 [01:52<2:57:31,  6.16card/s]Processing cards:   0%|          | 242/65892 [01:52<2:56:24,  6.20card/s]Processing cards:   0%|          | 244/65892 [01:52<2:22:38,  7.67card/s]Processing cards:   0%|          | 245/65892 [01:52<2:41:03,  6.79card/s]Processing cards:   0%|          | 247/65892 [01:52<2:32:30,  7.17card/s]Processing cards:   0%|          | 249/65892 [01:53<2:16:07,  8.04card/s]Processing cards:   0%|          | 250/65892 [01:53<3:42:26,  4.92card/s]Processing cards:   0%|          | 252/65892 [01:54<3:51:56,  4.72card/s]Processing cards:   0%|          | 253/65892 [01:54<3:53:15,  4.69card/s]Processing cards:   0%|          | 254/65892 [01:54<3:38:54,  5.00card/s]Processing cards:   0%|          | 257/65892 [01:54<2:21:59,  7.70card/s]Processing cards:   0%|          | 258/65892 [01:54<2:16:22,  8.02card/s]Processing cards:   0%|          | 260/65892 [01:54<2:07:26,  8.58card/s]Processing cards:   0%|          | 262/65892 [01:55<2:01:13,  9.02card/s]Processing cards:   0%|          | 263/65892 [01:55<3:54:24,  4.67card/s]Processing cards:   0%|          | 264/65892 [01:55<4:01:53,  4.52card/s]Processing cards:   0%|          | 265/65892 [01:56<3:48:29,  4.79card/s]Processing cards:   0%|          | 267/65892 [01:56<2:49:05,  6.47card/s]Processing cards:   0%|          | 270/65892 [01:56<1:48:45, 10.06card/s]Processing cards:   0%|          | 272/65892 [01:56<1:43:59, 10.52card/s]Processing cards:   0%|          | 274/65892 [01:56<1:45:32, 10.36card/s]Processing cards:   0%|          | 276/65892 [01:57<3:26:47,  5.29card/s]Processing cards:   0%|          | 277/65892 [01:57<3:27:09,  5.28card/s]Processing cards:   0%|          | 278/65892 [01:57<3:11:28,  5.71card/s]Processing cards:   0%|          | 280/65892 [01:58<2:53:27,  6.30card/s]Processing cards:   0%|          | 282/65892 [01:58<2:31:51,  7.20card/s]Processing cards:   0%|          | 283/65892 [01:58<2:59:26,  6.09card/s]Processing cards:   0%|          | 284/65892 [01:58<2:45:17,  6.62card/s]Processing cards:   0%|          | 285/65892 [01:58<2:36:41,  6.98card/s]Processing cards:   0%|          | 287/65892 [01:59<3:53:09,  4.69card/s]Processing cards:   0%|          | 289/65892 [01:59<3:16:47,  5.56card/s]Processing cards:   0%|          | 292/65892 [01:59<2:07:07,  8.60card/s]Processing cards:   0%|          | 294/65892 [02:00<3:11:41,  5.70card/s]Processing cards:   0%|          | 297/65892 [02:01<3:16:45,  5.56card/s]Processing cards:   0%|          | 299/65892 [02:01<3:21:59,  5.41card/s]Processing cards:   0%|          | 300/65892 [02:01<3:14:03,  5.63card/s]Processing cards:   0%|          | 301/65892 [02:01<3:33:54,  5.11card/s]Processing cards:   0%|          | 303/65892 [02:01<2:47:02,  6.54card/s]Processing cards:   0%|          | 304/65892 [02:02<2:55:20,  6.23card/s]Processing cards:   0%|          | 305/65892 [02:02<2:50:21,  6.42card/s]Processing cards:   0%|          | 306/65892 [02:02<3:28:44,  5.24card/s]Processing cards:   0%|          | 309/65892 [02:02<2:32:44,  7.16card/s]Processing cards:   0%|          | 310/65892 [02:02<2:24:46,  7.55card/s]Processing cards:   0%|          | 311/65892 [02:03<3:34:00,  5.11card/s]Processing cards:   0%|          | 312/65892 [02:03<3:11:20,  5.71card/s]Processing cards:   0%|          | 315/65892 [02:03<2:05:10,  8.73card/s]Processing cards:   0%|          | 317/65892 [02:04<2:25:16,  7.52card/s]Processing cards:   0%|          | 319/65892 [02:04<2:26:38,  7.45card/s]Processing cards:   0%|          | 321/65892 [02:04<2:26:12,  7.47card/s]Processing cards:   0%|          | 322/65892 [02:04<3:20:17,  5.46card/s]Processing cards:   0%|          | 324/65892 [02:05<2:34:21,  7.08card/s]Processing cards:   0%|          | 325/65892 [02:05<3:45:30,  4.85card/s]Processing cards:   0%|          | 327/65892 [02:05<2:45:11,  6.62card/s]Processing cards:   0%|          | 329/65892 [02:05<2:16:21,  8.01card/s]Processing cards:   1%|          | 331/65892 [02:06<2:10:57,  8.34card/s]Processing cards:   1%|          | 333/65892 [02:06<2:41:58,  6.75card/s]Processing cards:   1%|          | 334/65892 [02:06<2:58:10,  6.13card/s]Processing cards:   1%|          | 336/65892 [02:07<3:24:27,  5.34card/s]Processing cards:   1%|          | 339/65892 [02:07<3:00:51,  6.04card/s]Processing cards:   1%|          | 341/65892 [02:07<2:33:14,  7.13card/s]Processing cards:   1%|          | 342/65892 [02:07<2:30:48,  7.24card/s]Processing cards:   1%|          | 344/65892 [02:07<2:06:21,  8.65card/s]Processing cards:   1%|          | 346/65892 [02:08<3:02:52,  5.97card/s]Processing cards:   1%|          | 347/65892 [02:08<3:58:03,  4.59card/s]Processing cards:   1%|          | 350/65892 [02:09<2:30:53,  7.24card/s]Processing cards:   1%|          | 352/65892 [02:09<2:23:42,  7.60card/s]Processing cards:   1%|          | 354/65892 [02:09<2:13:09,  8.20card/s]Processing cards:   1%|          | 356/65892 [02:09<2:39:34,  6.84card/s]Processing cards:   1%|          | 357/65892 [02:10<3:07:24,  5.83card/s]Processing cards:   1%|          | 359/65892 [02:10<4:05:37,  4.45card/s]Processing cards:   1%|          | 363/65892 [02:11<2:24:29,  7.56card/s]Processing cards:   1%|          | 365/65892 [02:11<2:23:27,  7.61card/s]Processing cards:   1%|          | 367/65892 [02:11<2:42:06,  6.74card/s]Processing cards:   1%|          | 368/65892 [02:11<2:39:19,  6.85card/s]Processing cards:   1%|          | 369/65892 [02:12<3:09:20,  5.77card/s]Processing cards:   1%|          | 370/65892 [02:12<4:41:06,  3.88card/s]Processing cards:   1%|          | 371/65892 [02:12<4:05:11,  4.45card/s]Processing cards:   1%|          | 375/65892 [02:13<2:21:45,  7.70card/s]Processing cards:   1%|          | 378/65892 [02:13<2:02:24,  8.92card/s]Processing cards:   1%|          | 380/65892 [02:13<1:58:01,  9.25card/s]Processing cards:   1%|          | 382/65892 [02:14<4:03:25,  4.49card/s]Processing cards:   1%|          | 385/65892 [02:14<3:03:13,  5.96card/s]Processing cards:   1%|          | 388/65892 [02:14<2:16:27,  8.00card/s]Processing cards:   1%|          | 390/65892 [02:15<2:26:03,  7.47card/s]Processing cards:   1%|          | 392/65892 [02:15<2:05:13,  8.72card/s]Processing cards:   1%|          | 394/65892 [02:16<3:44:05,  4.87card/s]Processing cards:   1%|          | 395/65892 [02:16<3:26:53,  5.28card/s]Processing cards:   1%|          | 396/65892 [02:16<4:00:28,  4.54card/s]Processing cards:   1%|          | 399/65892 [02:16<2:31:37,  7.20card/s]Processing cards:   1%|          | 401/65892 [02:16<2:19:36,  7.82card/s]Processing cards:   1%|          | 404/65892 [02:17<2:56:19,  6.19card/s]Processing cards:   1%|          | 405/65892 [02:18<4:06:25,  4.43card/s]Processing cards:   1%|          | 407/65892 [02:18<3:26:37,  5.28card/s]Processing cards:   1%|          | 409/65892 [02:18<2:44:38,  6.63card/s]Processing cards:   1%|          | 411/65892 [02:18<2:13:01,  8.20card/s]Processing cards:   1%|          | 413/65892 [02:19<2:42:22,  6.72card/s]Processing cards:   1%|          | 415/65892 [02:19<2:45:25,  6.60card/s]Processing cards:   1%|          | 417/65892 [02:19<3:03:39,  5.94card/s]Processing cards:   1%|          | 419/65892 [02:20<2:56:20,  6.19card/s]Processing cards:   1%|          | 420/65892 [02:20<2:49:53,  6.42card/s]Processing cards:   1%|          | 422/65892 [02:20<2:38:41,  6.88card/s]Processing cards:   1%|          | 424/65892 [02:20<2:49:39,  6.43card/s]Processing cards:   1%|          | 425/65892 [02:20<2:52:52,  6.31card/s]Processing cards:   1%|          | 426/65892 [02:21<2:41:45,  6.75card/s]Processing cards:   1%|          | 427/65892 [02:21<2:57:59,  6.13card/s]Processing cards:   1%|          | 428/65892 [02:21<3:28:56,  5.22card/s]Processing cards:   1%|          | 431/65892 [02:21<2:26:58,  7.42card/s]Processing cards:   1%|          | 433/65892 [02:21<1:58:58,  9.17card/s]Processing cards:   1%|          | 435/65892 [02:22<2:23:48,  7.59card/s]Processing cards:   1%|          | 436/65892 [02:22<2:56:55,  6.17card/s]Processing cards:   1%|          | 437/65892 [02:23<3:51:46,  4.71card/s]Processing cards:   1%|          | 439/65892 [02:23<2:56:07,  6.19card/s]Processing cards:   1%|          | 440/65892 [02:23<3:20:06,  5.45card/s]Processing cards:   1%|          | 442/65892 [02:23<2:40:00,  6.82card/s]Processing cards:   1%|          | 443/65892 [02:23<2:33:31,  7.11card/s]Processing cards:   1%|          | 446/65892 [02:24<3:41:06,  4.93card/s]Processing cards:   1%|          | 447/65892 [02:24<3:26:35,  5.28card/s]Processing cards:   1%|          | 449/65892 [02:24<2:41:21,  6.76card/s]Processing cards:   1%|          | 451/65892 [02:24<2:19:51,  7.80card/s]Processing cards:   1%|          | 453/65892 [02:25<1:59:21,  9.14card/s]Processing cards:   1%|          | 455/65892 [02:25<2:10:27,  8.36card/s]Processing cards:   1%|          | 457/65892 [02:25<2:40:05,  6.81card/s]
