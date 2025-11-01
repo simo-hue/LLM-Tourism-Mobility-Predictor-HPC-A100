@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=m_mistral:7b
+#SBATCH --job-name=m_llama3.1:8b
 #SBATCH --account=IscrC_LLM-Mob
 #SBATCH --partition=boost_usr_prod
 #SBATCH --qos=boost_qos_lprod
@@ -9,7 +9,7 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=32
 #SBATCH --mem=256G
-#SBATCH --output=geom-time-m_mistral:7b-%j.out
+#SBATCH --output=geom-time-m_llama3.1:8b-%j.out
 
 echo "🚀 VERONA CARD - GEOM + TEMPORAL + CLUSTER VERSION"
 echo "================================================"
@@ -143,7 +143,7 @@ start_ollama_gpu() {
     OLLAMA_MAX_LOADED_MODELS=1 \
     OLLAMA_TMPDIR="$CUSTOM_TMP" \
     OLLAMA_CACHE_DIR="$gpu_cache" \
-    $OLLAMA_BIN serve > mistral:7b_geom_time__best_cluster_ollama_gpu${gpu_id}.log 2>&1 &
+    $OLLAMA_BIN serve > llama3.1:8b_geom_time__best_cluster_ollama_gpu${gpu_id}.log 2>&1 &
 
     local pid=$!
     echo "✅ GPU $gpu_id PID: $pid (NO TIMEOUT)"
@@ -155,7 +155,7 @@ start_ollama_gpu() {
     sleep 5
     if ! kill -0 $pid 2>/dev/null; then
         echo "❌ Processo GPU $gpu_id morto immediatamente!"
-        tail -20 mistral:7b_geom_time__best_cluster_ollama_gpu${gpu_id}.log
+        tail -20 llama3.1:8b_geom_time__best_cluster_ollama_gpu${gpu_id}.log
         return 1
     fi
 
@@ -171,7 +171,7 @@ start_ollama_gpu() {
             if ! kill -0 $pid 2>/dev/null; then
                 echo "❌ Processo GPU $gpu_id terminato inaspettatamente!"
                 echo "📜 Ultimi log:"
-                tail -30 mistral:7b_geom_time__best_cluster_ollama_gpu${gpu_id}.log
+                tail -30 llama3.1:8b_geom_time__best_cluster_ollama_gpu${gpu_id}.log
                 return 1
             fi
 
@@ -179,14 +179,14 @@ start_ollama_gpu() {
             if curl -s --connect-timeout 5 "http://127.0.0.1:$port/api/tags" >/dev/null 2>&1; then
                 echo "   🌐 API risponde, test modello..."
 
-                # Test caricamento modello - UPDATED per mistral:7b
+                # Test caricamento modello - UPDATED per llama3.1:8b
                 local test_response=$(curl -s -X POST \
                     --connect-timeout 10 \
                     --max-time 120 \
                     "http://127.0.0.1:$port/api/generate" \
                     -H "Content-Type: application/json" \
                     -d '{
-                        "model":"mistral:7b",
+                        "model":"llama3.1:8b",
                         "prompt":"Hi",
                         "stream":false,
                         "options":{"num_predict":1}
@@ -207,7 +207,7 @@ start_ollama_gpu() {
                 nvidia-smi --id=$gpu_id --query-gpu=memory.used,memory.total --format=csv,noheader
 
                 # Check log per progresso
-                local progress=$(grep "model load progress" mistral:7b_geom_time__best_cluster_ollama_gpu${gpu_id}.log | tail -1)
+                local progress=$(grep "model load progress" llama3.1:8b_geom_time__best_cluster_ollama_gpu${gpu_id}.log | tail -1)
                 [ -n "$progress" ] && echo "   📈 $progress"
             fi
 
@@ -250,7 +250,7 @@ for gpu_id in 1 2 3; do
     sleep 30
 done
 
-echo "⏳ Attesa finale stabilizzazione sistema per mistral:7b (60s)..."
+echo "⏳ Attesa finale stabilizzazione sistema per llama3.1:8b (60s)..."
 sleep 60
 
 # ============= VERIFICA FINALE =============
@@ -272,7 +272,7 @@ for i in 0 1 2 3; do
             "http://127.0.0.1:$port/api/chat" \
             -H "Content-Type: application/json" \
             -d '{
-                "model":"mistral:7b",
+                "model":"llama3.1:8b",
                 "messages":[{"role":"user","content":"Say OK"}],
                 "stream":false,
                 "options":{"num_predict":2}
@@ -298,7 +298,7 @@ if [ $WORKING_GPUS -eq 0 ]; then
     for i in 0 1 2 3; do
         echo ""
         echo "=== Log GPU $i (ultime 30 righe) ==="
-        tail -30 mistral:7b_geom_time__best_cluster_ollama_gpu${i}.log 2>/dev/null || echo "Log non disponibile"
+        tail -30 llama3.1:8b_geom_time__best_cluster_ollama_gpu${i}.log 2>/dev/null || echo "Log non disponibile"
     done
     exit 1
 fi
@@ -374,9 +374,9 @@ advanced_gpu_monitor() {
             echo "🐍 Python Processing (Temporal + Geom + Cluster):"
 
             # Linee processate dal log
-            if [ -f "mistral:7b_geom_time__best_cluster_python_execution.log" ]; then
-                processed=$(grep -c "Processing card" mistral:7b_geom_time__best_cluster_python_execution.log 2>/dev/null || echo "0")
-                errors=$(grep -c "ERROR\|Error" mistral:7b_geom_time__best_cluster_python_execution.log 2>/dev/null || echo "0")
+            if [ -f "llama3.1:8b_geom_time__best_cluster_python_execution.log" ]; then
+                processed=$(grep -c "Processing card" llama3.1:8b_geom_time__best_cluster_python_execution.log 2>/dev/null || echo "0")
+                errors=$(grep -c "ERROR\|Error" llama3.1:8b_geom_time__best_cluster_python_execution.log 2>/dev/null || echo "0")
                 echo "  Cards processed: $processed"
                 echo "  Errors: $errors"
             fi
@@ -403,7 +403,7 @@ echo ""
 
 if [ -f "data/verona/vc_site.csv" ]; then
     python3 -u veronacard_mob_with_geom_time__best_cluster.py \
-        --append 2>&1 | tee mistral:7b_geom_time__best_cluster_python_execution.log
+        --append 2>&1 | tee llama3.1:8b_geom_time__best_cluster_python_execution.log
     PYTHON_EXIT=$?
 else
     echo "❌ File non trovato!"

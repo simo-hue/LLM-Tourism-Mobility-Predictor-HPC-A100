@@ -30,7 +30,7 @@ class Config:
     """Centralized configuration to avoid global variables"""
     
     # Model configuration
-    MODEL_NAME = "mistral:7b" #llama3.1:8b - qwen2.5:7b - qwen2.5:14b - mixtral:8x7b - mistral:7b - deepseek-coder:33b
+    MODEL_NAME = "llama3.1:8b" #llama3.1:8b - qwen2.5:7b - qwen2.5:14b - mixtral:8x7b - mistral:7b - deepseek-coder:33b
     modello = MODEL_NAME.replace(":", "_")
     strategia = "with_geom_time_best_cluster"
     
