@@ -30,10 +30,7 @@ class Config:
     """Centralized configuration to avoid global variables"""
     
     # Model configuration
-    MODEL_NAME = "mixtral:8x7b" #qwen2.5:14b - mixtral:8x7b - mistral:7b - deepseek-coder:33b
-    modello = MODEL_NAME.replace(":", "_")
-    strategia = "with_geom_time_best_cluster"
-    
+    MODEL_NAME = "qwen2.5:14b" #llama3.1:8b - qwen2.5:7b - qwen2.5:14b - mixtral:8x7b - mistral:7b - deepseek-coder_33b
     TOP_K = 5  # Number of POI predictions
     
     # HPC optimization parameters - OPTIMIZED FOR 4x A100
@@ -50,11 +47,11 @@ class Config:
     CIRCUIT_BREAKER_THRESHOLD = 100
     
     # 503 specific handling
-    RETRY_ON_503_WAIT = 60  
-    MAX_503_RETRIES = 20    
+    RETRY_ON_503_WAIT = 60  # ✅ NUOVO: attesa specifica per 503
+    MAX_503_RETRIES = 20    # ✅ NUOVO: retry dedicati per 503
     
     # Anchor rule for POI selection
-    DEFAULT_ANCHOR_RULE = "middle"
+    DEFAULT_ANCHOR_RULE = "penultimate"
     
     # Parallelism - OPTIMIZED FOR A100 64GB CAPACITY
     MAX_CONCURRENT_PER_GPU = 3
@@ -62,7 +59,7 @@ class Config:
     # File paths
     OLLAMA_PORT_FILE = "ollama_ports.txt"
     LOG_DIR = Path(__file__).resolve().parent / "logs"
-    RESULTS_DIR = Path(__file__).resolve().parent / f"results/{DEFAULT_ANCHOR_RULE}/{modello}/{strategia}/"
+    RESULTS_DIR = Path(__file__).resolve().parent / "results/penultimate/qwen2.5_14b/with_geom_time_cluster/"
     DATA_DIR = Path(__file__).resolve().parent / "data" / "verona"
     POI_FILE = DATA_DIR / "vc_site.csv"
 
