@@ -1,5 +1,6 @@
 Strategy,Min_Processing_Time_Seconds,Max_Processing_Time_Seconds,Mean_Processing_Time_Seconds,Count_Records
 Base,0.844s,179.685s,2.881s,1245162
+Best-Cluster,0.179s,245.922s,4.270s,1492262
 Clustered-Time,0.977s,265.486s,4.576s,1249049
 Geom,0.249s,586.100s,3.134s,1247405
 Time,0.969s,504.931s,3.963s,1249051
