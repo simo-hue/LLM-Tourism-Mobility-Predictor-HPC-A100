@@ -1,5 +1,5 @@
 # 🚀 LLM-Mob: Tourist Mobility Prediction with Large Language Models on HPC
-
+## [ paper in writing ]
 <!-- SEO Keywords: large language models, tourism prediction, mobility forecasting, LLM tourism, next destination prediction, VeronaCard dataset, HPC machine learning, NVIDIA A100, Ollama inference, geospatial AI, temporal analysis, tourist behavior prediction -->
 
 <div align="center">
