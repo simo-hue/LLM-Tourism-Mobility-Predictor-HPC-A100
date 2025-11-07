@@ -39,7 +39,7 @@ class Config:
     # File paths
     LOG_DIR = Path(__file__).resolve().parent / "logs"
     # NOTA: Aggiorna questo percorso se vuoi separare i risultati
-    RESULTS_DIR = Path(__file__).resolve().parent / f"results/{DEFAULT_ANCHOR_RULE}/baseline_heuristics/"
+    RESULTS_DIR = Path(__file__).resolve().parent / f"results/{DEFAULT_ANCHOR_RULE}/baseline_heuristics/absolute_popular_top_k"
     DATA_DIR = Path(__file__).resolve().parent / "data" / "verona"
     POI_FILE = DATA_DIR / "vc_site.csv"
 
@@ -49,10 +49,11 @@ class StrategyPredictor:
     Contiene la logica per le strategie di predizione euristiche.
     """
     
-    def __init__(self, pois_df: DataFrame, cluster_preferences: Dict[int, List[str]]):
+    def __init__(self, pois_df: DataFrame, cluster_preferences: Dict[int, List[str]], absolute_popularity_list: List[str]):
         self.pois_df = pois_df
         self.all_poi_names = set(pois_df['name_short'].unique())
         self.cluster_preferences = cluster_preferences
+        self.absolute_popularity_list = absolute_popularity_list
         logger.info(f"StrategyPredictor initialized with {len(self.all_poi_names)} POIs.")
 
     def predict(
@@ -126,6 +127,18 @@ class StrategyPredictor:
                             min(remaining_needed, len(remaining_available))
                         ))
                 
+                predictions = predictions[:top_k]
+            
+            elif strategy == 'absolute':
+                # Filtra la nostra lista di popolarità globale pre-calcolata,
+                # tenendo solo i POI che sono in 'available_pois'
+                # (available_pois esclude già i POI visitati e quello corrente)
+                predictions = [
+                    poi for poi in self.absolute_popularity_list
+                    if poi in available_pois
+                ]
+                
+                # Prendi i primi top_k risultati
                 predictions = predictions[:top_k]
             
             else:
@@ -754,12 +767,18 @@ class VisitFileProcessor:
 
             logger.info("Cluster preferences extracted (for 'popular' strategy).")
            
+           # Calclo valori globali di popolarità
+            logger.info("Calculating absolute POI popularity...")
+            # Calcoliamo la popolarità globale da tutti i visite filtrate
+            absolute_poi_popularity = filtered_df['name_short'].value_counts().index.tolist()
+            logger.info(f"Top 3 absolute POIs: {absolute_poi_popularity[:3]}")
+           
             user_clusters = pd.DataFrame({
                 "card_id": user_poi_matrix.index,
                 "cluster": clusters
             })
             
-            predictor = StrategyPredictor(pois_df, cluster_preferences)
+            predictor = StrategyPredictor(pois_df, cluster_preferences, absolute_poi_popularity)
 
             # Select cards to process
             eligible_cards = self._get_eligible_cards(filtered_df)
@@ -989,7 +1008,7 @@ Examples:
         "--strategy",
         type=str,
         required=True, # Rendiamo la strategia obbligatoria
-        choices=['random', 'nearest', 'popular'], # Valori consentiti
+        choices=['random', 'nearest', 'popular', 'absolute'], # Valori consentiti
         help="The prediction strategy to use: random, nearest, popular"
     )
     
