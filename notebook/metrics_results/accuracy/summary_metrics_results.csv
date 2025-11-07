@@ -2,6 +2,8 @@ Path,Mean,StdDev,Max
 middle/baseline_heuristics/popular/top1_metrics_canva.csv,38.95,1.93,41.48
 middle/baseline_heuristics/random/top1_metrics_canva.csv,5.22,0.08,5.38
 middle/baseline_heuristics/nearest/top1_metrics_canva.csv,2.08,0.32,2.73
+middle/baseline_heuristics/absolute_popular/top1_metrics_canva.csv,29.18,1.69,32.17
+middle/baseline_heuristics/absolute_popular_top_k/top1_metrics_canva.csv,29.18,1.69,32.17
 middle/qwen2.5_14b/base_version/top1_metrics_canva.csv,0.87,0.11,1.05
 middle/qwen2.5_14b/with_geom/top1_metrics_canva.csv,24.99,2.96,27.52
 middle/qwen2.5_14b/with_geom_time_cluster/top1_metrics_canva.csv,33.19,2.55,37.92
@@ -35,6 +37,8 @@ middle/qwen2.5_7b/with_geom_time/top1_metrics_canva.csv,17.81,1.69,19.50
 penultimate/baseline_heuristics/popular/top1_metrics_canva.csv,46.30,5.17,53.21
 penultimate/baseline_heuristics/random/top1_metrics_canva.csv,5.62,0.12,5.75
 penultimate/baseline_heuristics/nearest/top1_metrics_canva.csv,3.34,0.35,4.18
+penultimate/baseline_heuristics/absolute_popular/top1_metrics_canva.csv,32.60,2.25,38.35
+penultimate/baseline_heuristics/absolute_popular_top_k/top1_metrics_canva.csv,32.66,2.28,38.35
 penultimate/qwen2.5_14b/base_version/top1_metrics_canva.csv,2.86,0.47,3.70
 penultimate/qwen2.5_14b/with_geom/top1_metrics_canva.csv,19.42,1.88,21.54
 penultimate/qwen2.5_14b/with_geom_time_cluster/top1_metrics_canva.csv,30.73,3.01,36.45
@@ -68,6 +72,8 @@ penultimate/qwen2.5_7b/with_geom_time/top1_metrics_canva.csv,13.31,0.98,14.43
 middle/baseline_heuristics/popular/hit5_metrics_canva.csv,74.61,1.91,78.09
 middle/baseline_heuristics/random/hit5_metrics_canva.csv,26.03,0.33,26.33
 middle/baseline_heuristics/nearest/hit5_metrics_canva.csv,34.78,2.05,37.12
+middle/baseline_heuristics/absolute_popular/hit5_metrics_canva.csv,29.18,1.69,32.17
+middle/baseline_heuristics/absolute_popular_top_k/hit5_metrics_canva.csv,84.21,1.96,86.39
 middle/qwen2.5_14b/base_version/hit5_metrics_canva.csv,14.38,1.39,16.92
 middle/qwen2.5_14b/with_geom/hit5_metrics_canva.csv,64.14,1.73,65.75
 middle/qwen2.5_14b/with_geom_time_cluster/hit5_metrics_canva.csv,73.80,1.38,75.31
@@ -101,6 +107,8 @@ middle/qwen2.5_7b/with_geom_time/hit5_metrics_canva.csv,50.06,1.43,52.22
 penultimate/baseline_heuristics/popular/hit5_metrics_canva.csv,69.94,3.75,73.53
 penultimate/baseline_heuristics/random/hit5_metrics_canva.csv,28.03,0.47,28.49
 penultimate/baseline_heuristics/nearest/hit5_metrics_canva.csv,29.68,0.83,30.32
+penultimate/baseline_heuristics/absolute_popular/hit5_metrics_canva.csv,32.60,2.25,38.35
+penultimate/baseline_heuristics/absolute_popular_top_k/hit5_metrics_canva.csv,85.15,1.16,86.45
 penultimate/qwen2.5_14b/base_version/hit5_metrics_canva.csv,26.11,2.25,30.80
 penultimate/qwen2.5_14b/with_geom/hit5_metrics_canva.csv,54.07,1.52,56.26
 penultimate/qwen2.5_14b/with_geom_time_cluster/hit5_metrics_canva.csv,65.62,2.78,69.34
