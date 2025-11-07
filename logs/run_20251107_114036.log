@@ -1,0 +1,179 @@
+2025-11-07 11:40:36 [INFO] Starting baseline test with strategy: ABSOLUTE
+2025-11-07 11:40:36 [INFO] Results will be saved to: /Users/simo/Downloads/LLM-Tourism-Mobility-Predictor-HPC-A100/results/middle/baseline_heuristics/absolute_popular_top_k
+2025-11-07 11:40:36 [INFO] Found 12 files to process
+2025-11-07 11:40:36 [INFO] Processing dati_2014.csv with strategy 'absolute'
+2025-11-07 11:40:36 [INFO] Loading and preprocessing data...
+2025-11-07 11:40:36 [INFO] Loaded 22 POIs from vc_site.csv
+2025-11-07 11:40:36 [INFO] Loaded 370377 visits from dati_2014.csv
+2025-11-07 11:40:36 [INFO] Valid visits after merge: 370377
+2025-11-07 11:40:37 [INFO] Multi-visit cards: 70236 / 71557
+2025-11-07 11:40:37 [INFO] Performing user clustering...
+2025-11-07 11:40:39 [INFO] Cluster preferences extracted (for 'popular' strategy).
+2025-11-07 11:40:39 [INFO] Calculating absolute POI popularity...
+2025-11-07 11:40:39 [INFO] Top 3 absolute POIs: ['Arena', 'Casa Giulietta', 'Torre Lamberti']
+2025-11-07 11:40:39 [INFO] StrategyPredictor initialized with 22 POIs.
+2025-11-07 11:40:39 [INFO] Processing 65892 cards
+2025-11-07 11:40:39 [INFO] Using 5 CPU workers
+2025-11-07 11:41:13 [INFO] Completed processing dati_2014.csv for strategy 'absolute'
+2025-11-07 11:41:13 [INFO] Processing dati_2015.csv with strategy 'absolute'
+2025-11-07 11:41:13 [INFO] Loading and preprocessing data...
+2025-11-07 11:41:13 [INFO] Loaded 22 POIs from vc_site.csv
+2025-11-07 11:41:14 [INFO] Loaded 369588 visits from dati_2015.csv
+2025-11-07 11:41:14 [INFO] Valid visits after merge: 369588
+2025-11-07 11:41:14 [INFO] Multi-visit cards: 71759 / 73424
+2025-11-07 11:41:14 [INFO] Performing user clustering...
+2025-11-07 11:41:17 [INFO] Cluster preferences extracted (for 'popular' strategy).
+2025-11-07 11:41:17 [INFO] Calculating absolute POI popularity...
+2025-11-07 11:41:17 [INFO] Top 3 absolute POIs: ['Arena', 'Casa Giulietta', 'Torre Lamberti']
+2025-11-07 11:41:17 [INFO] StrategyPredictor initialized with 22 POIs.
+2025-11-07 11:41:17 [INFO] Processing 66677 cards
+2025-11-07 11:41:17 [INFO] Using 5 CPU workers
+2025-11-07 11:41:55 [INFO] Completed processing dati_2015.csv for strategy 'absolute'
+2025-11-07 11:41:55 [INFO] Processing dati_2016.csv with strategy 'absolute'
+2025-11-07 11:41:55 [INFO] Loading and preprocessing data...
+2025-11-07 11:41:55 [INFO] Loaded 22 POIs from vc_site.csv
+2025-11-07 11:41:56 [INFO] Loaded 383517 visits from dati_2016.csv
+2025-11-07 11:41:56 [INFO] Valid visits after merge: 383517
+2025-11-07 11:41:56 [INFO] Multi-visit cards: 76452 / 78152
+2025-11-07 11:41:56 [INFO] Performing user clustering...
+2025-11-07 11:41:58 [INFO] Cluster preferences extracted (for 'popular' strategy).
+2025-11-07 11:41:58 [INFO] Calculating absolute POI popularity...
+2025-11-07 11:41:58 [INFO] Top 3 absolute POIs: ['Arena', 'Casa Giulietta', 'Torre Lamberti']
+2025-11-07 11:41:58 [INFO] StrategyPredictor initialized with 22 POIs.
+2025-11-07 11:41:58 [INFO] Processing 70266 cards
+2025-11-07 11:41:58 [INFO] Using 5 CPU workers
+2025-11-07 11:42:34 [INFO] Completed processing dati_2016.csv for strategy 'absolute'
+2025-11-07 11:42:34 [INFO] Processing dati_2017.csv with strategy 'absolute'
+2025-11-07 11:42:34 [INFO] Loading and preprocessing data...
+2025-11-07 11:42:34 [INFO] Loaded 22 POIs from vc_site.csv
+2025-11-07 11:42:35 [INFO] Loaded 441595 visits from dati_2017.csv
+2025-11-07 11:42:35 [INFO] Valid visits after merge: 441595
+2025-11-07 11:42:35 [INFO] Multi-visit cards: 89352 / 91555
+2025-11-07 11:42:35 [INFO] Performing user clustering...
+2025-11-07 11:42:38 [INFO] Cluster preferences extracted (for 'popular' strategy).
+2025-11-07 11:42:38 [INFO] Calculating absolute POI popularity...
+2025-11-07 11:42:38 [INFO] Top 3 absolute POIs: ['Arena', 'Casa Giulietta', 'Torre Lamberti']
+2025-11-07 11:42:38 [INFO] StrategyPredictor initialized with 22 POIs.
+2025-11-07 11:42:38 [INFO] Processing 81342 cards
+2025-11-07 11:42:38 [INFO] Using 5 CPU workers
+2025-11-07 11:43:18 [INFO] Completed processing dati_2017.csv for strategy 'absolute'
+2025-11-07 11:43:18 [INFO] Processing dati_2018.csv with strategy 'absolute'
+2025-11-07 11:43:18 [INFO] Loading and preprocessing data...
+2025-11-07 11:43:18 [INFO] Loaded 22 POIs from vc_site.csv
+2025-11-07 11:43:19 [INFO] Loaded 427214 visits from dati_2018.csv
+2025-11-07 11:43:19 [INFO] Valid visits after merge: 427214
+2025-11-07 11:43:19 [INFO] Multi-visit cards: 86222 / 88627
+2025-11-07 11:43:19 [INFO] Performing user clustering...
+2025-11-07 11:43:22 [INFO] Cluster preferences extracted (for 'popular' strategy).
+2025-11-07 11:43:22 [INFO] Calculating absolute POI popularity...
+2025-11-07 11:43:22 [INFO] Top 3 absolute POIs: ['Arena', 'Casa Giulietta', 'Torre Lamberti']
+2025-11-07 11:43:22 [INFO] StrategyPredictor initialized with 22 POIs.
+2025-11-07 11:43:22 [INFO] Processing 78385 cards
+2025-11-07 11:43:22 [INFO] Using 5 CPU workers
+2025-11-07 11:44:02 [INFO] Completed processing dati_2018.csv for strategy 'absolute'
+2025-11-07 11:44:02 [INFO] Processing dati_2019.csv with strategy 'absolute'
+2025-11-07 11:44:02 [INFO] Loading and preprocessing data...
+2025-11-07 11:44:02 [INFO] Loaded 22 POIs from vc_site.csv
+2025-11-07 11:44:03 [INFO] Loaded 397562 visits from dati_2019.csv
+2025-11-07 11:44:03 [INFO] Valid visits after merge: 397562
+2025-11-07 11:44:04 [INFO] Multi-visit cards: 77583 / 79825
+2025-11-07 11:44:04 [INFO] Performing user clustering...
+2025-11-07 11:44:06 [INFO] Cluster preferences extracted (for 'popular' strategy).
+2025-11-07 11:44:06 [INFO] Calculating absolute POI popularity...
+2025-11-07 11:44:06 [INFO] Top 3 absolute POIs: ['Arena', 'Casa Giulietta', 'Torre Lamberti']
+2025-11-07 11:44:06 [INFO] StrategyPredictor initialized with 22 POIs.
+2025-11-07 11:44:06 [INFO] Processing 71226 cards
+2025-11-07 11:44:06 [INFO] Using 5 CPU workers
+2025-11-07 11:44:42 [INFO] Completed processing dati_2019.csv for strategy 'absolute'
+2025-11-07 11:44:42 [INFO] Processing dati_2020.csv with strategy 'absolute'
+2025-11-07 11:44:42 [INFO] Loading and preprocessing data...
+2025-11-07 11:44:42 [INFO] Loaded 22 POIs from vc_site.csv
+2025-11-07 11:44:42 [INFO] Loaded 38294 visits from dati_2020.csv
+2025-11-07 11:44:42 [INFO] Valid visits after merge: 38294
+2025-11-07 11:44:42 [INFO] Multi-visit cards: 7658 / 7914
+2025-11-07 11:44:42 [INFO] Performing user clustering...
+2025-11-07 11:44:43 [INFO] Cluster preferences extracted (for 'popular' strategy).
+2025-11-07 11:44:43 [INFO] Calculating absolute POI popularity...
+2025-11-07 11:44:43 [INFO] Top 3 absolute POIs: ['Arena', 'Casa Giulietta', 'Castelvecchio']
+2025-11-07 11:44:43 [INFO] StrategyPredictor initialized with 22 POIs.
+2025-11-07 11:44:43 [INFO] Processing 6969 cards
+2025-11-07 11:44:43 [INFO] Using 5 CPU workers
+2025-11-07 11:44:46 [INFO] Completed processing dati_2020.csv for strategy 'absolute'
+2025-11-07 11:44:46 [INFO] Processing veronacard_2019_original.csv with strategy 'absolute'
+2025-11-07 11:44:46 [INFO] Loading and preprocessing data...
+2025-11-07 11:44:46 [INFO] Loaded 22 POIs from vc_site.csv
+2025-11-07 11:44:47 [INFO] Loaded 397563 visits from veronacard_2019_original.csv
+2025-11-07 11:44:47 [INFO] Valid visits after merge: 397563
+2025-11-07 11:44:47 [INFO] Multi-visit cards: 77583 / 79826
+2025-11-07 11:44:47 [INFO] Performing user clustering...
+2025-11-07 11:44:50 [INFO] Cluster preferences extracted (for 'popular' strategy).
+2025-11-07 11:44:50 [INFO] Calculating absolute POI popularity...
+2025-11-07 11:44:50 [INFO] Top 3 absolute POIs: ['Arena', 'Casa Giulietta', 'Torre Lamberti']
+2025-11-07 11:44:50 [INFO] StrategyPredictor initialized with 22 POIs.
+2025-11-07 11:44:50 [INFO] Processing 71226 cards
+2025-11-07 11:44:50 [INFO] Using 5 CPU workers
+2025-11-07 11:45:25 [INFO] Completed processing veronacard_2019_original.csv for strategy 'absolute'
+2025-11-07 11:45:25 [INFO] Processing veronacard_2020_original.csv with strategy 'absolute'
+2025-11-07 11:45:25 [INFO] Loading and preprocessing data...
+2025-11-07 11:45:25 [INFO] Loaded 22 POIs from vc_site.csv
+2025-11-07 11:45:25 [INFO] Loaded 38304 visits from veronacard_2020_original.csv
+2025-11-07 11:45:25 [INFO] Valid visits after merge: 38304
+2025-11-07 11:45:25 [INFO] Multi-visit cards: 7660 / 7914
+2025-11-07 11:45:25 [INFO] Performing user clustering...
+2025-11-07 11:45:25 [INFO] Cluster preferences extracted (for 'popular' strategy).
+2025-11-07 11:45:25 [INFO] Calculating absolute POI popularity...
+2025-11-07 11:45:25 [INFO] Top 3 absolute POIs: ['Arena', 'Casa Giulietta', 'Castelvecchio']
+2025-11-07 11:45:25 [INFO] StrategyPredictor initialized with 22 POIs.
+2025-11-07 11:45:25 [INFO] Processing 6971 cards
+2025-11-07 11:45:25 [INFO] Using 5 CPU workers
+2025-11-07 11:45:29 [INFO] Completed processing veronacard_2020_original.csv for strategy 'absolute'
+2025-11-07 11:45:29 [INFO] Processing veronacard_2021_original.csv with strategy 'absolute'
+2025-11-07 11:45:29 [INFO] Loading and preprocessing data...
+2025-11-07 11:45:29 [INFO] Loaded 22 POIs from vc_site.csv
+2025-11-07 11:45:29 [INFO] Loaded 115814 visits from veronacard_2021_original.csv
+2025-11-07 11:45:29 [INFO] Valid visits after merge: 115814
+2025-11-07 11:45:29 [INFO] Multi-visit cards: 25581 / 27032
+2025-11-07 11:45:29 [INFO] Performing user clustering...
+2025-11-07 11:45:30 [INFO] Cluster preferences extracted (for 'popular' strategy).
+2025-11-07 11:45:30 [INFO] Calculating absolute POI popularity...
+2025-11-07 11:45:30 [INFO] Top 3 absolute POIs: ['Arena', 'Casa Giulietta', 'Torre Lamberti']
+2025-11-07 11:45:30 [INFO] StrategyPredictor initialized with 22 POIs.
+2025-11-07 11:45:30 [INFO] Processing 21983 cards
+2025-11-07 11:45:30 [INFO] Using 5 CPU workers
+2025-11-07 11:45:40 [INFO] Completed processing veronacard_2021_original.csv for strategy 'absolute'
+2025-11-07 11:45:40 [INFO] Processing veronacard_2022_original.csv with strategy 'absolute'
+2025-11-07 11:45:40 [INFO] Loading and preprocessing data...
+2025-11-07 11:45:40 [INFO] Loaded 22 POIs from vc_site.csv
+2025-11-07 11:45:41 [INFO] Loaded 382346 visits from veronacard_2022_original.csv
+2025-11-07 11:45:41 [INFO] Valid visits after merge: 381361
+2025-11-07 11:45:41 [INFO] Multi-visit cards: 84988 / 89775
+2025-11-07 11:45:41 [INFO] Performing user clustering...
+2025-11-07 11:45:44 [INFO] Cluster preferences extracted (for 'popular' strategy).
+2025-11-07 11:45:44 [INFO] Calculating absolute POI popularity...
+2025-11-07 11:45:44 [INFO] Top 3 absolute POIs: ['Arena', 'Casa Giulietta', 'Torre Lamberti']
+2025-11-07 11:45:44 [INFO] StrategyPredictor initialized with 22 POIs.
+2025-11-07 11:45:44 [INFO] Processing 72904 cards
+2025-11-07 11:45:44 [INFO] Using 5 CPU workers
+2025-11-07 11:46:20 [INFO] Completed processing veronacard_2022_original.csv for strategy 'absolute'
+2025-11-07 11:46:20 [INFO] Processing veronacard_2023_original_parziale.csv with strategy 'absolute'
+2025-11-07 11:46:20 [INFO] Loading and preprocessing data...
+2025-11-07 11:46:20 [INFO] Loaded 22 POIs from vc_site.csv
+2025-11-07 11:46:20 [INFO] Loaded 58599 visits from veronacard_2023_original_parziale.csv
+2025-11-07 11:46:21 [INFO] Valid visits after merge: 58064
+2025-11-07 11:46:21 [INFO] Multi-visit cards: 12240 / 12848
+2025-11-07 11:46:21 [INFO] Performing user clustering...
+2025-11-07 11:46:21 [INFO] Cluster preferences extracted (for 'popular' strategy).
+2025-11-07 11:46:21 [INFO] Calculating absolute POI popularity...
+2025-11-07 11:46:21 [INFO] Top 3 absolute POIs: ['Arena', 'Casa Giulietta', 'Torre Lamberti']
+2025-11-07 11:46:21 [INFO] StrategyPredictor initialized with 22 POIs.
+2025-11-07 11:46:21 [INFO] Processing 10706 cards
+2025-11-07 11:46:21 [INFO] Using 5 CPU workers
+2025-11-07 11:46:26 [INFO] Completed processing veronacard_2023_original_parziale.csv for strategy 'absolute'
+2025-11-07 11:46:26 [INFO] 
+======================================================================
+2025-11-07 11:46:26 [INFO] PROCESSING SUMMARY:
+2025-11-07 11:46:26 [INFO]   Total files: 12
+2025-11-07 11:46:26 [INFO]   Processed: 12
+2025-11-07 11:46:26 [INFO]   Skipped: 0
+2025-11-07 11:46:26 [INFO]   Efficiency: 0.0% files avoided
+2025-11-07 11:46:26 [INFO] ======================================================================

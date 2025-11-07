@@ -34,12 +34,12 @@ class Config:
     BATCH_SAVE_INTERVAL = 1000  # Save results every N cards
     
     # Anchor rule for POI selection
-    DEFAULT_ANCHOR_RULE = "penultimate"
+    DEFAULT_ANCHOR_RULE = "middle"
     
     # File paths
     LOG_DIR = Path(__file__).resolve().parent / "logs"
     # NOTA: Aggiorna questo percorso se vuoi separare i risultati
-    RESULTS_DIR = Path(__file__).resolve().parent / f"results/{DEFAULT_ANCHOR_RULE}/baseline_heuristics/absolute_popular_top_k"
+    RESULTS_DIR = Path(__file__).resolve().parent / f"results/{DEFAULT_ANCHOR_RULE}/baseline_heuristics"
     DATA_DIR = Path(__file__).resolve().parent / "data" / "verona"
     POI_FILE = DATA_DIR / "vc_site.csv"
 
@@ -129,7 +129,7 @@ class StrategyPredictor:
                 
                 predictions = predictions[:top_k]
             
-            elif strategy == 'absolute':
+            elif strategy == 'absolute_top_k':
                 # Filtra la nostra lista di popolarità globale pre-calcolata,
                 # tenendo solo i POI che sono in 'available_pois'
                 # (available_pois esclude già i POI visitati e quello corrente)
@@ -140,6 +140,18 @@ class StrategyPredictor:
                 
                 # Prendi i primi top_k risultati
                 predictions = predictions[:top_k]
+            
+            elif strategy == 'absolute':
+                # Filtra la nostra lista di popolarità globale pre-calcolata,
+                # tenendo solo i POI che sono in 'available_pois'
+                # (available_pois esclude già i POI visitati e quello corrente)
+                predictions = [
+                    poi for poi in self.absolute_popularity_list
+                    if poi in available_pois
+                ]
+                
+                # Prendi il primo
+                predictions = predictions[0]
             
             else:
                 raise ValueError(f"Unknown strategy: {strategy}")
