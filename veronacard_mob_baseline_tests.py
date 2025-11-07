@@ -34,7 +34,7 @@ class Config:
     BATCH_SAVE_INTERVAL = 1000  # Save results every N cards
     
     # Anchor rule for POI selection
-    DEFAULT_ANCHOR_RULE = "middle"
+    DEFAULT_ANCHOR_RULE = "penultimate"
     
     # File paths
     LOG_DIR = Path(__file__).resolve().parent / "logs"
@@ -151,7 +151,7 @@ class StrategyPredictor:
                 ]
                 
                 # Prendi il primo
-                predictions = predictions[0]
+                predictions = predictions[0] if predictions else []
             
             else:
                 raise ValueError(f"Unknown strategy: {strategy}")
