@@ -1,0 +1,11 @@
+Visit history with timestamps: {chronological_history_with_time}
+Current location: {current_poi}
+Current location: {current_poi} (GPS: {lat}, {lon})
+Current time: {day_of_week}, {hour}:{minute}
+Nearest POIs: {top_10_nearest_with_distances}
+
+Considering the current time ({time_period}), the temporal tourist patterns
+in Verona, suggest 5 most likely next POIs.
+
+Respond ONLY in JSON format: {"prediction": ["poi1", "poi2", "poi3", "poi4",
+"poi5"], "reason": "brief explanation"}

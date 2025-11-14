@@ -1,0 +1,12 @@
+Visited PoIs: {chronological_history}
+Current location: {current_poi}
+Current location: {current_poi} (GPS: {lat}, {lon})
+Nearest POIs: {top_10_nearest_with_distances}
+
+Suggest the 5 most likely next PoIs considering:
+- Physical distance from current location
+- Typical tourist route patterns in Verona
+- Walking accessibility constraints (2km radius)
+
+Respond ONLY in JSON format: {"prediction": ["poi1", "poi2", "poi3", "poi4",
+"poi5"], "reason": "brief explanation"}

@@ -1,0 +1,6 @@
+Visited PoIs: {chronological_history}
+Suggest the 5 most likely next PoIs considering typical tourist movement
+patterns in Verona.
+
+Respond ONLY in JSON format: {"prediction": ["poi1", "poi2", "poi3", "poi4",
+"poi5"], "reason": "brief explanation"}

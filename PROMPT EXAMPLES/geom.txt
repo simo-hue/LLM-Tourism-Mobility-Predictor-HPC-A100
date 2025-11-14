@@ -1,8 +1,0 @@
-return f"""
-            Tourist cluster {cluster_id} in Verona.
-            Visited: {', '.join(history) if history else 'none'}
-            Current: {current_poi}
-            Nearby POIs: {pois_list}
-
-            Suggest {top_k} most likely next POIs considering distances and tourist patterns.
-            Reply ONLY JSON with this format: {{"prediction": ["poi1", "poi2", ...], "reason": "brief explanation"}}"""

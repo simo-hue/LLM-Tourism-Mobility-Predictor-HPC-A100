@@ -1,0 +1,16 @@
+Cluster typical preferences: {cluster_prefs_with_freqs}
+Visit history with timestamps: {chronological_history_with_time}
+Current location: {current_poi}
+Current location: {current_poi} (GPS: {lat}, {lon})
+Current time: {day_of_week}, {hour}:{minute}
+Nearest POIs: {top_10_nearest_with_distances}
+
+Considering:
+- Cluster preferences and typical behavior
+- Current time ({time_period}) and temporal patterns
+- Spatial proximity and walking constraints
+- Historical visit sequence. Suggest 5 most likely next POIs that align with
+this tourist’s behavioral profile.
+
+Respond ONLY in JSON format: {"prediction": ["poi1", "poi2", "poi3", "poi4",
+"poi5"], "reason": "brief explanation"}
