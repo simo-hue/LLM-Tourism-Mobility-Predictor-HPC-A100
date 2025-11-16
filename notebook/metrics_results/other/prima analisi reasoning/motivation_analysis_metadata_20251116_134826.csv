@@ -1,0 +1,2 @@
+export_timestamp,total_records,processing_rate,files_processed,context_analyses,context_coverage,avg_confidence,high_confidence_ratio,categories_count,analysis_type,analysis_date,quality_score,reliability_notes
+20251116_134826,587004,"24,754 records/sec",12,0,0.0%,0.36,12.0%,6,enhanced_context_validated,2025-11-16T13:48:26.733256,0.00,History-validated with spatial coherence analysis
