@@ -1,4 +1,0 @@
-complexity_level,strategy_name,hit_rate,avg_processing_time
-1,Base Version,12.1,2.30
-2,With Geospatial,48.3,2.03
-3,Geospatial + Temporal,47.0,2.18

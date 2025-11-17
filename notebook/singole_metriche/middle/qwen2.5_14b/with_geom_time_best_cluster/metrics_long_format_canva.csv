@@ -1,0 +1,51 @@
+Year,Value,Metric
+2014,13.87,Top-1 Accuracy
+2015,3.49,Top-1 Accuracy
+2016,12.18,Top-1 Accuracy
+2017,12.54,Top-1 Accuracy
+2018,20.41,Top-1 Accuracy
+2019,21.97,Top-1 Accuracy
+2020,15.09,Top-1 Accuracy
+2021,20.83,Top-1 Accuracy
+2022,21.22,Top-1 Accuracy
+2023,20.71,Top-1 Accuracy
+2014,58.44,Top-5 Hit Rate
+2015,59.09,Top-5 Hit Rate
+2016,61.74,Top-5 Hit Rate
+2017,59.96,Top-5 Hit Rate
+2018,62.11,Top-5 Hit Rate
+2019,64.45,Top-5 Hit Rate
+2020,61.04,Top-5 Hit Rate
+2021,60.55,Top-5 Hit Rate
+2022,63.9,Top-5 Hit Rate
+2023,61.61,Top-5 Hit Rate
+2014,27.87,MRR
+2015,20.99,MRR
+2016,28.93,MRR
+2017,28.34,MRR
+2018,34.76,MRR
+2019,37.67,MRR
+2020,31.77,MRR
+2021,34.55,MRR
+2022,36.9,MRR
+2023,34.65,MRR
+2014,100.0,Coverage
+2015,95.45,Coverage
+2016,95.45,Coverage
+2017,95.45,Coverage
+2018,95.45,Coverage
+2019,95.45,Coverage
+2020,95.45,Coverage
+2021,95.45,Coverage
+2022,95.45,Coverage
+2023,95.45,Coverage
+2014,972.73,Diversity Ratio
+2015,377.27,Diversity Ratio
+2016,631.82,Diversity Ratio
+2017,550.0,Diversity Ratio
+2018,1400.0,Diversity Ratio
+2019,1527.27,Diversity Ratio
+2020,586.36,Diversity Ratio
+2021,704.55,Diversity Ratio
+2022,1295.45,Diversity Ratio
+2023,413.64,Diversity Ratio

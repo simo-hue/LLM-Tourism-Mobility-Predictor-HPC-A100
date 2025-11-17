@@ -1,6 +1,0 @@
-model_name,Hit_Rate,Success_Rate,Speed_Score,Overall_Score
-Qwen2.5 14B,62.3,100.0,27.0,73.6
-Qwen2.5 7B,44.8,99.9,34.5,61.3
-Mistral 7B,38.2,99.8,25.6,56.7
-Llama3.1 8B,35.7,99.6,23.3,55.0
-Mixtral 8x7B,34.5,99.7,22.2,54.0

@@ -1,4 +1,0 @@
-Strategy,Min_Processing_Time_Seconds,Max_Processing_Time_Seconds,Mean_Processing_Time_Seconds,Count_Records
-Base,0.532s,12.317s,1.573s,1249019
-Geom,0.505s,11.672s,1.285s,1247157
-Time,0.713s,11.135s,1.531s,1249053
