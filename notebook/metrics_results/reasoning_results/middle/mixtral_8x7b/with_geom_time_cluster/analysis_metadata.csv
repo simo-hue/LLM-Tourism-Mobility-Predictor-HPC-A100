@@ -1,2 +1,2 @@
 total_records,processing_rate,files_processed,context_analyses,context_coverage,avg_confidence,high_confidence_ratio,categories_count,analysis_type,analysis_date,quality_score,reliability_notes
-624003,"17,329 records/sec",12,0,0.0%,0.80,70.9%,6,enhanced_context_validated,2025-11-16T14:39:04.259283,0.00,History-validated with spatial coherence analysis
+624003,"14,638 records/sec",12,0,0.0%,0.80,70.9%,6,enhanced_context_validated,2025-11-18T19:47:47.636423,0.00,History-validated with spatial coherence analysis
