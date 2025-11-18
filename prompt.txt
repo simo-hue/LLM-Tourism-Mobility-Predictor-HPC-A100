@@ -69,3 +69,107 @@ Calcola che devi evitare le seguenti cartelle/sottocartelle che non sono utili:
 - clustering_analysis
 - DEV
 - baseline_heuristics
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sei un esperto senior dev programmatore in python di notebook:
+
+Ho riscontrato un errore nei risultati che vengono salvati in formato .csv ( perchè vengono salvati sempre gli stessi file con gli stessi risultati anche se le strategie sono diverse ).
+
+Ti ripeto la struttura del mio esperimento.
+Queste sono le seguenti strategie:
+- base_version
+- with_geom
+- with_geom_time
+- with_geom_time_best_cluster
+- with_geom_time_cluster
+
+E queste strategie le ho ripetute sia per ogni modello tra i seguenti:
+- deepseek-coder_33b
+- llama3.1_8b
+- qwen2.5_7b
+- qwen2.5_14b
+- mistral_7b
+- mixtral8x7b
+
+e per ogni esecuzione avevo un altra variabile ancora, ovvero la tipologia di anchor point tra:
+- middle
+- penultimate
+
+Ecco qui la struttura della cartella globale di results: ".
+├── clustering_analysis
+│   ├── cluster_distribution_years.png
+│   ├── multi_year_comparison.csv
+│   ├── multi_year_report.html
+│   ├── silhouette_evolution.png
+│   ├── year_2014
+│   ├── year_2015
+│   ├── year_2016
+│   ├── year_2017
+│   ├── year_2018
+│   ├── year_2019
+│   ├── year_2020
+│   ├── year_original
+│   └── year_parziale
+├── DEV
+│   ├── debug_tools
+│   ├── mini run con geometrie da MACBOOK
+│   ├── parziali fino 2018
+│   ├── prima_run_su_srv_univr_LITE_
+│   ├── results_leo_with_geom_n-1_come_current_POI
+│   ├── results_leo_with_geom_parziali
+│   ├── results_parziali_ministral
+│   ├── results_parziali_sequenziali_ministral
+│   ├── semi-completi ministral
+│   ├── with geom da Leonardo
+│   ├── with_geom_ministral_primo_run_con_modifiche
+│   └── with_geom_ministral_primo_run_senza_modifiche
+├── middle
+│   ├── baseline_heuristics
+│   ├── deepseek-coder_33b
+│   ├── llama3.1_8b
+│   ├── mistral_7b
+│   ├── mixtral_8x7b
+│   ├── qwen2.5_14b
+│   └── qwen2.5_7b
+└── penultimate
+    ├── baseline_heuristics
+    ├── deepseek-coder_33b
+    ├── llama3.1_8b
+    ├── mistral_7b
+    ├── mixtral_8x7b
+    ├── qwen2.5_14b
+    └── qwen2.5_7b
+
+39 directories, 4 files".
+
+Calcola che devi evitare le seguenti cartelle/sottocartelle che non sono utili:
+- clustering_analysis
+- DEV
+- baseline_heuristics
+
+
+Ti chiedo quindi di analizzare nel dettaglio il mio notebook per trovare l'errore di computazione e guidarmi verso la risoluzione passo passo
